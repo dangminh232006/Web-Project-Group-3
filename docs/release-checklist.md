@@ -18,7 +18,7 @@ decision or an external action that only the group or the tutor can provide.
 | B-04 | **Member quotes and English translations missing.** Each member supplies a quote in their own first language. Native English speakers pick a quote in another language they like. | `about.html` `.quote` | Each member individually |
 | B-05 | **Contribution records missing.** Each member must own at least one page and its CSS. | `about.html`, `contributions.md` | Group, together |
 | B-06 | **Fun facts missing**, each approved by the person it describes. | `about.html` `#fun-facts` | Each member |
-| B-07 | **Team name, class day/time, tutor name missing.** | `about.html` `#class-details` | Group |
+| B-07 | **Class day/time and tutor name missing.** Team name is confirmed as *Group 3*. | `about.html` `#class-details` | Group |
 | B-08 | **Jira board contents unverified.** The board exists (https://group3-cos10026.atlassian.net/browse/SAM1) and is linked in the footer, but it could not be inspected from this workspace. Confirm it holds epics, stories, tasks and **two sprints**, and that the **tutor has access**. | board itself | Group |
 | ~~B-09~~ | ~~GitHub repository does not exist.~~ **DONE** - https://github.com/dangminh232006/Web-Project-Group-3 | footer, all 4 pages | - |
 | ~~B-10~~ | ~~Site is not deployed to GitHub Pages.~~ **DONE** - https://dangminh232006.github.io/Web-Project-Group-3/ | footer, all 4 pages | - |
@@ -46,7 +46,6 @@ decision or an external action that only the group or the tutor can provide.
 
 | Placeholder | Replace with |
 |---|---|
-| `[TEAM NAME]` | your registered team name |
 | `[G01 to G06]` | your allocated group code |
 | `[INDUSTRY FROM THE BRIEF]` | the matching industry name |
 | `[DAY]`, `[START TIME to END TIME]` | your class day and time |

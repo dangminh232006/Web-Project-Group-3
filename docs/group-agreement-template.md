@@ -25,7 +25,7 @@ COS10026 Applied Web Project - Part 1.
 
 | Field | Value |
 |---|---|
-| Team name | |
+| Team name | Group 3 |
 | Allocated group code | |
 | Allocated industry | |
 | Unit | COS10026 Web Technology Project |
