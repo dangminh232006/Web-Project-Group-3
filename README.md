@@ -8,9 +8,12 @@ frameworks, no build step, no external requests.
 
 > ## Status: NOT READY TO SUBMIT
 >
-> The code is complete and validates. The **human content does not exist yet** -
-> no group code, no member names, no group photo, no Jira board, no deployment.
-> Start at **`docs/release-checklist.md`**, which lists every blocker.
+> The code is complete, validates, and is **deployed live**. The **human content
+> does not exist yet** - no group code, no member names, no group photo, and no
+> Jira board. Start at **`docs/release-checklist.md`**, which lists every blocker.
+>
+> - Live site: https://dangminh232006.github.io/Web-Project-Group-3/
+> - Repository: https://github.com/dangminh232006/Web-Project-Group-3
 >
 > `Harbourline Digital` is a **fictional company** invented for this assessment.
 > No vacancy, salary or statement on the site describes a real employer.
@@ -128,16 +131,30 @@ grep -rn 'class="tbd"' about.html     # member details, quotes, fun facts
 grep -rn 'class="pending"' *.html     # Jira, GitHub and Pages URLs
 ```
 
-Both must return **nothing** before you submit. Full instructions per placeholder
-are in `docs/release-checklist.md` section 3.
+`class="tbd"` must return **nothing** before you submit. `class="pending"` should
+return exactly **one** hit per page - the Jira board, which does not exist yet.
+Full instructions per placeholder are in `docs/release-checklist.md` section 3.
 
 ---
 
-## Deployment and packaging
+## Deployment
 
-Neither was performed - no repository was supplied and no external action was
-authorised. Step-by-step instructions are in `docs/release-checklist.md`
-section 6. Deployment instructions are not a deployed site.
+**Done.** The site is pushed to `main` and served by GitHub Pages from the
+repository root.
+
+| Item | Value |
+|---|---|
+| Repository | https://github.com/dangminh232006/Web-Project-Group-3 |
+| Live site | https://dangminh232006.github.io/Web-Project-Group-3/ |
+| Branch and path | `main`, root (`/`) |
+| Verified | All four pages, `styles.css` and all three SVG assets return HTTP 200 with correct content types |
+
+Redeploy is automatic: push to `main` and Pages rebuilds in about 40 seconds.
+
+**Still not done:** the Jira board does not exist. See `docs/release-checklist.md`
+section 6.
+
+## Packaging
 
 For packaging, the ZIP must contain the four pages, `styles.css`, `images/` and
 `docs/`, and must match the deployed site exactly.

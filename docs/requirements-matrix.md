@@ -33,10 +33,10 @@ the totals, which match the Canvas value of 70 points.
 | A4 | Company description | `#home-hero` lead paragraphs | visual check | **Verified** |
 | A5 | Company-related image | `.hero__figure img` -> `images/workplace.svg`, with descriptive `alt` | TC-14 | **Verified** |
 | A6 | Common navigation menu | `#site-nav` - Home, Jobs, Apply, About in the same order on all 4 pages | TC-32 tab order | **Verified** |
-| A7 | Footer: Jira project link | `#site-footer` pending marker | - | **Needs information** (D-13) |
-| A8 | Footer: GitHub repository link | `#site-footer` pending marker | - | **Needs information** (D-13) |
-| A9 | Footer: live GitHub Pages link | `#site-footer` pending marker | - | **Blocked** on deployment (D-13) |
-| A10 | Footer: email link | `a[href^="mailto:"]` -> `careers@harbourline.example` | TC-01 | **Implemented** - replace with the approved address |
+| A7 | Footer: Jira project link | `#site-footer` pending marker | - | **Needs information** - board does not exist (D-13) |
+| A8 | Footer: GitHub repository link | `#site-footer` -> https://github.com/dangminh232006/Web-Project-Group-3 | live link, HTTP 200 | **Verified** |
+| A9 | Footer: live GitHub Pages link | `#site-footer` -> https://dangminh232006.github.io/Web-Project-Group-3/ | deployed, all pages HTTP 200 | **Verified** |
+| A10 | Footer: email link | `a[href^="mailto:"]` -> `105716425@student.swin.edu.au` | TC-01 | **Verified** |
 | A11 | At least one table using cell merging | `index.html` process table: `rowspan="2"` on Phase and Stage headers, `colspan="2"` on "What to expect", `rowspan="2"` on two Phase body cells | TC-01, TC-37 | **Verified** |
 | A12 | Table is meaningful data, with caption and headers | `<caption>` plus `scope="col"`, `scope="colgroup"`, `scope="rowgroup"`, `scope="row"` | TC-37 | **Verified** |
 | A13 | Search box with a button | `#site-search form` with labelled `input[type=search]` and submit button | TC-01 | **Verified** as a prototype |
@@ -194,8 +194,8 @@ the totals, which match the Canvas value of 70 points.
 | G2 | Single external stylesheet at the root | **Verified** - `styles.css` |
 | G3 | Relative paths that survive a repo subdirectory | **Verified** - TC-14 |
 | G4 | No JavaScript, Bootstrap or other libraries | **Verified** - TC-11, TC-12 |
-| G5 | Deployed on GitHub Pages | **Blocked** - no repository supplied, no deployment authorised |
-| G6 | GitHub repository link in `index.html` | **Needs information** - pending marker in place |
+| G5 | Deployed on GitHub Pages | **Verified** - https://dangminh232006.github.io/Web-Project-Group-3/ building from `main` at root; all four pages and every asset return HTTP 200 |
+| G6 | GitHub repository link in `index.html` | **Verified** - https://github.com/dangminh232006/Web-Project-Group-3 in the footer of all four pages |
 | G7 | ZIP submitted via Canvas | **Blocked** - ZIP is built locally; submitting is a human action |
 | G8 | Group Agreement submitted **before** project work | **Needs information** - see `group-agreement-template.md`; must not be backdated |
 | G9 | GenAI use acknowledged in code comments | **Verified** - comment block in all 4 pages and in `styles.css`, per the unit requirement |
@@ -226,7 +226,7 @@ the totals, which match the Canvas value of 70 points.
 | Group photograph missing | D5, D6 - About |
 | Member names, IDs, contributions, quotes, fun facts missing | D1 to D4, D10, G11 - About and Submission |
 | Jira board not created | H1 to H4 - all 5 Jira marks |
-| GitHub repository and Pages deployment not done | A8, A9, G5, G6 - Home and Submission |
+| ~~GitHub repository and Pages deployment~~ | **Resolved** - A8, A9, G5, G6 now verified |
 | Accessibility Guideline PDF not reviewed | F15 |
 | Skills checkbox interpretation unapproved | C17 |
 | Due date unresolved | G7 |

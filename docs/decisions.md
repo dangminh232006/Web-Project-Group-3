@@ -332,4 +332,16 @@ The email link is real markup pointing at `careers@harbourline.example`. The
 `.example` top-level domain is reserved by RFC 2606 for documentation and can
 never reach a real inbox, so no real address is fabricated.
 
-**These three items are release blockers.** See `release-checklist.md`.
+**Update, same day.** Three of the four are now real links: the repository
+(https://github.com/dangminh232006/Web-Project-Group-3), the live GitHub Pages site (https://dangminh232006.github.io/Web-Project-Group-3/), and the contact email, which is
+now the group's Swinburne student address rather than the `.example` placeholder.
+
+**One pending marker remains: the Jira project board.** It could not be created -
+the only Atlassian site reachable from this workspace is `cos20031-2026`, which
+belongs to a different unit and grants **Confluence scopes only, no Jira scopes**.
+The board must be created by the group and its URL pasted into the footer of all
+four pages. Until then it stays a visible pending marker, not a dead link.
+
+**Note on the email.** It is now publicly visible on a deployed public site, so it
+will be scraped by spam bots. That was a deliberate choice, preferred over an
+undeliverable address. See `release-checklist.md`.

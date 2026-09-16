@@ -20,9 +20,9 @@ decision or an external action that only the group or the tutor can provide.
 | B-06 | **Fun facts missing**, each approved by the person it describes. | `about.html` `#fun-facts` | Each member |
 | B-07 | **Team name, class day/time, tutor name missing.** | `about.html` `#class-details` | Group |
 | B-08 | **Jira project does not exist.** All 5 Jira marks currently score nothing. | `jira-backlog.csv` is a proposal only | Group |
-| B-09 | **GitHub repository does not exist.** | footer pending marker | Group |
-| B-10 | **Site is not deployed to GitHub Pages.** | footer pending marker | Group |
-| B-11 | **Contact email is a placeholder** (`careers@harbourline.example`, a reserved non-deliverable domain). | footer of all 4 pages | Group |
+| ~~B-09~~ | ~~GitHub repository does not exist.~~ **DONE** - https://github.com/dangminh232006/Web-Project-Group-3 | footer, all 4 pages | - |
+| ~~B-10~~ | ~~Site is not deployed to GitHub Pages.~~ **DONE** - https://dangminh232006.github.io/Web-Project-Group-3/ | footer, all 4 pages | - |
+| ~~B-11~~ | ~~Contact email is a placeholder.~~ **DONE** - now `105716425@student.swin.edu.au`. Note this address is now **publicly visible** on the live site. | footer, all 4 pages | - |
 
 ---
 
@@ -70,11 +70,12 @@ embedded `<style>` block along with the "Unfinished" warning note.
 
 | Placeholder | Replace with |
 |---|---|
-| Three `<span class="pending">` markers in the footer | real Jira, GitHub and GitHub Pages links, converted to `<a href="...">` |
-| `careers@harbourline.example` | the group's approved contact address |
+| One remaining `<span class="pending">` marker in the footer | the real Jira board URL, converted to `<a href="...">` |
 | `Harbourline Digital` and the slogan | your industry-appropriate company name |
 
-**Search for `class="pending"` across all four pages.**
+**Search for `class="pending"` across all four pages** - there should be exactly
+one hit per page (Jira). GitHub, GitHub Pages and the contact email are already
+real links.
 
 ### `styles.css`
 
@@ -122,17 +123,27 @@ Run these again after every placeholder is filled - filling text can break marku
 
 ---
 
-## 6. Deployment and submission - human actions
+## 6. Deployment and submission
 
-None of these were performed, and none were authorised.
+Steps 1, 2 and 4 are **done**. The rest are still outstanding.
 
-1. Create the GitHub repository. Have **each member commit their own work** so the
-   history evidences the "one page each" requirement.
-2. Enable GitHub Pages (Settings, then Pages, then deploy from branch).
+| Done | Item |
+|---|---|
+| YES | Repository created and code pushed to `main`: https://github.com/dangminh232006/Web-Project-Group-3 |
+| YES | GitHub Pages enabled (branch `main`, root) and building: https://dangminh232006.github.io/Web-Project-Group-3/ |
+| YES | GitHub and Pages URLs embedded in the footer of all four pages |
+| NO | Jira board - does not exist |
+
+1. ~~Create the GitHub repository.~~ **Done.** But note: the first real commit was
+   made by one account. **Each member must still commit their own page** under
+   their own GitHub account, or the history will not evidence the "one page each"
+   requirement (rubric G11).
+2. ~~Enable GitHub Pages.~~ **Done.**
 3. Open the live URL and re-run V-05 and V-07 **on the deployed site**, not just
    locally. Check the browser console for missing files.
-4. Put the real Jira, GitHub and Pages URLs into the footer of all four pages,
-   commit, and redeploy.
+4. ~~Put the GitHub and Pages URLs into the footer.~~ **Done.** The **Jira URL is
+   still a pending marker** - replace it once the board exists, then commit and
+   push (Pages redeploys automatically in about 40 seconds).
 5. Create the Jira project, import or hand-enter `jira-backlog.csv`, run the two
    sprints, and **share the board with your tutor**.
 6. Submit the Group Agreement. It is due **before** project work begins and must
