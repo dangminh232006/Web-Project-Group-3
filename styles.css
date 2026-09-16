@@ -234,19 +234,6 @@ a[href^="mailto:"]::before {
   content: "\2709\00a0";
 }
 
-/* A requirement we cannot satisfy yet is shown as an explicit pending marker
-   rather than a dead link. See docs/release-checklist.md. */
-.pending {
-  color: var(--c-accent);
-  font-weight: 600;
-}
-
-.pending::after {
-  content: " (URL not supplied yet)";
-  font-weight: 400;
-  color: var(--c-ink-soft);
-}
-
 .note {
   background-color: #eef4f5;
   padding: 0.75rem 1rem;

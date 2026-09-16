@@ -336,11 +336,22 @@ never reach a real inbox, so no real address is fabricated.
 (https://github.com/dangminh232006/Web-Project-Group-3), the live GitHub Pages site (https://dangminh232006.github.io/Web-Project-Group-3/), and the contact email, which is
 now the group's Swinburne student address rather than the `.example` placeholder.
 
-**One pending marker remains: the Jira project board.** It could not be created -
-the only Atlassian site reachable from this workspace is `cos20031-2026`, which
-belongs to a different unit and grants **Confluence scopes only, no Jira scopes**.
-The board must be created by the group and its URL pasted into the footer of all
-four pages. Until then it stays a visible pending marker, not a dead link.
+**Update: all four footer items are now live links.** The group supplied the Jira
+board, so no pending markers remain anywhere on the site and the `.pending` CSS
+rules were deleted as dead code.
+
+**On the Jira URL specifically.** The link supplied was to a single issue,
+`/browse/SAM1-11`. The brief asks for a *project* link, so the issue number was
+dropped to give `/browse/SAM1`, which opens the project rather than one arbitrary
+task. The project key `SAM1` was read directly from the supplied issue key - it
+was not guessed. A board URL of the form `/jira/software/projects/SAM1/boards/1`
+was deliberately **not** used, because the board id would have been invented.
+
+**What could not be verified, and why.** The Atlassian connector available here
+reaches only `cos20031-2026`, a different unit, with Confluence scopes and no Jira
+scopes. Jira Cloud also returns HTTP 200 for nearly any path because it is a
+single-page app, so a 200 proves only that the site responds. The group must open
+the footer link while logged in and confirm it lands on the project.
 
 **Note on the email.** It is now publicly visible on a deployed public site, so it
 will be scraped by spam bots. That was a deliberate choice, preferred over an

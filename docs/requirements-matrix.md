@@ -33,7 +33,7 @@ the totals, which match the Canvas value of 70 points.
 | A4 | Company description | `#home-hero` lead paragraphs | visual check | **Verified** |
 | A5 | Company-related image | `.hero__figure img` -> `images/workplace.svg`, with descriptive `alt` | TC-14 | **Verified** |
 | A6 | Common navigation menu | `#site-nav` - Home, Jobs, Apply, About in the same order on all 4 pages | TC-32 tab order | **Verified** |
-| A7 | Footer: Jira project link | `#site-footer` pending marker | - | **Needs information** - board does not exist (D-13) |
+| A7 | Footer: Jira project link | `#site-footer` -> https://group3-cos10026.atlassian.net/browse/SAM1 | link present on all 4 pages; destination not independently verifiable (see note) | **Implemented** |
 | A8 | Footer: GitHub repository link | `#site-footer` -> https://github.com/dangminh232006/Web-Project-Group-3 | live link, HTTP 200 | **Verified** |
 | A9 | Footer: live GitHub Pages link | `#site-footer` -> https://dangminh232006.github.io/Web-Project-Group-3/ | deployed, all pages HTTP 200 | **Verified** |
 | A10 | Footer: email link | `a[href^="mailto:"]` -> `105716425@student.swin.edu.au` | TC-01 | **Verified** |
@@ -155,7 +155,7 @@ the totals, which match the Canvas value of 70 points.
 | Pseudo-class (state) | `:hover`, `:focus-visible`, `:focus` | interaction feedback |
 | Pseudo-class (form) | `:required:invalid`, `:required:valid` | live validation feedback |
 | Pseudo-class (structural) | `#fun-facts tbody tr:nth-child(even)` | zebra striping |
-| Pseudo-element | `a[href^="mailto:"]::before`, `.pending::after` | generated content |
+| Pseudo-element | `a[href^="mailto:"]::before` | generated content |
 | Grouping | `h1, h2, h3, h4` | shared heading rhythm |
 | Universal | `*, *::before, *::after` | box-sizing reset |
 | At-rules | `@media screen and (min-width: ...)`, `@media (prefers-reduced-motion: reduce)`, `@media print` | responsive and user preference |
@@ -208,13 +208,17 @@ the totals, which match the Canvas value of 70 points.
 
 | # | Requirement | Status |
 |---|---|---|
-| H1 | Jira used to manage the project | **Blocked** - no Jira instance or URL supplied; nothing was created |
-| H2 | Epics, user stories and tasks | **Implemented as a proposal only** - `jira-backlog.csv` |
-| H3 | At least two sprints | **Implemented as a proposal only** - `project-workflow.md` |
-| H4 | Board shared with the tutor | **Blocked** |
+| H1 | Jira used to manage the project | **Implemented by the group** - a board exists at `group3-cos10026.atlassian.net`, project key `SAM1`, and is linked in the footer. Its contents could **not** be inspected from this workspace |
+| H2 | Epics, user stories and tasks | **Not verified** - the group must confirm the board actually contains epics, stories and tasks. `jira-backlog.csv` remains a proposal that may or may not match what is on the board |
+| H3 | At least two sprints | **Not verified** - confirm two sprints exist on the board |
+| H4 | Board shared with the tutor | **Not verified** - confirm tutor access explicitly |
 
-> A CSV file is not a populated Jira board. Until the issues exist in a real
-> project and the tutor has access, H1 to H4 score nothing.
+> **Why these are "not verified" and not "verified".** The Atlassian connector
+> available here reaches only `cos20031-2026` (a different unit) with Confluence
+> scopes only, so the `group3-cos10026` site could not be read. Jira Cloud is a
+> single-page app that returns HTTP 200 for almost any path, so a 200 response
+> proves the site exists - it does **not** prove the project, the board, the
+> issues or the sprints exist. Only someone logged in can confirm that.
 
 ---
 
@@ -225,7 +229,7 @@ the totals, which match the Canvas value of 70 points.
 | Group code and industry not allocated | B17, D1 - affects Jobs and About |
 | Group photograph missing | D5, D6 - About |
 | Member names, IDs, contributions, quotes, fun facts missing | D1 to D4, D10, G11 - About and Submission |
-| Jira board not created | H1 to H4 - all 5 Jira marks |
+| Jira board contents unverified (board exists and is linked) | H2 to H4 |
 | ~~GitHub repository and Pages deployment~~ | **Resolved** - A8, A9, G5, G6 now verified |
 | Accessibility Guideline PDF not reviewed | F15 |
 | Skills checkbox interpretation unapproved | C17 |

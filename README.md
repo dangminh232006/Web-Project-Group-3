@@ -8,12 +8,13 @@ frameworks, no build step, no external requests.
 
 > ## Status: NOT READY TO SUBMIT
 >
-> The code is complete, validates, and is **deployed live**. The **human content
-> does not exist yet** - no group code, no member names, no group photo, and no
-> Jira board. Start at **`docs/release-checklist.md`**, which lists every blocker.
+> The code is complete, validates, and is **deployed live**. The **team content
+> does not exist yet** - no confirmed group code, no member names, no group photo.
+> Start at **`docs/release-checklist.md`**, which lists every blocker.
 >
 > - Live site: https://dangminh232006.github.io/Web-Project-Group-3/
 > - Repository: https://github.com/dangminh232006/Web-Project-Group-3
+> - Jira board: https://group3-cos10026.atlassian.net/browse/SAM1
 >
 > `Harbourline Digital` is a **fictional company** invented for this assessment.
 > No vacancy, salary or statement on the site describes a real employer.
@@ -131,9 +132,9 @@ grep -rn 'class="tbd"' about.html     # member details, quotes, fun facts
 grep -rn 'class="pending"' *.html     # Jira, GitHub and Pages URLs
 ```
 
-`class="tbd"` must return **nothing** before you submit. `class="pending"` should
-return exactly **one** hit per page - the Jira board, which does not exist yet.
-Full instructions per placeholder are in `docs/release-checklist.md` section 3.
+Both must return **nothing** before you submit - `class="pending"` already does,
+because all four footer links are now real. Full instructions per placeholder are
+in `docs/release-checklist.md` section 3.
 
 ---
 
@@ -151,8 +152,9 @@ repository root.
 
 Redeploy is automatic: push to `main` and Pages rebuilds in about 40 seconds.
 
-**Still not done:** the Jira board does not exist. See `docs/release-checklist.md`
-section 6.
+**Still to confirm:** the Jira board is linked, but its contents (epics, stories,
+tasks, two sprints) and tutor access could not be verified from here. See
+`docs/release-checklist.md` section 6.
 
 ## Packaging
 
