@@ -1,0 +1,805 @@
+/*
+filename: styles.css
+author: [PENDING - see docs/contributions.md; each member records the sections they wrote]
+created: 2026-09-16
+last modified: 2026-09-16
+description: Single external stylesheet for index.html, jobs.html, apply.html and about.html
+             (Harbourline Digital recruitment site, COS10026 Applied Web Project Part 1).
+*/
+
+/* Generative AI acknowledgement (unit requirement - Canvas "Unit Requirement: GenAI Acknowledgment").
+   Parts of this stylesheet were drafted with assistance from Claude (Anthropic, Opus 5, September 2026).
+   All rules were reviewed, edited and tested by the team before submission.
+   Full statement: docs/ai-use.md */
+
+/* ==========================================================================
+   1. BASE - design tokens, resets and typography
+   ========================================================================== */
+
+/* Design tokens keep colour and spacing decisions in one place so the four
+   pages stay visually consistent. Hex colours are reused on about.html. */
+:root {
+  --c-ink: #11263a;
+  --c-ink-soft: #46586b;
+  --c-brand: #0d4f5c;
+  --c-brand-dark: #08333c;
+  --c-accent: #8a3d12;
+  --c-surface: #f6f8f8;
+  --c-panel: #ffffff;
+  --c-line: #cfdadd;
+  --c-focus: #b34700;
+  --radius: 10px;
+  --measure: 68ch;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  /* System font stack only - the brief forbids external dependencies, so no web fonts. */
+  font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-size: 100%;
+  line-height: 1.6;
+  color: var(--c-ink);
+  background-color: var(--c-surface);
+}
+
+/* Headings step down predictably so the document outline is obvious. */
+h1, h2, h3, h4 {
+  line-height: 1.25;
+  color: var(--c-brand-dark);
+  margin: 0 0 0.5em;
+}
+
+h1 { font-size: 1.9rem; }
+h2 { font-size: 1.45rem; }
+h3 { font-size: 1.15rem; }
+
+p, li { max-width: var(--measure); }
+
+/* Adjacent sibling combinator: the lead paragraph directly after a section
+   heading is emphasised without needing an extra class in the markup. */
+h2 + p {
+  color: var(--c-ink-soft);
+  font-size: 1.05rem;
+}
+
+a {
+  color: var(--c-accent);
+  text-underline-offset: 0.15em;
+}
+
+a:hover {
+  color: var(--c-brand-dark);
+}
+
+/* Accessibility: a visible, high-contrast focus ring on every interactive
+   element. Do not remove - keyboard users depend on it. */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid var(--c-focus);
+  outline-offset: 2px;
+  border-radius: 3px;
+}
+
+img,
+svg {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Skip link - off screen until focused, then pinned to the top left. */
+#skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  background-color: var(--c-brand-dark);
+  color: #ffffff;
+  padding: 0.6rem 1rem;
+  z-index: 10;
+}
+
+#skip-link:focus {
+  left: 0;
+}
+
+/* Visually hidden but still announced by screen readers.
+   Note on "clip": it is deprecated in favour of clip-path, but the W3C CSS
+   validator's css3 profile does not recognise clip-path and reports it as an
+   error. We chose the declaration that validates cleanly and accepts one
+   deprecation warning. See docs/decisions.md (D-08). */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+}
+
+/* ==========================================================================
+   2. SHARED LAYOUT - page shell and reusable blocks
+   ========================================================================== */
+
+.wrap {
+  width: 100%;
+  max-width: 68rem;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+main {
+  display: block;
+  padding: 1.5rem 0 2.5rem;
+}
+
+section {
+  margin-bottom: 2.25rem;
+}
+
+.panel {
+  background-color: var(--c-panel);
+  border: 1px solid var(--c-line);
+  border-radius: var(--radius);
+  padding: 1.25rem;
+}
+
+/* Call-to-action button shared by the home page and the job listings. */
+.btn {
+  display: inline-block;
+  background-color: var(--c-brand);
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 0.65rem 1.15rem;
+  border: 2px solid var(--c-brand);
+  border-radius: var(--radius);
+}
+
+.btn:hover {
+  background-color: var(--c-brand-dark);
+  border-color: var(--c-brand-dark);
+  color: #ffffff;
+}
+
+.btn--ghost {
+  background-color: transparent;
+  color: var(--c-brand-dark);
+}
+
+.btn--ghost:hover {
+  background-color: var(--c-brand);
+  color: #ffffff;
+}
+
+/* Wide data tables cannot compress below their min-content width, which made
+   the whole page scroll sideways at 320px. The table now scrolls inside its own
+   region instead. tabindex="0" in the HTML makes that region reachable and
+   scrollable by keyboard, which is required once a scroll container exists. */
+.table-scroll {
+  overflow-x: auto;
+  max-width: 100%;
+}
+
+.table-scroll:focus-visible {
+  outline: 3px solid var(--c-focus);
+  outline-offset: 2px;
+}
+
+/* Shared data table styling (home page process table, about page fun facts). */
+table {
+  border-collapse: collapse;
+  width: 100%;
+  background-color: var(--c-panel);
+}
+
+caption {
+  caption-side: top;
+  text-align: left;
+  font-weight: 700;
+  color: var(--c-brand-dark);
+  padding-bottom: 0.5rem;
+}
+
+th,
+td {
+  border: 1px solid var(--c-line);
+  padding: 0.6rem 0.7rem;
+  text-align: left;
+  vertical-align: top;
+}
+
+thead th {
+  background-color: var(--c-brand);
+  color: #ffffff;
+}
+
+/* Row-group headers (the merged Phase cells) read as headings, not data. */
+tbody th {
+  background-color: #e8f0f1;
+  color: var(--c-brand-dark);
+}
+
+/* Attribute selector: mark email links so their purpose is obvious. */
+a[href^="mailto:"]::before {
+  content: "\2709\00a0";
+}
+
+/* A requirement we cannot satisfy yet is shown as an explicit pending marker
+   rather than a dead link. See docs/release-checklist.md. */
+.pending {
+  color: var(--c-accent);
+  font-weight: 600;
+}
+
+.pending::after {
+  content: " (URL not supplied yet)";
+  font-weight: 400;
+  color: var(--c-ink-soft);
+}
+
+.note {
+  background-color: #eef4f5;
+  padding: 0.75rem 1rem;
+  border-radius: var(--radius);
+}
+
+/* ==========================================================================
+   3. NAVIGATION AND FOOTER - shared by all four pages
+   ========================================================================== */
+
+#site-header {
+  background-color: var(--c-panel);
+  border-bottom: 3px solid var(--c-brand);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.9rem 0 0.6rem;
+  text-decoration: none;
+  color: inherit;
+}
+
+.brand img {
+  width: 44px;
+  height: 44px;
+}
+
+.brand__name {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--c-brand-dark);
+  margin: 0;
+}
+
+.brand__slogan {
+  font-size: 0.85rem;
+  color: var(--c-ink-soft);
+  margin: 0;
+}
+
+/* Navigation is a plain list - it works with no JavaScript at any width. */
+#site-nav ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+  margin: 0;
+  padding: 0 0 0.5rem;
+}
+
+/* Descendant combinator. */
+#site-nav a {
+  display: block;
+  padding: 0.55rem 0.9rem;
+  text-decoration: none;
+  font-weight: 600;
+  color: var(--c-brand-dark);
+  border-radius: var(--radius);
+}
+
+#site-nav a:hover {
+  background-color: #e8f0f1;
+}
+
+/* The current page is marked with aria-current in the HTML, so the styling
+   and the accessible name stay in sync. */
+#site-nav a[aria-current="page"] {
+  background-color: var(--c-brand);
+  color: #ffffff;
+}
+
+#site-footer {
+  background-color: var(--c-brand-dark);
+  color: #e9f1f2;
+  padding: 1.75rem 0;
+  margin-top: 2rem;
+}
+
+#site-footer h2 {
+  color: #ffffff;
+  font-size: 1.1rem;
+}
+
+#site-footer a {
+  color: #bfe9df;
+}
+
+#site-footer a:hover {
+  color: #ffffff;
+}
+
+#site-footer ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1rem;
+}
+
+#site-footer li {
+  margin-bottom: 0.4rem;
+}
+
+.footer-grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.footer-note {
+  font-size: 0.85rem;
+  color: #bcd2d6;
+  border-top: 1px solid #1d5b68;
+  padding-top: 0.9rem;
+  max-width: none;
+}
+
+/* ==========================================================================
+   4. HOME PAGE (index.html)
+   ========================================================================== */
+
+/* Required by the brief: a background graphic applied with CSS.
+   The pattern is a local SVG, tiled, drawn at low opacity so text contrast
+   is never compromised. */
+#home-hero {
+  background-color: var(--c-panel);
+  background-image: url("images/bg-pattern.svg");
+  background-repeat: repeat;
+  background-position: top left;
+  border: 1px solid var(--c-line);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+}
+
+.hero__grid {
+  display: grid;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+/* Site search prototype. Flexbox so it reflows on small screens. */
+#site-search .search-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+#site-search input[type="search"] {
+  flex: 1 1 14rem;
+  min-width: 0;
+  padding: 0.6rem 0.7rem;
+  font-size: 1rem;
+  border: 2px solid var(--c-line);
+  border-radius: var(--radius);
+}
+
+#site-search button {
+  padding: 0.6rem 1.1rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #ffffff;
+  background-color: var(--c-brand);
+  border: 2px solid var(--c-brand);
+  border-radius: var(--radius);
+  cursor: pointer;
+}
+
+#site-search button:hover {
+  background-color: var(--c-brand-dark);
+}
+
+/* Reconciliation and inclusive employment statement. */
+#acknowledgement {
+  background-color: #f0f6f2;
+  border: 1px solid #b9d6c6;
+  border-radius: var(--radius);
+  padding: 1.25rem;
+}
+
+/* ==========================================================================
+   5. JOBS PAGE (jobs.html)
+   ========================================================================== */
+
+/* flow-root contains the floated aside so it cannot escape its job card. */
+.job {
+  display: flow-root;
+  background-color: var(--c-panel);
+  border: 1px solid var(--c-line);
+  border-radius: var(--radius);
+  padding: 1.25rem;
+  margin-bottom: 1.75rem;
+}
+
+.job__ref {
+  display: inline-block;
+  font-family: Consolas, "Courier New", monospace;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  background-color: #e8f0f1;
+  color: var(--c-brand-dark);
+  border: 1px solid var(--c-line);
+  border-radius: 6px;
+  padding: 0.15rem 0.5rem;
+}
+
+.job__meta {
+  margin: 0.75rem 0 1rem;
+}
+
+.job__meta dt {
+  font-weight: 700;
+  color: var(--c-brand-dark);
+}
+
+.job__meta dd {
+  margin: 0 0 0.5rem;
+}
+
+/* Child combinator: only direct list items are spaced, so nested notes
+   keep their default rhythm. */
+.responsibilities > li {
+  margin-bottom: 0.35rem;
+}
+
+/* Base (narrow screens): the aside is a normal full-width block.
+   The float is added at the large breakpoint - see section 8. */
+.job__aside {
+  background-color: #eef4f5;
+  border: 2px solid var(--c-brand);
+  border-radius: var(--radius);
+  padding: 1rem;
+  margin: 0 0 1.25rem;
+  width: auto;
+}
+
+.job__aside h3 {
+  margin-top: 0;
+}
+
+.job__aside ul {
+  padding-left: 1.1rem;
+  margin-bottom: 0;
+}
+
+/* ==========================================================================
+   6. APPLY PAGE (apply.html)
+   ========================================================================== */
+
+/* Required by the brief: the form layout uses CSS Grid.
+   One column on small screens, two columns from the medium breakpoint up. */
+#application-form {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.1rem 1.5rem;
+  align-items: start;
+}
+
+/* Fieldsets and any field marked .field--wide span the full grid width. */
+#application-form fieldset,
+#application-form .field--wide,
+#application-form .form-actions {
+  grid-column: 1 / -1;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.field label {
+  font-weight: 600;
+  color: var(--c-brand-dark);
+}
+
+.field input,
+.field select,
+.field textarea {
+  font-family: inherit;
+  font-size: 1rem;
+  padding: 0.55rem 0.6rem;
+  border: 2px solid var(--c-line);
+  border-radius: var(--radius);
+  background-color: var(--c-panel);
+  color: var(--c-ink);
+}
+
+.field textarea {
+  min-height: 7rem;
+  resize: vertical;
+}
+
+/* Format hints sit under the control and are wired up with aria-describedby. */
+.hint {
+  font-size: 0.85rem;
+  color: var(--c-ink-soft);
+  max-width: none;
+}
+
+/* Pseudo-class selectors give live validation feedback. The wording of each
+   hint carries the same information, so the cue is never colour-only. */
+.field input:required:invalid,
+.field select:required:invalid {
+  border-color: var(--c-accent);
+}
+
+.field input:required:valid,
+.field select:required:valid {
+  border-color: #2f6b4f;
+}
+
+fieldset {
+  border: 2px solid var(--c-line);
+  border-radius: var(--radius);
+  padding: 1rem;
+  margin: 0;
+  background-color: var(--c-panel);
+}
+
+legend {
+  font-weight: 700;
+  color: var(--c-brand-dark);
+  padding: 0 0.4rem;
+}
+
+/* Radio and checkbox groups use flexbox so each control and its label stay
+   together on one line. */
+.choice-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.5rem;
+}
+
+.choice {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.choice label {
+  font-weight: 400;
+  margin: 0;
+}
+
+/* Attribute selector: give the small tick boxes a usable hit area. */
+input[type="checkbox"],
+input[type="radio"] {
+  width: 1.1rem;
+  height: 1.1rem;
+  accent-color: var(--c-brand);
+}
+
+.form-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  align-items: center;
+  border-top: 1px solid var(--c-line);
+  padding-top: 1.1rem;
+}
+
+button[type="submit"] {
+  background-color: var(--c-brand);
+  color: #ffffff;
+  font-size: 1.05rem;
+  font-weight: 700;
+  padding: 0.7rem 1.4rem;
+  border: 2px solid var(--c-brand);
+  border-radius: var(--radius);
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background-color: var(--c-brand-dark);
+}
+
+button[type="reset"] {
+  background-color: transparent;
+  color: var(--c-brand-dark);
+  font-size: 1rem;
+  padding: 0.7rem 1.2rem;
+  border: 2px solid var(--c-line);
+  border-radius: var(--radius);
+  cursor: pointer;
+}
+
+/* ==========================================================================
+   7. ABOUT PAGE (about.html)
+   ========================================================================== */
+
+/* Required by the brief: student IDs are styled distinctly from body text. */
+.student-id {
+  font-family: Consolas, "Courier New", monospace;
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: #ffffff;
+  background-color: #0d4f5c;
+  border-radius: 6px;
+  padding: 0.1rem 0.45rem;
+}
+
+#class-details ul {
+  padding-left: 1.2rem;
+}
+
+#class-details ul ul {
+  margin-top: 0.3rem;
+}
+
+/* Member contribution list. */
+#contributions dt {
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: var(--c-brand-dark);
+  margin-top: 1rem;
+}
+
+#contributions dd {
+  margin: 0.25rem 0 0.25rem 1rem;
+}
+
+/* Quotes carry a lang attribute in the HTML so assistive technology can
+   switch pronunciation to the member's first language. */
+.quote {
+  font-style: italic;
+}
+
+.quote__translation {
+  font-style: normal;
+  color: var(--c-ink-soft);
+}
+
+/* Required by the brief: the group photo figure has a visible border. */
+#group-photo {
+  border: 4px solid #0d4f5c;
+  border-radius: var(--radius);
+  background-color: var(--c-panel);
+  padding: 0.9rem;
+  margin: 0 0 1.5rem;
+  max-width: 34rem;
+}
+
+#group-photo figcaption {
+  font-size: 0.9rem;
+  color: var(--c-ink-soft);
+  padding-top: 0.6rem;
+}
+
+/* Placeholder shown until the real group photograph is supplied. It is drawn
+   entirely in CSS, so the browser never requests a missing image file. */
+.photo-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 0.4rem;
+  background-color: #eef4f5;
+  border: 3px dashed #0d4f5c;
+  border-radius: var(--radius);
+  padding: 2rem 1rem;
+  color: var(--c-brand-dark);
+  font-weight: 600;
+}
+
+/* Required by the brief: fun facts table uses hexadecimal colours and a
+   hover effect. Zebra striping uses a structural pseudo-class. */
+#fun-facts caption {
+  color: #08333c;
+}
+
+#fun-facts thead th {
+  background-color: #0d4f5c;
+  color: #ffffff;
+}
+
+#fun-facts tbody tr:nth-child(even) {
+  background-color: #f2f7f8;
+}
+
+/* The hover highlight is decorative only. Every cell is fully readable
+   without it, so keyboard and touch users lose no information. */
+#fun-facts tbody tr:hover {
+  background-color: #dbeceb;
+  color: #08333c;
+}
+
+/* ==========================================================================
+   8. RESPONSIVE OVERRIDES AND USER PREFERENCES
+   ========================================================================== */
+
+/* Medium screens and up (approx. 640px): two-column form and footer. */
+@media screen and (min-width: 40em) {
+  h1 { font-size: 2.3rem; }
+
+  #application-form {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .footer-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* Large screens and up (approx. 1024px).
+   This is where the brief's floated aside applies: float right at 25% width
+   with margin, padding and border. Below this width the rule never applies,
+   so the aside stays a full-width block in the normal flow (see section 5). */
+@media screen and (min-width: 64em) {
+  .job__aside {
+    float: right;
+    width: 25%;
+    margin: 0 0 1rem 1.5rem;
+  }
+
+  .hero__grid {
+    grid-template-columns: 1.15fr 1fr;
+  }
+
+  .footer-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+/* Respect a reduced-motion preference. */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms;
+    animation-iteration-count: 1;
+    transition-duration: 0.01ms;
+    scroll-behavior: auto;
+  }
+}
+
+/* Print: drop navigation chrome so a job description prints cleanly. */
+@media print {
+  #site-header,
+  #site-footer,
+  #site-search {
+    display: none;
+  }
+
+  body {
+    background-color: #ffffff;
+    color: #000000;
+  }
+}

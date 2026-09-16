@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<!--
+  apply.html - Job application form for the Harbourline Digital recruitment site.
+  COS10026 Web Technology Project, Applied Web Project Part 1.
+
+  THIS IS AN EDUCATIONAL PROTOTYPE. The form posts to the Swinburne Mercury test
+  script, which simply echoes back whatever it receives. Do not enter real
+  personal information. See docs/decisions.md (D-03) for why this endpoint is
+  provisional and docs/test-report.md for what was actually tested.
+
+  Generative AI acknowledgement (unit requirement):
+  Parts of this page were drafted with assistance from Claude (Anthropic, Opus 5,
+  September 2026). All markup and validation patterns were reviewed, edited and
+  tested by the team before submission. Full statement: docs/ai-use.md
+-->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Apply for a vacancy at Harbourline Digital. Enter the five character job reference, your contact details and your skills.">
+  <title>Apply for a role - Harbourline Digital</title>
+  <link rel="icon" href="images/logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Embedded CSS example (required on every page).
+       Both rules serve the form only: the required marker needs to read as a
+       marker rather than a typo, and format examples inside hints need to look
+       like sample values rather than prose. -->
+  <style>
+    .req {
+      color: #8a3d12;
+      font-weight: 700;
+    }
+
+    .hint code {
+      background-color: #eef4f5;
+      border-radius: 3px;
+      padding: 0 0.25rem;
+    }
+  </style>
+</head>
+
+<body>
+  <a id="skip-link" href="#main-content">Skip to main content</a>
+
+  <header id="site-header">
+    <div class="wrap">
+      <a class="brand" href="index.html">
+        <img src="images/logo.svg" alt="Harbourline Digital logo" width="44" height="44">
+        <span>
+          <span class="brand__name">Harbourline Digital</span>
+          <span class="brand__slogan">Digital services people actually rely on</span>
+        </span>
+      </a>
+
+      <nav id="site-nav" aria-label="Main">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="jobs.html">Jobs</a></li>
+          <li><a href="apply.html" aria-current="page">Apply</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <div class="wrap">
+
+      <section aria-labelledby="apply-heading">
+        <h1 id="apply-heading">Apply for a role</h1>
+        <p>
+          One form covers one vacancy. Take the five character reference number
+          from the <a href="jobs.html">vacancy you want</a> and type it into the
+          first field.
+        </p>
+
+        <p class="note">
+          <strong>This is a student prototype, not a real recruitment system.</strong>
+          It was built for COS10026 coursework. Submitting the form sends the
+          fields to a Swinburne test script that echoes them back to you; nothing
+          is stored by this site, and no application is received by anyone.
+          Please enter made-up test data only. Do not enter a real date of birth,
+          a real address, or any other genuine personal information.
+        </p>
+
+        <p>
+          Fields marked <span class="req" aria-hidden="true">*</span>
+          <span class="visually-hidden">(required)</span> must be completed.
+          Only <strong>Other skills</strong> is optional.
+        </p>
+      </section>
+
+      <section aria-labelledby="form-heading">
+        <h2 id="form-heading">Application form</h2>
+
+        <!-- The action below is PROVISIONAL. The assessment brief contains a
+             malformed link: the visible text reads
+             https://mercury.swin.edu.au/it000000/formtest.php but the href
+             attribute is the broken relative value "formtest.php." We have used
+             the visible address. "it000000" is almost certainly a placeholder
+             for a real Mercury account id and probably needs replacing with the
+             group's own. Confirm with the tutor before submission.
+             See docs/decisions.md (D-03). -->
+        <form id="application-form"
+              method="post"
+              action="https://mercury.swin.edu.au/it000000/formtest.php">
+
+          <!-- Job reference: exactly 5 alphanumeric characters. -->
+          <div class="field">
+            <label for="jobReference">Job reference number <span class="req" aria-hidden="true">*</span></label>
+            <input type="text" id="jobReference" name="jobReference"
+                   pattern="[A-Za-z0-9]{5}" minlength="5" maxlength="5"
+                   required aria-describedby="jobReference-hint">
+            <p class="hint" id="jobReference-hint">
+              Exactly 5 letters or digits, no spaces. For example <code>HD417</code>.
+            </p>
+          </div>
+
+          <!-- First name: alphabetic only, maximum 20 characters. The pattern
+               accepts A-Z and a-z only, exactly as the brief specifies. This
+               means hyphenated names, apostrophes and accented letters are
+               rejected - a real limitation, recorded in docs/decisions.md (D-05). -->
+          <div class="field">
+            <label for="firstName">First name <span class="req" aria-hidden="true">*</span></label>
+            <input type="text" id="firstName" name="firstName"
+                   pattern="[A-Za-z]{1,20}" maxlength="20"
+                   autocomplete="given-name"
+                   required aria-describedby="firstName-hint">
+            <p class="hint" id="firstName-hint">
+              Letters A to Z only, up to 20 characters. No spaces, hyphens or apostrophes.
+            </p>
+          </div>
+
+          <div class="field">
+            <label for="lastName">Last name <span class="req" aria-hidden="true">*</span></label>
+            <input type="text" id="lastName" name="lastName"
+                   pattern="[A-Za-z]{1,20}" maxlength="20"
+                   autocomplete="family-name"
+                   required aria-describedby="lastName-hint">
+            <p class="hint" id="lastName-hint">
+              Letters A to Z only, up to 20 characters. No spaces, hyphens or apostrophes.
+            </p>
+          </div>
+
+          <!-- Date of birth in dd/mm/yyyy, as the brief specifies.
+               A text input is used deliberately: type="date" submits yyyy-mm-dd
+               and would change the required format. The pattern checks the shape
+               and the numeric ranges, but it cannot check the calendar, so
+               31/02/2000 is accepted. Documented in docs/decisions.md (D-06). -->
+          <div class="field">
+            <label for="dateOfBirth">Date of birth <span class="req" aria-hidden="true">*</span></label>
+            <input type="text" id="dateOfBirth" name="dateOfBirth"
+                   pattern="(0[1-9]|[12][0-9]|3[01])/(0[1-9]|1[0-2])/(19|20)[0-9]{2}"
+                   maxlength="10" inputmode="numeric" placeholder="dd/mm/yyyy"
+                   required aria-describedby="dateOfBirth-hint">
+            <p class="hint" id="dateOfBirth-hint">
+              Use the format <code>dd/mm/yyyy</code>, for example <code>04/09/1998</code>.
+              Include the leading zero for single digit days and months.
+            </p>
+          </div>
+
+          <!-- Radio group in a fieldset with a legend, as the brief requires.
+               required on one radio makes the whole group required. -->
+          <fieldset>
+            <legend>Gender <span class="req" aria-hidden="true">*</span></legend>
+            <div class="choice-grid">
+              <span class="choice">
+                <input type="radio" id="genderFemale" name="gender" value="female" required>
+                <label for="genderFemale">Female</label>
+              </span>
+              <span class="choice">
+                <input type="radio" id="genderMale" name="gender" value="male" required>
+                <label for="genderMale">Male</label>
+              </span>
+              <span class="choice">
+                <input type="radio" id="genderOther" name="gender" value="other" required>
+                <label for="genderOther">Another term</label>
+              </span>
+              <span class="choice">
+                <input type="radio" id="genderUndisclosed" name="gender" value="undisclosed" required>
+                <label for="genderUndisclosed">Prefer not to say</label>
+              </span>
+            </div>
+          </fieldset>
+
+          <div class="field field--wide">
+            <label for="streetAddress">Street address <span class="req" aria-hidden="true">*</span></label>
+            <input type="text" id="streetAddress" name="streetAddress"
+                   maxlength="40" autocomplete="address-line1"
+                   required aria-describedby="streetAddress-hint">
+            <p class="hint" id="streetAddress-hint">Maximum 40 characters.</p>
+          </div>
+
+          <div class="field">
+            <label for="suburb">Suburb or town <span class="req" aria-hidden="true">*</span></label>
+            <input type="text" id="suburb" name="suburb"
+                   maxlength="40" autocomplete="address-level2"
+                   required aria-describedby="suburb-hint">
+            <p class="hint" id="suburb-hint">Maximum 40 characters.</p>
+          </div>
+
+          <div class="field">
+            <label for="state">State or territory <span class="req" aria-hidden="true">*</span></label>
+            <select id="state" name="state" required>
+              <option value="">Please choose</option>
+              <option value="VIC">VIC</option>
+              <option value="NSW">NSW</option>
+              <option value="QLD">QLD</option>
+              <option value="NT">NT</option>
+              <option value="WA">WA</option>
+              <option value="SA">SA</option>
+              <option value="TAS">TAS</option>
+              <option value="ACT">ACT</option>
+            </select>
+          </div>
+
+          <!-- Postcode: exactly 4 digits. type="text" with inputmode="numeric"
+               is used on purpose - type="number" would strip a leading zero and
+               break postcodes such as 0800 (Darwin). -->
+          <div class="field">
+            <label for="postcode">Postcode <span class="req" aria-hidden="true">*</span></label>
+            <input type="text" id="postcode" name="postcode"
+                   pattern="[0-9]{4}" minlength="4" maxlength="4"
+                   inputmode="numeric" autocomplete="postal-code"
+                   style="max-width: 10rem;"
+                   required aria-describedby="postcode-hint">
+            <!-- Inline CSS example (required on every page): a four digit field
+                 does not need a full column, and no other control on the site
+                 wants this width, so the value stays on the element. -->
+            <p class="hint" id="postcode-hint">
+              Exactly 4 digits. Leading zeros are kept, for example <code>0800</code>.
+            </p>
+          </div>
+
+          <div class="field">
+            <label for="email">Email address <span class="req" aria-hidden="true">*</span></label>
+            <input type="email" id="email" name="email"
+                   maxlength="100" autocomplete="email"
+                   required aria-describedby="email-hint">
+            <p class="hint" id="email-hint">
+              For example <code>test.user@example.com</code>. Use a made-up address.
+            </p>
+          </div>
+
+          <!-- Phone: 8 to 12 digits. Again type="text", not type="number", so a
+               leading zero in an Australian number survives. -->
+          <div class="field">
+            <label for="phone">Phone number <span class="req" aria-hidden="true">*</span></label>
+            <input type="text" id="phone" name="phone"
+                   pattern="[0-9]{8,12}" minlength="8" maxlength="12"
+                   inputmode="numeric" autocomplete="tel"
+                   required aria-describedby="phone-hint">
+            <p class="hint" id="phone-hint">
+              Between 8 and 12 digits, no spaces, brackets or plus sign.
+              For example <code>0390001234</code>.
+            </p>
+          </div>
+
+          <!-- Skill list as checkboxes.
+               AMBIGUITY IN THE BRIEF: it says "all fields except textarea must be
+               required", but putting required on every checkbox is NOT the same
+               as requiring at least one selection - HTML has no native way to do
+               the second without JavaScript, which the brief forbids. We have
+               implemented the literal reading: every box carries required, so
+               every box must be ticked. The consequence is stated visibly below
+               so no applicant is caught out. This decision needs tutor approval
+               and is recorded in docs/decisions.md (D-04). -->
+          <!-- The name is "skills[]", not "skills". Tested against the unit's
+               Mercury echo script: with name="skills" only the LAST ticked box
+               arrives at the server and the other four are silently discarded;
+               with name="skills[]" all five arrive. Evidence in
+               docs/test-report.md (TC-30 and TC-31). -->
+          <fieldset>
+            <legend>Skills <span class="req" aria-hidden="true">*</span></legend>
+
+            <p class="hint" id="skills-hint">
+              <strong>Under the current settings every box below must be ticked
+              before the form will submit.</strong> We read the brief literally
+              here. If you meant "tick at least one", tell us and we will change
+              it - it cannot be done in HTML alone.
+            </p>
+
+            <div class="choice-grid">
+              <span class="choice">
+                <input type="checkbox" id="skillHtml" name="skills[]" value="html"
+                       required aria-describedby="skills-hint">
+                <label for="skillHtml">HTML5</label>
+              </span>
+              <span class="choice">
+                <input type="checkbox" id="skillCss" name="skills[]" value="css"
+                       required aria-describedby="skills-hint">
+                <label for="skillCss">CSS3</label>
+              </span>
+              <span class="choice">
+                <input type="checkbox" id="skillAccessibility" name="skills[]" value="accessibility"
+                       required aria-describedby="skills-hint">
+                <label for="skillAccessibility">Accessibility testing</label>
+              </span>
+              <span class="choice">
+                <input type="checkbox" id="skillResponsive" name="skills[]" value="responsive"
+                       required aria-describedby="skills-hint">
+                <label for="skillResponsive">Responsive design</label>
+              </span>
+              <span class="choice">
+                <input type="checkbox" id="skillVersionControl" name="skills[]" value="version-control"
+                       required aria-describedby="skills-hint">
+                <label for="skillVersionControl">Version control</label>
+              </span>
+            </div>
+          </fieldset>
+
+          <!-- The only optional control on the form. -->
+          <div class="field field--wide">
+            <label for="otherSkills">Other skills (optional)</label>
+            <textarea id="otherSkills" name="otherSkills" rows="5"
+                      aria-describedby="otherSkills-hint"></textarea>
+            <p class="hint" id="otherSkills-hint">
+              Anything relevant that is not in the list above. Leave it blank if
+              you would rather not answer.
+            </p>
+          </div>
+
+          <div class="form-actions">
+            <button type="submit">Submit application</button>
+            <button type="reset">Clear the form</button>
+          </div>
+
+          <p class="hint field--wide">
+            Your browser checks these fields before sending them. That is a
+            convenience for you, not a security control: browser side validation
+            can be bypassed, so a production system would have to check
+            everything again on the server. Part 1 of this project is static
+            HTML and CSS, so there is no server side validation here.
+          </p>
+
+        </form>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- Shared footer. The brief asks for four things here: a Jira project link,
+       a GitHub repository link, the live GitHub Pages link and an email link.
+       Where a real URL has not been supplied yet the item is shown as an
+       explicit pending marker rather than a link that goes nowhere. Every
+       pending item is tracked in docs/release-checklist.md. -->
+  <footer id="site-footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div>
+          <h2>Project links</h2>
+          <ul>
+            <li><span class="pending">Jira project board</span></li>
+            <li><span class="pending">GitHub repository</span></li>
+            <li><span class="pending">Live site on GitHub Pages</span></li>
+          </ul>
+        </div>
+
+        <div>
+          <h2>Contact</h2>
+          <ul>
+            <li><a href="mailto:careers@harbourline.example">careers@harbourline.example</a></li>
+          </ul>
+          <p class="footer-note">
+            This address uses the reserved <code>.example</code> domain, so it can
+            never reach a real inbox. Replace it with the group's approved contact
+            address before submission.
+          </p>
+        </div>
+
+        <div>
+          <h2>Site</h2>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="jobs.html">Jobs</a></li>
+            <li><a href="apply.html">Apply</a></li>
+            <li><a href="about.html">About</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <p class="footer-note">
+        Harbourline Digital is a fictional company created for COS10026 Web
+        Technology Project, Applied Web Project Part 1. The vacancies, salaries
+        and hiring process described on this site are coursework scenario content
+        and are not real job advertisements.
+      </p>
+    </div>
+  </footer>
+</body>
+</html>

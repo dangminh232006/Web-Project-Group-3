@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<!--
+  index.html - Home page for the Harbourline Digital recruitment site.
+  COS10026 Web Technology Project, Applied Web Project Part 1.
+
+  Harbourline Digital is a FICTIONAL company invented for this assessment.
+  Nothing on this site describes a real employer, and no vacancy is real.
+
+  Generative AI acknowledgement (unit requirement):
+  Parts of this page were drafted with assistance from Claude (Anthropic, Opus 5,
+  September 2026). All markup was reviewed, edited and tested by the team before
+  submission. Full statement: docs/ai-use.md
+-->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Harbourline Digital is hiring for its web team. See the hiring process, browse current vacancies and apply online.">
+  <title>Harbourline Digital - Careers and current vacancies</title>
+  <link rel="icon" href="images/logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Embedded CSS example (required on every page).
+       These two rules exist only on the home page: they tint the single
+       accent word in the hero heading and cap the width of the hero
+       illustration. Keeping them here avoids adding home-only selectors to
+       the shared stylesheet. Everything else lives in styles.css. -->
+  <style>
+    .hero__accent {
+      color: #0d4f5c;
+      border-bottom: 3px solid #7fd4c1;
+    }
+
+    .hero__figure img {
+      width: 100%;
+      max-width: 26rem;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Keyboard and screen reader users can jump straight past the navigation. -->
+  <a id="skip-link" href="#main-content">Skip to main content</a>
+
+  <header id="site-header">
+    <div class="wrap">
+      <a class="brand" href="index.html">
+        <img src="images/logo.svg" alt="Harbourline Digital logo" width="44" height="44">
+        <span>
+          <span class="brand__name">Harbourline Digital</span>
+          <span class="brand__slogan">Digital services people actually rely on</span>
+        </span>
+      </a>
+
+      <!-- Shared navigation. The same four links, in the same order, appear on
+           every page. aria-current marks the page you are on. -->
+      <nav id="site-nav" aria-label="Main">
+        <ul>
+          <li><a href="index.html" aria-current="page">Home</a></li>
+          <li><a href="jobs.html">Jobs</a></li>
+          <li><a href="apply.html">Apply</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <div class="wrap">
+
+      <!-- Hero: company name, slogan, description and a company-related image.
+           The CSS background graphic required by the brief is applied to this
+           section by the #home-hero rule in styles.css. -->
+      <section id="home-hero">
+        <div class="hero__grid">
+          <div>
+            <h1>Build the services <span class="hero__accent">people depend on</span></h1>
+            <p>
+              Harbourline Digital designs, builds and supports the public-facing
+              web platforms that customers use to book, apply, track and get help.
+              We are a small product team: designers, front-end developers and
+              content specialists who ship accessible, standards-based websites
+              and then look after them properly.
+            </p>
+            <!-- Inline CSS example (required on every page).
+                 This one paragraph is set to a narrower measure than the site
+                 default because it sits beside the illustration. The value is
+                 specific to this single element, so it is not worth a class. -->
+            <p style="max-width: 46ch;">
+              We are hiring across our web team. Every role below is open to
+              applicants at different career stages, and we assess on evidence of
+              skill rather than on years served.
+            </p>
+
+            <p class="hero__actions">
+              <a class="btn" href="jobs.html">See current vacancies</a>
+              <a class="btn btn--ghost" href="apply.html">Start an application</a>
+            </p>
+          </div>
+
+          <figure class="hero__figure">
+            <img src="images/workplace.svg"
+                 alt="Illustration of a product team reviewing a web page layout together"
+                 width="480" height="300">
+          </figure>
+        </div>
+      </section>
+
+      <!-- Search box with a button, as required by the brief.
+           IMPORTANT: this is a static prototype. Submitting it loads the full
+           vacancy list (jobs.html); it does NOT filter by keyword, because
+           filtering needs server-side code and the brief allows HTML and CSS
+           only. The visible note below says so, so nobody is misled. -->
+      <section id="site-search" aria-labelledby="search-heading">
+        <h2 id="search-heading">Search our vacancies</h2>
+        <p>Looking for something specific? Start from the full list of open roles.</p>
+
+        <form action="jobs.html" method="get" role="search">
+          <div class="search-row">
+            <label class="visually-hidden" for="keywords">Search vacancies by keyword</label>
+            <input type="search" id="keywords" name="keywords"
+                   placeholder="e.g. front-end developer"
+                   aria-describedby="search-note">
+            <button type="submit">Search jobs</button>
+          </div>
+          <p class="note" id="search-note">
+            <strong>Prototype only.</strong> This button takes you to the full
+            vacancy list. Keyword filtering is not implemented in Part 1 - the
+            site is static HTML and CSS, with no JavaScript and no server-side
+            search. Any text you type is carried in the address bar but is not
+            used to filter results.
+          </p>
+        </form>
+      </section>
+
+      <!-- Data table using cell merging, as required by the brief.
+           rowspan groups the stages that belong to the same phase;
+           colspan groups the two "what to expect" columns under one heading.
+           scope attributes tell screen readers which header governs which
+           cell, which matters once cells are merged. -->
+      <section aria-labelledby="process-heading">
+        <h2 id="process-heading">How hiring works here</h2>
+        <p>Every applicant goes through the same five stages. No stage is a surprise.</p>
+
+        <div class="table-scroll" tabindex="0" role="region" aria-label="Hiring process table, scrollable">
+        <table>
+          <caption>Harbourline Digital hiring process, stage by stage</caption>
+          <thead>
+            <tr>
+              <th scope="col" rowspan="2">Phase</th>
+              <th scope="col" rowspan="2">Stage</th>
+              <th scope="colgroup" colspan="2">What to expect</th>
+            </tr>
+            <tr>
+              <th scope="col">What happens</th>
+              <th scope="col">Typical timing</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="rowgroup" rowspan="2">Apply</th>
+              <td>1. Online application</td>
+              <td>You send the application form with the reference number of the role.</td>
+              <td>Any time before the closing date</td>
+            </tr>
+            <tr>
+              <td>2. Shortlisting</td>
+              <td>Two team members read every application against the essential requirements.</td>
+              <td>Within 5 working days of closing</td>
+            </tr>
+            <tr>
+              <th scope="rowgroup" rowspan="2">Assess</th>
+              <td>3. Skills conversation</td>
+              <td>A 45 minute call about your work. You may bring examples instead of doing a test.</td>
+              <td>Week 1 after shortlisting</td>
+            </tr>
+            <tr>
+              <td>4. Team interview</td>
+              <td>You meet the people you would work with and ask them anything.</td>
+              <td>Week 2 after shortlisting</td>
+            </tr>
+            <tr>
+              <th scope="row">Decide</th>
+              <td>5. Offer and onboarding</td>
+              <td>We call with a decision either way, and give feedback if you ask for it.</td>
+              <td>Within 5 working days of the interview</td>
+            </tr>
+          </tbody>
+        </table>
+        </div>
+      </section>
+
+      <!-- Inclusive element required by the brief. The brief allows several
+           options; we use an inclusive employment statement plus a commitment
+           to reconciliation, and explain why it belongs on a recruitment site.
+
+           Deliberately NOT included: a named Traditional Owner group, a named
+           community partner, or any claim of endorsement. The Canvas
+           "Acknowledgement of Country" module states that an acknowledgement
+           should name the correct Nation for the place you are on and should
+           never be a box-ticking exercise, so guessing one would be worse than
+           leaving it to be completed. See docs/decisions.md (D-07). -->
+      <section id="acknowledgement" aria-labelledby="ack-heading">
+        <h2 id="ack-heading">Working towards a workplace that includes First Peoples</h2>
+
+        <p>
+          Harbourline Digital encourages applications from Aboriginal and Torres
+          Strait Islander peoples for every role advertised on this site. We
+          recognise Aboriginal and Torres Strait Islander peoples as the
+          Traditional Owners of the lands on which we work, and we recognise
+          their continuing connection to land, waters, knowledge and community.
+        </p>
+
+        <h3>Why this sits on a careers page</h3>
+        <p>
+          A recruitment site is where an employer's commitments are tested.
+          Saying that we welcome First Nations applicants means little unless the
+          hiring process reflects it, so we have made three specific changes to
+          the process described above:
+        </p>
+        <ul>
+          <li>
+            Applicants may bring existing work or community experience to the
+            skills conversation instead of completing a separate technical test.
+          </li>
+          <li>
+            Every applicant can ask for feedback at any stage, not only after a
+            final decision.
+          </li>
+          <li>
+            Our essential requirements are kept deliberately short, so people who
+            took a non-traditional route into web work are not screened out
+            before anyone reads their application.
+          </li>
+        </ul>
+
+        <p class="note">
+          <strong>To be completed by the group before submission:</strong> if your
+          tutor expects a full Acknowledgement of Country naming the Traditional
+          Owners of the land your campus is on, add it here using the AIATSIS Map
+          of Indigenous Australia and the guidance in the Canvas
+          <em>Acknowledgement of Country</em> module. Do not guess a Nation name.
+        </p>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- Shared footer. The brief asks for four things here: a Jira project link,
+       a GitHub repository link, the live GitHub Pages link and an email link.
+       Where a real URL has not been supplied yet the item is shown as an
+       explicit pending marker rather than a link that goes nowhere. Every
+       pending item is tracked in docs/release-checklist.md. -->
+  <footer id="site-footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div>
+          <h2>Project links</h2>
+          <ul>
+            <li><span class="pending">Jira project board</span></li>
+            <li><span class="pending">GitHub repository</span></li>
+            <li><span class="pending">Live site on GitHub Pages</span></li>
+          </ul>
+        </div>
+
+        <div>
+          <h2>Contact</h2>
+          <ul>
+            <li><a href="mailto:careers@harbourline.example">careers@harbourline.example</a></li>
+          </ul>
+          <p class="footer-note">
+            This address uses the reserved <code>.example</code> domain, so it can
+            never reach a real inbox. Replace it with the group's approved contact
+            address before submission.
+          </p>
+        </div>
+
+        <div>
+          <h2>Site</h2>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="jobs.html">Jobs</a></li>
+            <li><a href="apply.html">Apply</a></li>
+            <li><a href="about.html">About</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <p class="footer-note">
+        Harbourline Digital is a fictional company created for COS10026 Web
+        Technology Project, Applied Web Project Part 1. The vacancies, salaries
+        and hiring process described on this site are coursework scenario content
+        and are not real job advertisements.
+      </p>
+    </div>
+  </footer>
+</body>
+</html>

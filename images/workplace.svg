@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Company-related illustration for the index.html hero.
+  Original abstract artwork authored for COS10026 coursework.
+  It is a stylised diagram of a team working on a web platform - it is NOT a photograph
+  and must not be presented as one.
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" role="img" aria-labelledby="workplaceTitle">
+  <title id="workplaceTitle">Illustration of a digital team planning a web platform</title>
+  <rect width="480" height="300" rx="16" fill="#eef4f5"/>
+  <rect x="40" y="40" width="250" height="160" rx="10" fill="#ffffff" stroke="#0d4f5c" stroke-width="2"/>
+  <rect x="56" y="58" width="96" height="10" rx="5" fill="#0d4f5c"/>
+  <rect x="56" y="80" width="180" height="8" rx="4" fill="#c9d8db"/>
+  <rect x="56" y="98" width="150" height="8" rx="4" fill="#c9d8db"/>
+  <rect x="56" y="122" width="70" height="24" rx="6" fill="#0d4f5c"/>
+  <rect x="136" y="122" width="70" height="24" rx="6" fill="none" stroke="#0d4f5c" stroke-width="2"/>
+  <rect x="56" y="162" width="218" height="22" rx="6" fill="#e3edee"/>
+  <circle cx="360" cy="92" r="26" fill="#0d4f5c"/>
+  <path d="M330 168c0-18 14-32 30-32s30 14 30 32z" fill="#0d4f5c"/>
+  <circle cx="420" cy="132" r="18" fill="#7fd4c1"/>
+  <path d="M400 192c0-12 9-22 20-22s20 10 20 22z" fill="#7fd4c1"/>
+  <rect x="40" y="228" width="400" height="12" rx="6" fill="#d6e3e5"/>
+  <rect x="40" y="252" width="260" height="12" rx="6" fill="#d6e3e5"/>
+</svg>

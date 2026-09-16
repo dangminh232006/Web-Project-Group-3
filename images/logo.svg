@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Harbourline Digital logo mark.
+  Original artwork authored for COS10026 coursework - no third-party asset is used.
+  Three stacked bars rising from a baseline: the "harbour line" motif.
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Harbourline Digital logo">
+  <title>Harbourline Digital</title>
+  <rect width="64" height="64" rx="14" fill="#0d4f5c"/>
+  <rect x="14" y="34" width="8" height="16" rx="3" fill="#7fd4c1"/>
+  <rect x="28" y="24" width="8" height="26" rx="3" fill="#bfe9df"/>
+  <rect x="42" y="14" width="8" height="36" rx="3" fill="#ffffff"/>
+  <rect x="14" y="54" width="36" height="3" rx="1.5" fill="#7fd4c1"/>
+</svg>

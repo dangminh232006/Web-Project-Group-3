@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<!--
+  jobs.html - Current vacancies for the Harbourline Digital recruitment site.
+  COS10026 Web Technology Project, Applied Web Project Part 1.
+
+  The vacancies below are coursework scenario content for a fictional company.
+  The salary bands are illustrative figures chosen to look plausible for the
+  scenario; they are NOT the result of market research and must not be cited
+  as real pay data.
+
+  Generative AI acknowledgement (unit requirement):
+  Parts of this page were drafted with assistance from Claude (Anthropic, Opus 5,
+  September 2026). All markup was reviewed, edited and tested by the team before
+  submission. Full statement: docs/ai-use.md
+-->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Current vacancies at Harbourline Digital, including responsibilities, salary, reporting line and the essential and preferable requirements for each role.">
+  <title>Current vacancies - Harbourline Digital</title>
+  <link rel="icon" href="images/logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Embedded CSS example (required on every page).
+       Specific to the vacancy listing: tabular figures make the two salary
+       bands line up digit for digit, so they can be compared at a glance. -->
+  <style>
+    .salary {
+      font-variant-numeric: tabular-nums;
+      font-weight: 600;
+    }
+  </style>
+</head>
+
+<body>
+  <a id="skip-link" href="#main-content">Skip to main content</a>
+
+  <header id="site-header">
+    <div class="wrap">
+      <a class="brand" href="index.html">
+        <img src="images/logo.svg" alt="Harbourline Digital logo" width="44" height="44">
+        <span>
+          <span class="brand__name">Harbourline Digital</span>
+          <span class="brand__slogan">Digital services people actually rely on</span>
+        </span>
+      </a>
+
+      <nav id="site-nav" aria-label="Main">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="jobs.html" aria-current="page">Jobs</a></li>
+          <li><a href="apply.html">Apply</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <div class="wrap">
+
+      <section aria-labelledby="vacancies-heading">
+        <h1 id="vacancies-heading">Current vacancies</h1>
+        <p>
+          Two roles are open in the Harbourline Digital web team. Read the whole
+          description before applying: the essential requirements are the ones we
+          screen on, and the preferable requirements are genuinely optional.
+        </p>
+        <p>
+          <!-- Inline CSS example (required on every page). A one-off highlight
+               on the single most time-critical line on the page. It applies to
+               this element only, so a shared class would not earn its place. -->
+          Applications close
+          <span style="background-color: #fff3cd; padding: 0.1rem 0.4rem; border-radius: 4px;">
+            5:00pm on the closing date shown in each role
+          </span>.
+          Late applications are not considered.
+        </p>
+      </section>
+
+      <!-- Vacancy 1. The aside is inside the job card; .job uses
+           display: flow-root so the float cannot escape the card. -->
+      <section class="job" aria-labelledby="job-hd417">
+        <h2 id="job-hd417">Front-End Developer</h2>
+        <p>Reference <span class="job__ref">HD417</span></p>
+
+        <!-- Aside: related but non-essential context about the team.
+             Floated right at 25% width on large screens (styles.css section 8),
+             full width in normal flow on narrow screens. -->
+        <aside class="job__aside" aria-labelledby="hd417-aside">
+          <h3 id="hd417-aside">About the team</h3>
+          <ul>
+            <li>Six people: three developers, one designer, one content specialist, one lead.</li>
+            <li>Two days a week in the office, three remote.</li>
+            <li>We review each other's code. Nothing ships without a second pair of eyes.</li>
+            <li>Every release must pass the same accessibility checks we ask of applicants.</li>
+          </ul>
+        </aside>
+
+        <h3>About the role</h3>
+        <p>
+          You will build and maintain the customer-facing pages of our booking and
+          enquiry platforms. Most of your week is hand-written HTML, CSS and
+          templating work, with an emphasis on pages that stay fast and usable on
+          older devices and slow connections.
+        </p>
+
+        <dl class="job__meta">
+          <dt>Salary</dt>
+          <dd><span class="salary">AUD 78,000 - 92,000 per year</span>, full time, plus superannuation</dd>
+
+          <dt>Reporting line</dt>
+          <dd>Reports to the Web Team Lead, who reports to the Head of Digital Delivery</dd>
+
+          <dt>Contract</dt>
+          <dd>Ongoing, full time (38 hours per week)</dd>
+
+          <dt>Closing date</dt>
+          <dd>Friday 5:00pm, four weeks after this advertisement appears</dd>
+        </dl>
+
+        <h3>Key responsibilities</h3>
+        <ul class="responsibilities">
+          <li>Build responsive page templates from designs, using semantic HTML and CSS.</li>
+          <li>Keep the shared stylesheet organised, documented and free of dead rules.</li>
+          <li>Test each change against keyboard navigation and a screen reader before release.</li>
+          <li>Fix defects raised by the support team, starting with those that block a task.</li>
+          <li>Review a teammate's work at least twice a week and explain your reasoning.</li>
+        </ul>
+
+        <h3>Essential requirements</h3>
+        <ul>
+          <li>Demonstrated ability to write valid, semantic HTML5 without a framework.</li>
+          <li>Confident with CSS layout, including Flexbox and Grid, and with responsive design.</li>
+          <li>Working knowledge of WCAG 2.1 Level AA and how to test against it.</li>
+          <li>Able to explain a technical decision to a non-technical colleague.</li>
+          <li>Comfortable using version control day to day.</li>
+        </ul>
+
+        <h3>Preferable requirements</h3>
+        <ul>
+          <li>Experience supporting a site that is already in production.</li>
+          <li>Familiarity with a templating language or static site generator.</li>
+          <li>Exposure to automated accessibility or performance testing tools.</li>
+          <li>Interest in mentoring someone earlier in their career.</li>
+        </ul>
+
+        <p>
+          <a class="btn" href="apply.html">Apply for HD417</a>
+        </p>
+      </section>
+
+      <!-- Vacancy 2. -->
+      <section class="job" aria-labelledby="job-hd892">
+        <h2 id="job-hd892">Accessibility and Content Specialist</h2>
+        <p>Reference <span class="job__ref">HD892</span></p>
+
+        <aside class="job__aside" aria-labelledby="hd892-aside">
+          <h3 id="hd892-aside">Good to know</h3>
+          <ul>
+            <li>This is a new role, so you will help shape what it becomes.</li>
+            <li>You do not need to write production code, but you will read it.</li>
+            <li>Part-time arrangements are genuinely available for this position.</li>
+          </ul>
+        </aside>
+
+        <h3>About the role</h3>
+        <p>
+          You will make sure what we publish can actually be used and understood.
+          That covers auditing pages against accessibility standards, rewriting
+          copy that confuses people, and working with developers early enough that
+          problems are designed out rather than patched later.
+        </p>
+
+        <dl class="job__meta">
+          <dt>Salary</dt>
+          <dd><span class="salary">AUD 72,000 - 84,000 per year</span>, full time, plus superannuation (pro rata if part time)</dd>
+
+          <dt>Reporting line</dt>
+          <dd>Reports to the Head of Digital Delivery, working alongside the Web Team Lead</dd>
+
+          <dt>Contract</dt>
+          <dd>Ongoing; full time or part time from 0.6 FTE</dd>
+
+          <dt>Closing date</dt>
+          <dd>Friday 5:00pm, four weeks after this advertisement appears</dd>
+        </dl>
+
+        <h3>Key responsibilities</h3>
+        <ul class="responsibilities">
+          <li>Audit published pages against WCAG 2.1 Level AA and record what you find.</li>
+          <li>Rewrite page copy, form labels and error messages in plain English.</li>
+          <li>Run short usability sessions and turn what you observe into specific changes.</li>
+          <li>Advise designers and developers while a feature is still being planned.</li>
+          <li>Maintain the internal content style guide.</li>
+        </ul>
+
+        <h3>Essential requirements</h3>
+        <ul>
+          <li>Practical experience applying accessibility standards to real web pages.</li>
+          <li>Strong written English and the judgement to cut words that add nothing.</li>
+          <li>Able to read HTML and CSS well enough to describe a fix precisely.</li>
+          <li>Evidence of working directly with the people who use a service.</li>
+        </ul>
+
+        <h3>Preferable requirements</h3>
+        <ul>
+          <li>Experience with screen readers such as NVDA, JAWS or VoiceOver.</li>
+          <li>Background in technical writing, editing or education.</li>
+          <li>Familiarity with a content management system.</li>
+        </ul>
+
+        <p>
+          <a class="btn" href="apply.html">Apply for HD892</a>
+        </p>
+      </section>
+
+      <!-- Ordered list: the application steps are genuinely sequential. -->
+      <section aria-labelledby="how-to-apply">
+        <h2 id="how-to-apply">How to apply</h2>
+        <p>Follow these steps in order. Applications missing a reference number cannot be matched to a role.</p>
+
+        <ol>
+          <li>Note the five character reference number of the role you want, for example HD417.</li>
+          <li>Open the <a href="apply.html">application form</a>.</li>
+          <li>Type that reference number into the <strong>Job reference number</strong> field yourself. The link above does not fill it in for you.</li>
+          <li>Complete every remaining field, then check your email address and phone number before submitting.</li>
+          <li>Submit the form once. You will not receive an automatic confirmation email from this prototype.</li>
+        </ol>
+
+        <p class="note">
+          <strong>Applying for both roles?</strong> Send a separate application for
+          each reference number. One form submission covers one vacancy.
+        </p>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- Shared footer. The brief asks for four things here: a Jira project link,
+       a GitHub repository link, the live GitHub Pages link and an email link.
+       Where a real URL has not been supplied yet the item is shown as an
+       explicit pending marker rather than a link that goes nowhere. Every
+       pending item is tracked in docs/release-checklist.md. -->
+  <footer id="site-footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div>
+          <h2>Project links</h2>
+          <ul>
+            <li><span class="pending">Jira project board</span></li>
+            <li><span class="pending">GitHub repository</span></li>
+            <li><span class="pending">Live site on GitHub Pages</span></li>
+          </ul>
+        </div>
+
+        <div>
+          <h2>Contact</h2>
+          <ul>
+            <li><a href="mailto:careers@harbourline.example">careers@harbourline.example</a></li>
+          </ul>
+          <p class="footer-note">
+            This address uses the reserved <code>.example</code> domain, so it can
+            never reach a real inbox. Replace it with the group's approved contact
+            address before submission.
+          </p>
+        </div>
+
+        <div>
+          <h2>Site</h2>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="jobs.html">Jobs</a></li>
+            <li><a href="apply.html">Apply</a></li>
+            <li><a href="about.html">About</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <p class="footer-note">
+        Harbourline Digital is a fictional company created for COS10026 Web
+        Technology Project, Applied Web Project Part 1. The vacancies, salaries
+        and hiring process described on this site are coursework scenario content
+        and are not real job advertisements.
+      </p>
+    </div>
+  </footer>
+</body>
+</html>
