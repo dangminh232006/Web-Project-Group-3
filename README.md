@@ -22,11 +22,13 @@ built with HTML5 and CSS3 only. No JavaScript, no frameworks, no build step.
 | Page | What it contains |
 |---|---|
 | `index.html` | Logo, company name, slogan, description and image; CSS background graphic; search box with button; hiring-process table with merged cells (`rowspan`, `colspan`); Acknowledgement of Country and inclusive hiring statement; footer with Jira, GitHub and email links |
-| `jobs.html` | Two job descriptions (`AFE26` Front-End Web Developer, `AUX26` Accessibility and UX Designer), each a `<section>` with salary, reporting line, responsibilities, essential (`<ol>`) and preferable (`<ul>`) requirements; `<aside>` floated right at 25%; embedded Google Map of Apple headquarters (Apple Park) |
+| `jobs.html` | Two job descriptions (`AFE26` Front-End Web Developer, `AUX26` Accessibility and UX Designer), each a `<section>` with salary, reporting line, responsibilities, essential (`<ol>`) and preferable (`<ul>`) requirements; `<aside>` floated right at 25% |
 | `apply.html` | Job application form, `method="post"` to `https://mercury.swin.edu.au/it000000/formtest.php`, HTML5 validation with `pattern`, `maxlength`, `required`, `type="email"`; layout with CSS Grid |
-| `about.html` | Group name and class details (nested list), members, contributions and quotes (definition list), group photo in a bordered `<figure>`, fun facts table with hover effect |
+| `about.html` | Group name and class details (nested list), selected project brief, members, contributions and quotes (definition list), group photo in a bordered `<figure>` |
 | `styles.css` | Shared base, navigation, footer, responsive and print styles |
 | `index.css`, `jobs.css`, `apply.css`, `about.css` | CSS specific to each matching HTML page |
+
+The shared footer lists all four student contacts and embeds a Google Map of Apple Park beside the Pages links. Application results open in a new tab, preserving the original form and its answers.
 
 Every page has the four meta tags taught in Week 1 (charset, description, keywords, author), the
 viewport meta tag (Week 5), the shared navigation and footer, one embedded `<style>` example and one
@@ -62,14 +64,12 @@ Search for the yellow placeholders and replace each one with real details:
 grep -n 'class="placeholder"' about.html
 ```
 
-1. Class day, time and tutor name.
-2. Page owned, other work, quote in Vietnamese + English translation for Le Ho Hoang Lan, Nguyen Quang Thang
-   and Tran Vo Nhat Minh (names and student IDs are already filled in).
-3. Fun facts for members 2 to 4.
-4. Replace `images/group-photo.jpg` with a real group photo (JPEG, under 300 KB, keep 800 x 450 or update
+1. Page owned and other work for Le Ho Hoang Lan, Nguyen Quang Thang and Tran Vo Nhat Minh
+   (names and student IDs are already filled in).
+2. Replace `images/group-photo.jpg` with a real group photo (JPEG, under 300 KB, keep 800 x 450 or update
    `width`/`height` in `about.html`), then delete the "Before submission" box at the top of `about.html`.
-5. Check the Jira board has epics, user stories, tasks and two sprints, and that the tutor has access.
-6. Make sure GitHub Pages is switched on and the live link works (the repository must allow Pages).
+3. Check the Jira board has epics, user stories, tasks and two sprints, and that the tutor has access.
+4. Make sure GitHub Pages is switched on and the live link works (the repository must allow Pages).
 
 Full list: `docs/release-checklist.md`.
 
