@@ -24,7 +24,7 @@ built with HTML5 and CSS3 only. No JavaScript, no frameworks, no build step.
 | `index.html` | Logo, company name, slogan, description and image; CSS background graphic; search box with button; hiring-process table with merged cells (`rowspan`, `colspan`); Acknowledgement of Country and inclusive hiring statement; footer with Jira, GitHub and email links |
 | `jobs.html` | Two job descriptions (`AFE26` Front-End Web Developer, `AUX26` Accessibility and UX Designer), each a `<section>` with salary, reporting line, responsibilities, essential (`<ol>`) and preferable (`<ul>`) requirements; `<aside>` floated right at 25% |
 | `apply.html` | Job application form, `method="post"` to `https://mercury.swin.edu.au/it000000/formtest.php`, HTML5 validation with `pattern`, `maxlength`, `required`, `type="email"`; layout with CSS Grid |
-| `about.html` | Group name and class details (nested list), selected project brief, members, contributions and quotes (definition list), temporary member portraits in a bordered `<figure>`; full group photo pending |
+| `about.html` | Group name and class details (nested list), selected project brief, members, contributions and quotes (definition list), a named member portrait collage in a bordered `<figure>`; acceptance as the required group photograph remains unverified |
 | `styles.css` | Shared base, navigation, footer, responsive and print styles |
 | `index.css`, `jobs.css`, `apply.css`, `about.css` | CSS specific to each matching HTML page |
 
@@ -54,7 +54,8 @@ applied-web-project-part1/
 │   ├── group-portrait-1.png First supplied portrait, unchanged (1280 x 1280)
 │   ├── group-portrait-2.png Second supplied portrait, unchanged (256 x 256)
 │   ├── group-portrait-3.png Third supplied portrait, unchanged (960 x 1280)
-│   └── group-portrait-4.png Fourth supplied portrait, unchanged (245 x 324)
+│   ├── group-portrait-4.png Fourth supplied portrait, unchanged (245 x 324)
+│   └── group-collage.jpg   Four original portraits and names, 1200 x 1320, 299185 bytes
 ├── docs/                    Supporting documentation (see below)
 └── README.md
 ```
@@ -62,8 +63,12 @@ applied-web-project-part1/
 ## Submission status (23 October 2026)
 
 The four page owners, their student IDs and translated quotes are recorded. The live site works,
-and Jira contains epics, stories, tasks and two Part 1 sprints. Remaining items include the real
-group photo (the four individual portraits do not replace it), confirmation of the three other members' coordinator-selected fun facts and verified tutor access to Jira.
+and Jira contains epics, stories, tasks and two Part 1 sprints. The coordinator confirmed on
+23 October that the tutor approved the Apple topic and Zalo participation evidence, and that Peer
+and Self Evaluation is not required for this submission. The portrait collage is below 300 KB;
+it is not a photograph of the group together, and tutor acceptance of that substitute is unverified.
+Other remaining items are personal confirmation of three members' coordinator-selected fun facts
+and confirmation that the tutor can log in to Jira. The Access table lists the tutor with the Viewer role; actual tutor login remains unobserved.
 The group and individual Canvas submissions have not yet been uploaded.
 
 The current Canvas deadline for both Part 1 submissions is **1 November 2026, 23:59 Vietnam time**
@@ -77,7 +82,7 @@ The complete status, evidence and remaining submission steps are maintained in
 Double-click `index.html`, or serve the parent folder to test it the way GitHub Pages serves it:
 
 ```bash
-python3 -m http.server 8777
+npx --yes http-server -p 8777 -a 127.0.0.1
 ```
 
 Then open `http://127.0.0.1:8777/applied-web-project-part1/index.html`.
