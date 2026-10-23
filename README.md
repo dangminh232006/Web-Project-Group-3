@@ -87,6 +87,7 @@ Then open `http://127.0.0.1:8777/applied-web-project-part1/index.html`.
 | W3C Nu HTML Checker, all four deployed pages (23 October) | 0 errors, 0 warnings |
 | W3C CSS Validator, all five deployed CSS files (23 October, CSS level 3 + SVG) | 0 errors |
 | WAVE screenshots, all four pages (23 October) | 0 errors, 0 contrast errors; alerts reviewed |
+| Published keyboard checks (23 October) | All four skip links visible on first Tab; Enter focuses main content; form control spot-check passed |
 | Chrome responsive checks, four pages at 320, 375, 768, 1024 and 1280 px (20 October) | 20/20 without page overflow |
 | Form pattern tests (7 October) | 28 of 28 as expected |
 | POST to Mercury `formtest.php` (7 and 20 October) | All 13 field names echoed; result opens separately |

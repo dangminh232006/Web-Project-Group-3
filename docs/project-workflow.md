@@ -29,12 +29,19 @@ current WWTP records or imported again over the live project.
 Evidence should accompany a status change: a code commit, validator result, browser check or
 submission receipt. A task with multiple acceptance criteria stays open until all are met.
 For example, generating a ZIP does not complete a task that also requires Canvas submission.
-A local group-photo placeholder does not complete the real-photo requirement.
+Separate temporary portraits do not complete the full-group-photograph requirement.
 
 WWTP-21 now has an Apply-specific title consistent with its existing Apply epic, description and
 assignee. Its old About evidence comment was corrected to the authored Apply changes. WWTP-33
-is Done following verification of both complete vacancy descriptions. WWTP-42 and WWTP-43
-remain In Progress for the remaining responsive and published accessibility checks.
+is Done following verification of both complete vacancy descriptions. WWTP-43 is Done after
+the accessibility guideline/contrast review and published image/skip-link checks. WWTP-42 remains
+In Progress because fresh responsive verification is outstanding, although keyboard checks passed.
+
+WWTP-27 remains In Progress: Minh's Group Agreement receipt is verified, and the other members'
+receipts are not. WWTP-47 remains In Progress for the group: Minh confirmed completing his
+interview, while other members' attendance remains unverified. WWTP-25 and WWTP-46 are In
+Progress for final ZIP preparation and Canvas submission; generating the final archive does not
+establish submission. WWTP-44 records the final deployment run and verified commit after the documentation update.
 
 The canonical remaining requirements and their issue links are in `release-checklist.md`.
 This workflow document does not duplicate live status totals, which change as work is completed.

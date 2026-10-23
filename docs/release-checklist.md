@@ -18,13 +18,13 @@ as displayed by the current group and individual Canvas assignments.
 | B-06 | Open | Two supplied member portraits are used temporarily. Separate portraits do not fulfil the full-group photograph requirement | Group; WWTP-39 |
 | B-07 | Complete | The old Before submission box is absent from the About page | `about.html` |
 | B-08 | Partial | Jira has 8 epics, 11 stories, 22 tasks and two Part 1 sprints. Tutor access has not been verified | WWTP-45 |
-| B-09 | Complete for audited revision | All four live pages and five CSS files returned HTTP 200 and matched `c265cea`; verify again after the final push | WWTP-44 |
-| B-10 | Partial | Bui Dang Minh's Canvas Group Agreement shows Submitted, attempt 1, `Group3_GroupAgreement.docx`. Other members' submissions are unverified | Each member; WWTP-27 |
+| B-09 | Complete for audited code revision | Live files matched `23e4809`, and updated stylesheet-version links in `32a2b06` are published; all four skip links and both portraits were verified live | WWTP-44 records the deployment run and final verified commit |
+| B-10 | Partial | Bui Dang Minh's Canvas Group Agreement shows Submitted, attempt 1, `Group3_GroupAgreement.docx`. Other members' submissions are unverified | Each member; WWTP-27 In Progress |
 | B-11 | Unmet | Required in-code GenAI acknowledgements are absent. The owner has explicitly chosen to keep source files without comments | Documentation does not replace this requirement |
 | B-12 | Unmet | Required explanatory CSS comments and external-source acknowledgements are absent | Source records in `references.md` do not meet an in-code requirement |
 | B-13 | Interpretation pending | Only the HTML and CSS skill checkbox is required; other skills remain optional | Confirm interpretation with tutor; `decisions.md` D-04 |
-| B-14 | Partial | HTML/CSS validation and WAVE evidence are recorded. A keyboard spot-check passed; the new published skip link and fresh responsive checks remain open | `test-report.md`; WWTP-42 and WWTP-43 |
-| B-15 | Not submitted | Canvas group submission shows attempt 0. A matching ZIP and both project links are required | WWTP-25 and WWTP-46 |
+| B-14 | Partial | Fresh HTML/CSS validation passed. Published skip links and keyboard controls passed; guideline/contrast review is complete. Fresh responsive widths and screen-reader coverage remain unverified | `test-report.md`; WWTP-43 Done, WWTP-42 In Progress |
+| B-15 | Not submitted | Canvas group submission shows attempt 0. The release archive is generated from the final committed revision; its commit and verification are recorded in WWTP-46 | WWTP-25 and WWTP-46 In Progress until a Canvas receipt exists |
 
 The fun-fact placeholders can be located with:
 
@@ -41,7 +41,7 @@ A clean search alone does not prove the group photograph or personal facts are a
 | Self-report | Word and PDF exist; keep their GitHub screenshots and counts aligned with the final repository history |
 | Contribution evidence | Actual authored commits, merged page work and two original group-channel screenshots are available |
 | Participation channel | The report uses Zalo at the student's request. The rubric names Discord; acceptance of Zalo evidence has not been confirmed |
-| Week 6 interview | Bui Dang Minh confirmed on 23 October that the interview was completed in class. No grade or exact interview date is inferred; other members' attendance is not verified |
+| Week 6 interview | Bui Dang Minh confirmed on 23 October that the interview was completed in class. No grade or exact interview date is inferred; other members' attendance is not verified. WWTP-47 remains In Progress for the group |
 | Peer and Self Evaluation | Canvas attempt 0. SPARKPLUS reports that the unit is not ready for the Student role; completion is blocked until the unit is enabled |
 | Individual Canvas submission | Attempt 0. Upload Word or PDF directly, not a ZIP, before the deadline |
 
