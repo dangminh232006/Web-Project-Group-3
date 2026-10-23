@@ -181,10 +181,17 @@ conformance or completion of WWTP-42's outstanding responsive verification.
 - Submitted made-up values in Chrome to Mercury. A separate result tab displayed all 13 field names, including `state=ACT`. Closing it left the original form populated with `Test`, `ACT` and `Test only`; Clear form reset the fields and selections.
 - Mercury's own Back button remains unavailable: its referenced `https://mercury.swin.edu.au/it000000/formutil.js` returned HTTP 404. The HTML-only new-tab behaviour avoids relying on it and is explained before the form.
 
-- Class details are Wednesday, 09:00 to 12:00, tutor Thomas Harrison, as confirmed by the coordinator. Current 23 October source contains all four translated quotes and the styled fun-facts table; 12 cells for three members still need real details.
+- Class details are Wednesday, 09:00 to 12:00, tutor Thomas Harrison, as confirmed by the coordinator. Current 23 October source contains all four translated quotes and the styled fun-facts table; the 12 cells for three members are now filled with coordinator-selected entries whose personal confirmation remains open.
 
 - About now includes a Selected project brief section describing the chosen Apple recruitment site, both advertised roles, the four pages and the HTML5/CSS3-only Part 1 scope.
 
 ## 7. Additional portrait update (23 October)
 
 The coordinator supplied a third portrait and confirmed the image order: Tran Vo Nhat Minh, Bui Dang Minh, Le Ho Hoang Lan. The About page displays these full names below unchanged source images. Desktop CSS uses three columns; the rule at 600 px switches to one column. The source passed W3C HTML validation with zero errors and warnings. Publication evidence is recorded in WWTP-44; fresh narrow-viewport verification remains open in WWTP-42. The coordinator subsequently supplied Nguyen Quang Thang's fourth portrait (245 x 324). The original PNG is preserved unchanged, with its full name and an accurate alternative. The current desktop grid has two columns and two rows; the existing rule at 600 px retains a single column. The updated source passed W3C HTML validation with zero errors and warnings. Connected Chrome checks at 320, 375, 600, 601, 768 and 1280 px found no horizontal page overflow, confirmed all four original image dimensions, and verified `object-fit: contain`. The measured grid gap is 16 px; 600 px and below uses one column, while 601 px and above uses two. These remain individual portraits, not a complete group photograph.
+
+
+## 8. About content and gallery alignment (23 October)
+
+The 12 previously empty fun-fact cells now contain coordinator-selected entries for Lan, Thang and Nhat Minh. All four rows have five populated cells, and Bui Dang Minh's existing row is unchanged. Personal confirmation of those three rows remains open in B-05. The webpage displays the completed table without a provisional label.
+
+The outer gallery caption was removed; all four individual name captions and original portraits remain. Scoped About styles center the Our group heading and bordered figure. Connected Chrome checks at 320, 375, 600, 601, 768 and 1280 px measured a 0 px difference between the horizontal centers of the section and figure, no horizontal page overflow, and four loaded portraits. The existing two-column desktop and one-column mobile rules remain in place.

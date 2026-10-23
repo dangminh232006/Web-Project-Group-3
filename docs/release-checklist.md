@@ -14,7 +14,7 @@ as displayed by the current group and individual Canvas assignments.
 | B-02 | Complete | All four names and student IDs appear in `about.html` | Four members |
 | B-03 | Complete | Each member has a page and stylesheet, supported by actual Git authorship | `contributions.md` |
 | B-04 | Complete | All four Vietnamese quotes and English translations appear with `lang="vi"` | `about.html` |
-| B-05 | Open | Fun-facts table is styled, but three members still have 12 placeholder cells | Lan, Thang and Nhat Minh; WWTP-39 |
+| B-05 | Open | All fun-facts cells are filled and styled. The coordinator selected the 12 entries for Lan, Thang and Nhat Minh; those members have not personally confirmed them | Lan, Thang and Nhat Minh; WWTP-39 |
 | B-06 | Open | All four supplied member portraits have confirmed full-name captions. Separate portraits do not fulfil the full-group photograph requirement | Group; WWTP-39 |
 | B-07 | Complete | The old Before submission box is absent from the About page | `about.html` |
 | B-08 | Partial | Jira has 8 epics, 11 stories, 22 tasks and two Part 1 sprints. Tutor access has not been verified | WWTP-45 |
@@ -26,13 +26,7 @@ as displayed by the current group and individual Canvas assignments.
 | B-14 | Partial | Fresh HTML/CSS validation passed. Published skip links and keyboard controls passed; guideline/contrast review is complete. Fresh responsive widths and screen-reader coverage remain unverified | `test-report.md`; WWTP-43 Done, WWTP-42 In Progress |
 | B-15 | Not submitted | Canvas group submission shows attempt 0. The release archive is generated from the final committed revision; its commit and verification are recorded in WWTP-46 | WWTP-25 and WWTP-46 In Progress until a Canvas receipt exists |
 
-The fun-fact placeholders can be located with:
-
-```bash
-rg -n 'class="placeholder"' about.html
-```
-
-A clean search alone does not prove the group photograph or personal facts are authentic.
+The fun-facts table has no placeholder cells. Filled cells do not establish that the personal facts are authentic; member confirmation remains open, as does the full-group photograph.
 
 ## 2. Individual submission and participation
 
@@ -47,7 +41,7 @@ A clean search alone does not prove the group photograph or personal facts are a
 
 ## 3. Final packaging and hand-off
 
-1. Obtain the real group photograph and the remaining members' fun facts, then revalidate affected pages.
+1. Obtain the real group photograph and have the three members confirm or replace the coordinator-selected fun facts, then revalidate affected pages.
 2. Confirm tutor access to Jira and resolve the skills-checkbox and Zalo-evidence interpretations.
 3. Recheck changed live pages after the final commit and successful Pages deployment. Keep remaining
    limitations visible; do not turn open items into Done without evidence.
