@@ -20,6 +20,7 @@
 </head>
 
 <body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
 
   <header id="site-header">
     <div class="container">
@@ -44,7 +45,7 @@
     <strong>Student project for COS10026 at Swinburne.</strong> This is not an official Apple website and all jobs are fictional.
   </p>
 
-  <main>
+  <main id="main-content" tabindex="-1">
     <div class="container">
 
       <h1>About Group 3</h1>
@@ -124,8 +125,11 @@
       <section id="photo" aria-labelledby="photo-heading">
         <h2 id="photo-heading">Our group</h2>
         <figure id="group-photo">
-          <img src="images/group-photo.jpg" alt="Group 3 members together on campus" width="800" height="450">
-          <figcaption>Group 3, COS10026 Web Technology Project, 2026.</figcaption>
+          <div class="group-portraits">
+            <img src="images/group-portrait-1.png" alt="Portrait of a person wearing glasses and holding headphones" width="1280" height="1280">
+            <img src="images/group-portrait-2.png" alt="Portrait of a person wearing glasses, a dark suit and a tie" width="256" height="256">
+          </div>
+          <figcaption>Group 3, COS10026 Web Technology Project, 2026. Temporary portraits while the full group photo is being prepared.</figcaption>
         </figure>
       </section>
 

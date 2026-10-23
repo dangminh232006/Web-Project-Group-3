@@ -1,48 +1,62 @@
 # Release checklist
 
-COS10026 Applied Web Project - Part 1, Group 3. Work through this list before the ZIP is uploaded
-to Canvas. The open items include missing group details and code attribution.
+COS10026 Applied Web Project - Part 1, Group 3. Checked 23 October 2026.
+This is the canonical submission checklist; Jira tracks the work and its evidence.
 
-## 1. Open items (group to do)
+**Deadline:** 1 November 2026, 23:59 Vietnam time (2 November, 03:59 Melbourne time),
+as displayed by the current group and individual Canvas assignments.
 
-| # | Item | Where | Who |
+## 1. Group requirements
+
+| ID | Status | Requirement and evidence | Owner / follow-up |
 |---|---|---|---|
-| ~~B-01~~ | **Done 20/10/2026:** Wednesday, 09:00 to 12:00, Thomas Harrison (confirmed by the coordinator) | `about.html` `#group-details` | Group |
-| ~~B-02~~ | ~~Name and student ID of members 2 to 4~~ **Done 07/10/2026:** Le Ho Hoang Lan (106229050), Nguyen Quang Thang (106202475), Tran Vo Nhat Minh (106233462) | `about.html` | - |
-| B-03 | Page owned and other work for members 2 to 4 (each student must build at least one page and its CSS) | `about.html`, `docs/contributions.md` | Each member |
-| B-04 | Quote in each member's first language plus English translation; add `lang="xx"` on the quote's `<span>` | `about.html` `dd.quote` | Each member |
-| B-05 | Fun facts table restored 23/10/2026. Bui Dang Minh's row is filled in; the other three members must replace their `[placeholder]` cells | `about.html` `#fun-facts` | Each member |
-| B-06 | Real group photo (not individual photos), JPEG under 300 KB, saved as `images/group-photo.jpg` | `images/` | Group |
-| ~~B-07~~ | **Done 23/10/2026:** "Before submission" box removed from `about.html` | `about.html` | - |
-| B-08 | Jira board has epics, user stories, tasks and at least two sprints, and the tutor has access | Jira | Group |
-| ~~B-09~~ | ~~Restore GitHub Pages~~ **Done 18/10/2026:** repository made public and Pages enabled from `main` `/`; live site verified | GitHub repository visibility and Pages settings | Repository owner |
-| B-10 | Group Agreement submitted on Canvas by every member | Canvas | Each member |
-| B-11 | In-code GenAI acknowledgements are absent after the requested comment removal on 23/10/2026 | Four HTML pages and five CSS files | Repository owner |
-| B-12 | In-code external source acknowledgements are absent after the requested comment removal on 23/10/2026; source records remain in `docs/references.md` | Four HTML pages and five CSS files | Repository owner |
+| B-01 | Complete | Class: Wednesday, 09:00-12:00, Thomas Harrison, recorded in `about.html` | Group-confirmed details |
+| B-02 | Complete | All four names and student IDs appear in `about.html` | Four members |
+| B-03 | Complete | Each member has a page and stylesheet, supported by actual Git authorship | `contributions.md` |
+| B-04 | Complete | All four Vietnamese quotes and English translations appear with `lang="vi"` | `about.html` |
+| B-05 | Open | Fun-facts table is styled, but three members still have 12 placeholder cells | Lan, Thang and Nhat Minh; WWTP-39 |
+| B-06 | Open | Two supplied member portraits are used temporarily. Separate portraits do not fulfil the full-group photograph requirement | Group; WWTP-39 |
+| B-07 | Complete | The old Before submission box is absent from the About page | `about.html` |
+| B-08 | Partial | Jira has 8 epics, 11 stories, 22 tasks and two Part 1 sprints. Tutor access has not been verified | WWTP-45 |
+| B-09 | Complete for audited revision | All four live pages and five CSS files returned HTTP 200 and matched `c265cea`; verify again after the final push | WWTP-44 |
+| B-10 | Partial | Bui Dang Minh's Canvas Group Agreement shows Submitted, attempt 1, `Group3_GroupAgreement.docx`. Other members' submissions are unverified | Each member; WWTP-27 |
+| B-11 | Unmet | Required in-code GenAI acknowledgements are absent. The owner has explicitly chosen to keep source files without comments | Documentation does not replace this requirement |
+| B-12 | Unmet | Required explanatory CSS comments and external-source acknowledgements are absent | Source records in `references.md` do not meet an in-code requirement |
+| B-13 | Interpretation pending | Only the HTML and CSS skill checkbox is required; other skills remain optional | Confirm interpretation with tutor; `decisions.md` D-04 |
+| B-14 | Partial | HTML/CSS validation and WAVE evidence are recorded. A keyboard spot-check passed; the new published skip link and fresh responsive checks remain open | `test-report.md`; WWTP-42 and WWTP-43 |
+| B-15 | Not submitted | Canvas group submission shows attempt 0. A matching ZIP and both project links are required | WWTP-25 and WWTP-46 |
 
-Check that nothing is left:
+The fun-fact placeholders can be located with:
 
 ```bash
-grep -n 'class="placeholder"' *.html
+rg -n 'class="placeholder"' about.html
 ```
 
-must print nothing.
+A clean search alone does not prove the group photograph or personal facts are authentic.
 
-## 2. Done
+## 2. Individual submission and participation
 
-| Item | Evidence |
+| Item | Verified status / next action |
 |---|---|
-| Four pages with shared navigation and footer | `index.html`, `jobs.html`, `apply.html`, `about.html` |
-| Footer: Jira, GitHub repository, live site and email links | footer of every page |
-| HTML and CSS validate | `docs/test-report.md` section 1 |
-| Responsive, no horizontal page scroll | `docs/test-report.md` section 2 |
-| Form validation and POST to `formtest.php` | `docs/test-report.md` section 3 |
-| Aboriginal and Torres Strait Islander element with explanation | `index.html` `#acknowledgement` |
+| Self-report | Word and PDF exist; keep their GitHub screenshots and counts aligned with the final repository history |
+| Contribution evidence | Actual authored commits, merged page work and two original group-channel screenshots are available |
+| Participation channel | The report uses Zalo at the student's request. The rubric names Discord; acceptance of Zalo evidence has not been confirmed |
+| Week 6 interview | Bui Dang Minh confirmed on 23 October that the interview was completed in class. No grade or exact interview date is inferred; other members' attendance is not verified |
+| Peer and Self Evaluation | Canvas attempt 0. SPARKPLUS reports that the unit is not ready for the Student role; completion is blocked until the unit is enabled |
+| Individual Canvas submission | Attempt 0. Upload Word or PDF directly, not a ZIP, before the deadline |
 
-## 3. After the open items are done
+## 3. Final packaging and hand-off
 
-1. Re-validate the changed pages at https://validator.w3.org/nu/ and all five CSS files at https://jigsaw.w3.org/css-validator/.
-2. Run the WAVE extension on each live page and fix anything red.
-3. Commit and push to `main`, wait about a minute, then open the live site and check every page and image.
-4. Make the ZIP from the same commit: the four pages, all five CSS files, `images/` (and `docs/` if wanted).
-5. Upload the ZIP to Canvas and paste the live site and repository links in the submission.
+1. Obtain the real group photograph and the remaining members' fun facts, then revalidate affected pages.
+2. Confirm tutor access to Jira and resolve the skills-checkbox and Zalo-evidence interpretations.
+3. Recheck changed live pages after the final commit and successful Pages deployment. Keep remaining
+   limitations visible; do not turn open items into Done without evidence.
+4. Rebuild `applied-web-project-part1.zip` from the final committed revision using `git archive`.
+   Check that it includes all four HTML pages, five CSS files and every referenced image, and that its
+   contents match that revision. Building a ZIP is not a Canvas submission.
+5. Refresh report screenshots, commit counts and PDF after the final Git commit. Check image clarity,
+   headings, page numbers, contents, captions and Word/PDF text consistency.
+6. The student uploads the group ZIP with the live-site and repository links, then uploads the
+   individual Word/PDF. Check the Canvas receipt for each; attempt 0 must not be reported as submitted.
+7. Complete the peer evaluation when SPARKPLUS is available. Minh has confirmed completing the
+   interview; each other member must confirm their own interview status.
