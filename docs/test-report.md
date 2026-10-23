@@ -1,7 +1,8 @@
 # Test report
 
 COS10026 Applied Web Project - Part 1, Group 3. Updated 23 October 2026.
-Results below distinguish the latest deployed-source validation from earlier browser checks.
+Section 9 records the final collage and required-skills revision. Earlier sections retain dated
+observations from previous revisions and do not establish the current image or checkbox structure.
 
 ## 1. Validation and deployed files (23 October 2026)
 
@@ -81,10 +82,9 @@ invalid values. The 20 October end-to-end form check is recorded in section 6.
 | State | `NSW` | valid | valid |
 
 28 of 28 cases matched. Every input, select and textarea has a label. The text fields and state
-selection are required; the gender radios form a required group. In Skills, only the HTML and
-CSS checkbox is mandatory, and the other skill choices and Other skills textarea are optional.
-This is the group's interpretation of the brief's all-fields-required wording, not confirmed
-tutor acceptance; see `decisions.md` D-04.
+selection were required; the gender radios formed a required group. These historical checks used
+a combined HTML/CSS checkbox and optional additional checkboxes. Section 9 supersedes that
+structure with two independently required HTML and CSS checkboxes and the optional textarea.
 
 Known limit: the date pattern checks the format and the ranges 01-31 and 01-12, not the calendar,
 so `31/02/2000` is accepted. Calendar validation remains a limitation of this implementation;
@@ -100,14 +100,15 @@ The script returned HTTP 200 and echoed all 13 name/value pairs: `job_ref`, `fir
 ## 4. Links and images
 
 All internal links (`index.html`, `jobs.html`, `apply.html`, `about.html`) and image paths are
-relative, so the site works from the GitHub Pages sub-folder. The current image set contains the three site graphics and four supplied member portraits.
-Their original files are retained; the former generated group-photo placeholder is no longer used.
+relative, so the site works from the GitHub Pages sub-folder. The current image set contains three
+site graphics, four unchanged supplied portraits and the displayed portrait collage. The former
+generated group-photo placeholder is no longer used.
 
 The Google Map is in the shared footer of all four pages. Its rendering at desktop and phone
-widths was checked on 20 October. The About page uses three supplied portraits with a temporary caption. In the published desktop
-page, both images loaded at their original 1280 x 1280 and 256 x 256 dimensions and displayed
-at 272 px wide each in a two-column grid. Separate portraits do not satisfy the real
-full-group-photograph requirement.
+widths was checked on 20 October. Earlier About revisions displayed the separate supplied
+portraits; sections 7 and 8 retain those historical checks. The current About figure displays
+one 1200 x 1320 JPEG collage with an accessible caption. It is 299185 bytes, below 300 KB, but
+it is not a photograph of the group together. Tutor acceptance remains unverified.
 
 ## 5. Accessibility evidence and limits
 
@@ -131,13 +132,12 @@ About with Enter, traversed the Apply controls with visible 3 px focus outlines,
 skill checkbox with Space in both directions. After publication of `32a2b06`, the first Tab on
 each of the four pages displayed Skip to main content with a visible orange 3 px outline;
 Enter moved focus to `main-content`. This verifies the published skip link on all four pages.
-The published About image alternatives and caption accurately identify the two temporary
-portraits and the pending full-group photograph.
+That earlier revision used temporary portrait alternatives. The current collage alternative and
+full member-name caption are checked in section 9.
 
-Not yet verified in this audit: a screen-reader walkthrough, browsers other than Chrome and a
-fresh responsive check after the latest edits. The browser tool could not apply the requested
-mobile viewport for the fresh 23 October check; no new mobile-width pass is claimed. WWTP-42
-remains In Progress for responsive verification, while its recorded keyboard checks have passed.
+Not yet verified: a screen-reader walkthrough and browsers other than Chrome. Earlier viewport
+limitations were superseded by the connected Chrome checks in sections 7 to 9. WWTP-42 was In
+Progress in the last verified Jira snapshot; these new checks do not change its live status.
 
 ### Review against the unit accessibility guideline (23 October)
 
@@ -146,9 +146,9 @@ particularly PDF pages 3-5 (web, keyboard and vision guidance) and 10-12 (docume
 
 | Guideline area | Source/evidence review | Remaining boundary |
 |---|---|---|
-| Accurate image alternatives | All image elements have alt text; four supplied portraits have accurate alternatives and a temporary caption | Real group photograph still needed |
+| Accurate image alternatives | All displayed image elements have alt text; the collage caption names all four original portrait subjects | Real group photograph still needed |
 | Heading structure and clear navigation | Semantic headings and consistent four-page navigation are present | Screen-reader navigation not tested |
-| Form instructions and keyboard operation | Labels, fieldsets, legends, format hints and visible focus styles are present; native controls were traversed by keyboard | Full responsive retest and screen-reader walkthrough pending |
+| Form instructions and keyboard operation | Labels, fieldsets, legends, format hints and visible focus styles are present; native controls were traversed by keyboard | Changed-page responsive checks in section 9; screen-reader walkthrough pending |
 | Readable type and spacing | Shared body uses Helvetica/Arial sans-serif, scalable em sizes and 1.6 line height | No claim of testing every assistive reading configuration |
 | Colour and contrast | WAVE evidence shows zero contrast errors; representative CSS text pairs calculated below | Gradient/image backgrounds still require visual review |
 | Consistent layout and non-colour cues | Shared navigation/footer, labelled controls, underlined body links and written status/hints | No full accessibility conformance claim |
@@ -185,13 +185,50 @@ conformance or completion of WWTP-42's outstanding responsive verification.
 
 - About now includes a Selected project brief section describing the chosen Apple recruitment site, both advertised roles, the four pages and the HTML5/CSS3-only Part 1 scope.
 
-## 7. Additional portrait update (23 October)
+## 7. Additional portrait update (23 October, superseded image layout)
 
 The coordinator supplied a third portrait and confirmed the image order: Tran Vo Nhat Minh, Bui Dang Minh, Le Ho Hoang Lan. The About page displays these full names below unchanged source images. Desktop CSS uses three columns; the rule at 600 px switches to one column. The source passed W3C HTML validation with zero errors and warnings. Publication evidence is recorded in WWTP-44; fresh narrow-viewport verification remains open in WWTP-42. The coordinator subsequently supplied Nguyen Quang Thang's fourth portrait (245 x 324). The original PNG is preserved unchanged, with its full name and an accurate alternative. The current desktop grid has two columns and two rows; the existing rule at 600 px retains a single column. The updated source passed W3C HTML validation with zero errors and warnings. Connected Chrome checks at 320, 375, 600, 601, 768 and 1280 px found no horizontal page overflow, confirmed all four original image dimensions, and verified `object-fit: contain`. The measured grid gap is 16 px; 600 px and below uses one column, while 601 px and above uses two. These remain individual portraits, not a complete group photograph.
 
 
-## 8. About content and gallery alignment (23 October)
+## 8. About content and gallery alignment (23 October, superseded image layout)
 
 The 12 previously empty fun-fact cells now contain coordinator-selected entries for Lan, Thang and Nhat Minh. All four rows have five populated cells, and Bui Dang Minh's existing row is unchanged. Personal confirmation of those three rows remains open in B-05. The webpage displays the completed table without a provisional label.
 
 The outer gallery caption was removed; all four individual name captions and original portraits remain. Scoped About styles center the Our group heading and bordered figure. Connected Chrome checks at 320, 375, 600, 601, 768 and 1280 px measured a 0 px difference between the horizontal centers of the section and figure, no horizontal page overflow, and four loaded portraits. The existing two-column desktop and one-column mobile rules remain in place.
+
+## 9. Final collage and required-skills checks (23 October)
+
+This section supersedes the separate-portrait layouts and combined skill checkbox described in
+sections 1 to 8. The source validation below was repeated on the final website changes.
+
+- W3C Nu HTML Checker: all four HTML files returned zero messages (0 errors, 0 warnings).
+- W3C CSS Validator: all five external stylesheets returned valid with 0 errors using the
+  CSS level 3 + SVG profile. Warning suppression means no warning-count claim is made.
+- Local source checks: 28 deliverable files, four HTML pages, five CSS files and 56 local
+  HTML references; every local reference exists. All HTML/CSS files contain zero comments
+  and no script elements. The four original portrait PNGs match revision ea81c93 byte for byte.
+- The displayed collage is the exact coordinator-supplied JPEG: 1200 x 1320, 299185 bytes,
+  SHA-256 f3a1d8599fde583498c508b44564917eec90b4a325cacdd8421fb62a53f093c4.
+  It uses the original portraits with names; faces were not regenerated. The single image
+  retains its aspect ratio, and the real HTML caption names all four members in row order.
+- Connected Chrome checks for About and Apply at 320, 375, 768 and 1280 CSS px, then back
+  to 320 px, passed 10/10 cases without horizontal page overflow. The collage figure's
+  horizontal center differed from its section center by 0 px in all five About cases.
+  Its rendered width at 1280 px was 786.40625 px; the figure retained its 820 px maximum.
+- With all other fields valid, neither skill, HTML only and CSS only each leave the form
+  invalid. Both required skills with an empty Other skills textarea make it valid. The
+  two checked controls supply skills[]=html and skills[]=css. Keyboard Space disables
+  and re-enables HTML validation correctly; its focused outline is 3 px. Both checkbox
+  labels are 48 px high at every tested width. No external test-server submission was
+  performed for this revision; earlier POST results are historical.
+
+The coordinator confirmed tutor approval of the Apple topic and Zalo participation evidence,
+and exemption from Peer and Self Evaluation on 23 October. The Jira Access table lists
+the tutor with the Viewer role; actual tutor login remains unobserved. The collage is below 300 KB but is not a
+photograph of the group together, so acceptance as a substitute remains unverified. Personal
+confirmation of the three coordinator-selected fun-fact rows remains open. The owner's decision
+to omit source comments leaves the unit's in-code acknowledgement/comment requirements unmet.
+
+The publication gate compares all 17 website HTML/CSS/image files against committed Git bytes
+after a successful GitHub Pages run. The exact final main SHA and run URL are returned with the
+publication result so the Windows report and ZIP can be rebuilt from that stable revision.

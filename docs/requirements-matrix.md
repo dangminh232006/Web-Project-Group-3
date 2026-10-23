@@ -13,9 +13,9 @@ and how to check it. Status reviewed 23 October 2026; remaining work is tracked 
 | Common navigation menu on all pages | `<nav>` in each `<header>` | Met (identical four links, current page marked) |
 | Validates as HTML5 | `docs/test-report.md` | Met, 0 errors |
 | Semantic tags | `header`, `nav`, `main`, `section`, `aside`, `figure`, `figcaption`, `footer` | Met |
-| Accessibility checks | labels, `alt`, heading order, `lang`, focus outline, contrast, `aria-labelledby` (Week 6) | WAVE screenshots: 0 errors and 0 contrast errors on all four pages; published skip links and keyboard control checks passed; fresh responsive widths and screen-reader coverage remain incomplete |
+| Accessibility checks | labels, `alt`, heading order, `lang`, focus outline, contrast, `aria-labelledby` (Week 6) | WAVE screenshots: 0 errors and 0 contrast errors on all four pages; published skip links and keyboard control checks passed; changed-page responsive checks are recorded in test-report.md section 9; a screen-reader walkthrough remains incomplete |
 | Aboriginal and Torres Strait Islander element, explained | `index.html` `#acknowledgement` | Met |
-| Jira with epics, stories, tasks, two sprints | Live WWTP board; `project-workflow.md` | Structure and two Part 1 sprints verified; tutor access pending (B-08) |
+| Jira with epics, stories, tasks, two sprints | Live WWTP board; `project-workflow.md` | Structure and two Part 1 sprints verified; tutor listed as Viewer in the Access table on 23 October; actual tutor login unobserved (B-08) |
 | Deployed on GitHub Pages | footer link | Met: public repository, Pages enabled from `main` `/` (B-09) |
 
 ## index.html
@@ -59,10 +59,10 @@ and how to check it. Status reviewed 23 October 2026; remaining work is tracked 
 | Postcode | exactly 4 digits | `pattern="[0-9]{4}"` |
 | Email | valid format | `type="email"` |
 | Phone | 8 to 12 digits | `type="tel"`, `pattern="[0-9]{8,12}"` |
-| Skill list | check boxes | `name="skills[]"` |
+| Skill list | check boxes | Two independently required controls, HTML (`value="html"`) and CSS (`value="css"`), both with `name="skills[]"` |
 | Other skills | textarea | Optional `<textarea>` |
 | Labels on all inputs | | `<label for>` or wrapping `<label>` on every control |
-| All fields except textarea required | | Required text fields, state selection and gender group; only HTML and CSS is mandatory in the skills group. Other checkboxes are optional; tutor acceptance of this interpretation is pending (D-04, B-13) |
+| All fields except textarea required | | Required text fields, state selection, gender group and both skill checkboxes. Additional skills appear only in the optional textarea (D-04, B-13) |
 | POST to formtest.php | | `method="post" action="https://mercury.swin.edu.au/it000000/formtest.php"` |
 | Form layout using Flexbox or Grid | | `.form-grid` (Grid) and `.choices` (Flexbox) in `apply.css` |
 
@@ -73,7 +73,7 @@ and how to check it. Status reviewed 23 October 2026; remaining work is tracked 
 | Group name and class day/time, nested list | `#group-details`: Wednesday, 09:00 to 12:00, tutor Thomas Harrison |
 | Member contributions and quotes, definition list | `dl.members` |
 | Quote in first language + English translation | All four members have `dd.quote` with `lang="vi"` plus an English translation (B-04) |
-| Group photo under 300 KB in `<figure>` with caption | `#group-photo` (two temporary member portraits; a real full-group photo under 300 KB remains pending, B-06) |
+| Group photo under 300 KB in `<figure>` with caption | `#group-photo`: one captioned 1200 x 1320 JPEG portrait collage, 299185 bytes (under 300 KB). Original portraits retained. It is not a together photograph; tutor acceptance remains unverified (B-06) |
 | Fun facts table with caption | `#fun-facts` (all cells filled; the coordinator-selected entries for three members still need their confirmation, B-05) |
 | Styled student IDs | `.student-id` |
 | Bordered figure | `#group-photo { border: 4px solid #1d1d1f; }` |
