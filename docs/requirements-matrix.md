@@ -13,7 +13,7 @@ and how to check it. Status reviewed 23 October 2026; remaining work is tracked 
 | Common navigation menu on all pages | `<nav>` in each `<header>` | Met (identical four links, current page marked) |
 | Validates as HTML5 | `docs/test-report.md` | Met, 0 errors |
 | Semantic tags | `header`, `nav`, `main`, `section`, `aside`, `figure`, `figcaption`, `footer` | Met |
-| Accessibility checks | labels, `alt`, heading order, `lang`, focus outline, contrast, `aria-labelledby` (Week 6) | WAVE screenshots: 0 errors and 0 contrast errors on all four pages; manual keyboard/screen-reader coverage remains incomplete |
+| Accessibility checks | labels, `alt`, heading order, `lang`, focus outline, contrast, `aria-labelledby` (Week 6) | WAVE screenshots: 0 errors and 0 contrast errors on all four pages; published skip links and keyboard control checks passed; fresh responsive widths and screen-reader coverage remain incomplete |
 | Aboriginal and Torres Strait Islander element, explained | `index.html` `#acknowledgement` | Met |
 | Jira with epics, stories, tasks, two sprints | Live WWTP board; `project-workflow.md` | Structure and two Part 1 sprints verified; tutor access pending (B-08) |
 | Deployed on GitHub Pages | footer link | Met: public repository, Pages enabled from `main` `/` (B-09) |

@@ -9,12 +9,14 @@ Results below distinguish the latest deployed-source validation from earlier bro
 |---|---|---|
 | `index.html`, `jobs.html`, `apply.html`, `about.html` | [W3C Nu HTML Checker](https://validator.w3.org/nu/) against each live URL | Each: 0 errors, 0 warnings |
 | `styles.css`, `index.css`, `jobs.css`, `apply.css`, `about.css` | [W3C CSS Validator](https://jigsaw.w3.org/css-validator/), CSS level 3 + SVG profile | Each: valid, 0 errors |
-| Four HTML pages and five CSS files | HTTP retrieval of the GitHub Pages files and comparison with committed source | All nine returned HTTP 200 and matched the audited commit `c265cea` |
+| Four HTML pages, five CSS files and two portraits | HTTP retrieval of the GitHub Pages files and comparison with committed source | All eleven matched `23e4809`; the four updated HTML pages with versioned stylesheet URLs are live at `32a2b06` |
 | Internal page links and local assets | Local path checks | All referenced files exist |
 
 The CSS request suppressed warnings; the result establishes zero errors, not zero warnings.
 Windows working-tree line endings differ from the deployed files; the comparison used committed
-Git content so line-ending conversion did not produce a false mismatch.
+Git content so line-ending conversion did not produce a false mismatch. The final source check
+after `32a2b06` returned an empty W3C Nu message list for each HTML page and valid/zero-error
+results for all five stylesheets. The stylesheet URL version avoids stale browser caching.
 
 Earlier checks: on 18 October, all five stylesheets passed a local syntax parse, and Chrome
 computed styles and element positions matched the pre-split version on four pages at 320,
@@ -102,8 +104,10 @@ relative, so the site works from the GitHub Pages sub-folder. The current image 
 Their original files are retained; the former generated group-photo placeholder is no longer used.
 
 The Google Map is in the shared footer of all four pages. Its rendering at desktop and phone
-widths was checked on 20 October. The About page now uses two supplied portraits with a temporary caption. Separate portraits
-do not satisfy the real full-group-photograph requirement.
+widths was checked on 20 October. The About page uses two supplied portraits with a temporary caption. In the published desktop
+page, both images loaded at their original 1280 x 1280 and 256 x 256 dimensions and displayed
+at 272 px wide each in a two-column grid. Separate portraits do not satisfy the real
+full-group-photograph requirement.
 
 ## 5. Accessibility evidence and limits
 
@@ -124,14 +128,16 @@ accessibility certification.
 
 On 23 October, a live keyboard check traversed the four navigation links in order, activated
 About with Enter, traversed the Apply controls with visible 3 px focus outlines, and toggled a
-skill checkbox with Space in both directions. The source has since gained a Skip to main content
-link on all four pages and a focusable main target. The About image alternatives and caption now accurately identify the two temporary portraits
-and the pending full-group photograph. These changes require verification after publication.
+skill checkbox with Space in both directions. After publication of `32a2b06`, the first Tab on
+each of the four pages displayed Skip to main content with a visible orange 3 px outline;
+Enter moved focus to `main-content`. This verifies the published skip link on all four pages.
+The published About image alternatives and caption accurately identify the two temporary
+portraits and the pending full-group photograph.
 
-Not yet verified in this audit: a screen-reader walkthrough, browsers other than Chrome, the
-new skip link on the published site and a fresh responsive check after the latest edits. The
-fresh viewport attempt on 23 October was blocked by the browser tool's paused document response;
-no new responsive pass is claimed from that attempt. WWTP-42 remains In Progress.
+Not yet verified in this audit: a screen-reader walkthrough, browsers other than Chrome and a
+fresh responsive check after the latest edits. The browser tool could not apply the requested
+mobile viewport for the fresh 23 October check; no new mobile-width pass is claimed. WWTP-42
+remains In Progress for responsive verification, while its recorded keyboard checks have passed.
 
 ### Review against the unit accessibility guideline (23 October)
 
@@ -142,7 +148,7 @@ particularly PDF pages 3-5 (web, keyboard and vision guidance) and 10-12 (docume
 |---|---|---|
 | Accurate image alternatives | All image elements have alt text; two supplied portraits have accurate alternatives and a temporary caption | Real group photograph still needed |
 | Heading structure and clear navigation | Semantic headings and consistent four-page navigation are present | Screen-reader navigation not tested |
-| Form instructions and keyboard operation | Labels, fieldsets, legends, format hints and visible focus styles are present; native controls were traversed by keyboard | Published skip-link check and full responsive retest pending |
+| Form instructions and keyboard operation | Labels, fieldsets, legends, format hints and visible focus styles are present; native controls were traversed by keyboard | Full responsive retest and screen-reader walkthrough pending |
 | Readable type and spacing | Shared body uses Helvetica/Arial sans-serif, scalable em sizes and 1.6 line height | No claim of testing every assistive reading configuration |
 | Colour and contrast | WAVE evidence shows zero contrast errors; representative CSS text pairs calculated below | Gradient/image backgrounds still require visual review |
 | Consistent layout and non-colour cues | Shared navigation/footer, labelled controls, underlined body links and written status/hints | No full accessibility conformance claim |
@@ -161,8 +167,9 @@ rendered-page checks.
 | `#f5f5f7` / `#1d1d1f` | Header navigation | 15.46:1 |
 | `#1d1d1f` / `#d6e9ff` | About table hover text | 13.59:1 |
 
-This review identifies the pending work rather than marking all accessibility requirements
-complete. WWTP-43 remains In Progress until the published alt-text change is verified.
+WWTP-43 is Done following the guideline/contrast review and verification of the published image
+alternatives and skip links. This completes that review task; it does not imply full accessibility
+conformance or completion of WWTP-42's outstanding responsive verification.
 
 ## 6. Form and footer regression checks (20/10/2026)
 
