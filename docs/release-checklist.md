@@ -15,10 +15,10 @@ as displayed by the current group and individual Canvas assignments.
 | B-03 | Complete | Each member has a page and stylesheet, supported by actual Git authorship | `contributions.md` |
 | B-04 | Complete | All four Vietnamese quotes and English translations appear with `lang="vi"` | `about.html` |
 | B-05 | Open | Fun-facts table is styled, but three members still have 12 placeholder cells | Lan, Thang and Nhat Minh; WWTP-39 |
-| B-06 | Open | Two supplied member portraits are used temporarily. Separate portraits do not fulfil the full-group photograph requirement | Group; WWTP-39 |
+| B-06 | Open | Three supplied member portraits have confirmed full-name captions. Nguyen Quang Thang's portrait is awaiting supply. Separate portraits do not fulfil the full-group photograph requirement | Group; WWTP-39 |
 | B-07 | Complete | The old Before submission box is absent from the About page | `about.html` |
 | B-08 | Partial | Jira has 8 epics, 11 stories, 22 tasks and two Part 1 sprints. Tutor access has not been verified | WWTP-45 |
-| B-09 | Complete for audited code revision | Live files matched `23e4809`, and updated stylesheet-version links in `32a2b06` are published; all four skip links and both portraits were verified live | WWTP-44 records the deployment run and final verified commit |
+| B-09 | Complete for audited code revision | Live files matched `23e4809`, and updated stylesheet-version links in `32a2b06` are published; all four skip links and the first two portraits were verified live | WWTP-44 records the deployment run and final verified commit |
 | B-10 | Partial | Bui Dang Minh's Canvas Group Agreement shows Submitted, attempt 1, `Group3_GroupAgreement.docx`. Other members' submissions are unverified | Each member; WWTP-27 In Progress |
 | B-11 | Unmet | Required in-code GenAI acknowledgements are absent. The owner has explicitly chosen to keep source files without comments | Documentation does not replace this requirement |
 | B-12 | Unmet | Required explanatory CSS comments and external-source acknowledgements are absent | Source records in `references.md` do not meet an in-code requirement |

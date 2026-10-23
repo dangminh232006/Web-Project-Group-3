@@ -52,7 +52,8 @@ applied-web-project-part1/
 │   ├── hero-workplace.jpg   Hero illustration, 640 x 400
 │   ├── bg-hero.jpg          Background graphic for the home page hero (CSS)
 │   ├── group-portrait-1.png First supplied portrait, unchanged (1280 x 1280)
-│   └── group-portrait-2.png Second supplied portrait, unchanged (256 x 256)
+│   ├── group-portrait-2.png Second supplied portrait, unchanged (256 x 256)
+│   └── group-portrait-3.png Third supplied portrait, unchanged (960 x 1280)
 ├── docs/                    Supporting documentation (see below)
 └── README.md
 ```
