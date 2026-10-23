@@ -1,3 +1,4 @@
+/* Distinguish student IDs within the member list. GenAI acknowledgement and prompt: index.html. */
 .student-id {
   display: inline-block;
   font-family: "Courier New", Courier, monospace;
@@ -37,6 +38,7 @@
   padding-left: 0.8em;
 }
 
+/* Center the bounded figure and scale the supplied collage without cropping. */
 #photo {
   text-align: center;
 }
@@ -63,6 +65,7 @@
   color: #424245;
 }
 
+/* Use bordered cells, alternating row fills and a hover state to support table reading. */
 #fun-facts table {
   border: 2px solid #1d1d1f;
 }
