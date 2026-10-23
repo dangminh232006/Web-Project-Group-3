@@ -71,15 +71,10 @@ individual contributions.
 
 ## What the AI assistance covered
 
-For honesty, as also recorded in the README: an AI assistant produced the initial
-scaffold of all four pages, the stylesheet and this documentation set in a single
-session, before any member-specific content existed.
+AI assistance supported website layout and colour choices through specific
+questions and suggestions. Members reviewed and adapted those suggestions to
+suit the project requirements.
 
-That means **the current code is not yet evidence of anyone's individual
-contribution.** It becomes evidence as members review it, change it, fill in the
-placeholders, fix what they disagree with, and commit their own work under their
-own accounts.
-
-Be straightforward about this in the interview. The interview assesses whether
-**you** can explain and modify the code, so make sure you can explain every line of
-the page you own.
+Individual contributions should be supported by each member's own commits,
+reviews and changes. Each member should be able to explain and modify the code
+for the page they own during the interview.

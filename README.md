@@ -94,3 +94,8 @@ Then open `http://127.0.0.1:8777/applied-web-project-part1/index.html`.
 | POST to Mercury `formtest.php` | HTTP 200, all 13 field names echoed |
 
 Details: `docs/test-report.md`.
+
+## Acknowledgements
+
+- External sources (Devicon logo glyph, Apple company information, Google Maps embed, City of Sydney)
+  are listed in `docs/references.md`.

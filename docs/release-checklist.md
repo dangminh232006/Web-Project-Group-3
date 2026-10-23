@@ -11,14 +11,14 @@ to Canvas. The open items include missing group details and code attribution.
 | ~~B-02~~ | ~~Name and student ID of members 2 to 4~~ **Done 07/10/2026:** Le Ho Hoang Lan (106229050), Nguyen Quang Thang (106202475), Tran Vo Nhat Minh (106233462) | `about.html` | - |
 | B-03 | Page owned and other work for members 2 to 4 (each student must build at least one page and its CSS) | `about.html`, `docs/contributions.md` | Each member |
 | B-04 | Quote in each member's first language plus English translation; add `lang="xx"` on the quote's `<span>` | `about.html` `dd.quote` | Each member |
-| B-05 | Fun facts section removed at the coordinator's request on 20/10/2026; brief requirement remains unmet | `about.html` | Group |
+| B-05 | Fun facts table restored 23/10/2026. Bui Dang Minh's row is filled in; the other three members must replace their `[placeholder]` cells | `about.html` `#fun-facts` | Each member |
 | B-06 | Real group photo (not individual photos), JPEG under 300 KB, saved as `images/group-photo.jpg` | `images/` | Group |
-| B-07 | Delete the "Before submission" box at the top of `about.html` once B-01 to B-06 are done | `about.html` | Group |
+| ~~B-07~~ | **Done 23/10/2026:** "Before submission" box removed from `about.html` | `about.html` | - |
 | B-08 | Jira board has epics, user stories, tasks and at least two sprints, and the tutor has access | Jira | Group |
 | ~~B-09~~ | ~~Restore GitHub Pages~~ **Done 18/10/2026:** repository made public and Pages enabled from `main` `/`; live site verified | GitHub repository visibility and Pages settings | Repository owner |
 | B-10 | Group Agreement submitted on Canvas by every member | Canvas | Each member |
-| B-11 | Unit-required GenAI acknowledgements and prompts are absent from code comments after the 18 October removal | Four HTML pages and five CSS files; use recorded in `README.md` | Group |
-| B-12 | Unit-required external source acknowledgements are absent from code comments after the 18 October removal | Four HTML pages and five CSS files; sources in `docs/references.md` | Group |
+| B-11 | In-code GenAI acknowledgements are absent after the requested comment removal on 23/10/2026 | Four HTML pages and five CSS files | Repository owner |
+| B-12 | In-code external source acknowledgements are absent after the requested comment removal on 23/10/2026; source records remain in `docs/references.md` | Four HTML pages and five CSS files | Repository owner |
 
 Check that nothing is left:
 

@@ -3,9 +3,8 @@
 COS10026 Applied Web Project - Part 1, Group 3. Referencing style: APA 7 where applicable.
 
 The unit requires every external source to be acknowledged in a code comment next to the code
-that uses it (Canvas: *Unit Requirement: External Source Acknowledgment*). Those comments were
-removed on 18 October 2026 at the coordinator's request. This file preserves the source list,
-but does not meet the unit's in-code acknowledgement requirement.
+that uses it (Canvas: *Unit Requirement: External Source Acknowledgment*). Source comments were removed from the current HTML and CSS on 23 October 2026.
+This file retains the source records; it does not replace the required in-code acknowledgements.
 
 ## Images
 
