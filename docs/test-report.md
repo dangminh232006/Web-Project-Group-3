@@ -100,7 +100,7 @@ The script returned HTTP 200 and echoed all 13 name/value pairs: `job_ref`, `fir
 ## 4. Links and images
 
 All internal links (`index.html`, `jobs.html`, `apply.html`, `about.html`) and image paths are
-relative, so the site works from the GitHub Pages sub-folder. The current image set contains the three site graphics and three supplied member portraits.
+relative, so the site works from the GitHub Pages sub-folder. The current image set contains the three site graphics and four supplied member portraits.
 Their original files are retained; the former generated group-photo placeholder is no longer used.
 
 The Google Map is in the shared footer of all four pages. Its rendering at desktop and phone
@@ -146,7 +146,7 @@ particularly PDF pages 3-5 (web, keyboard and vision guidance) and 10-12 (docume
 
 | Guideline area | Source/evidence review | Remaining boundary |
 |---|---|---|
-| Accurate image alternatives | All image elements have alt text; three supplied portraits have accurate alternatives and a temporary caption | Real group photograph still needed |
+| Accurate image alternatives | All image elements have alt text; four supplied portraits have accurate alternatives and a temporary caption | Real group photograph still needed |
 | Heading structure and clear navigation | Semantic headings and consistent four-page navigation are present | Screen-reader navigation not tested |
 | Form instructions and keyboard operation | Labels, fieldsets, legends, format hints and visible focus styles are present; native controls were traversed by keyboard | Full responsive retest and screen-reader walkthrough pending |
 | Readable type and spacing | Shared body uses Helvetica/Arial sans-serif, scalable em sizes and 1.6 line height | No claim of testing every assistive reading configuration |
@@ -187,4 +187,4 @@ conformance or completion of WWTP-42's outstanding responsive verification.
 
 ## 7. Additional portrait update (23 October)
 
-The coordinator supplied a third portrait and confirmed the image order: Tran Vo Nhat Minh, Bui Dang Minh, Le Ho Hoang Lan. The About page displays these full names below unchanged source images. Desktop CSS uses three columns; the rule at 600 px switches to one column. The source passed W3C HTML validation with zero errors and warnings. Publication evidence is recorded in WWTP-44; fresh narrow-viewport verification remains open in WWTP-42. Nguyen Quang Thang's portrait will be supplied later. These remain individual portraits, not a complete group photograph.
+The coordinator supplied a third portrait and confirmed the image order: Tran Vo Nhat Minh, Bui Dang Minh, Le Ho Hoang Lan. The About page displays these full names below unchanged source images. Desktop CSS uses three columns; the rule at 600 px switches to one column. The source passed W3C HTML validation with zero errors and warnings. Publication evidence is recorded in WWTP-44; fresh narrow-viewport verification remains open in WWTP-42. The coordinator subsequently supplied Nguyen Quang Thang's fourth portrait (245 x 324). The original PNG is preserved unchanged, with its full name and an accurate alternative. The current desktop grid has two columns and two rows; the existing rule at 600 px retains a single column. The updated source passed W3C HTML validation with zero errors and warnings. Connected Chrome checks at 320, 375, 600, 601, 768 and 1280 px found no horizontal page overflow, confirmed all four original image dimensions, and verified `object-fit: contain`. The measured grid gap is 16 px; 600 px and below uses one column, while 601 px and above uses two. These remain individual portraits, not a complete group photograph.
