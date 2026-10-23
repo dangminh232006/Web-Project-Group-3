@@ -3,28 +3,29 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Meet Group 3, the COS10026 students who built the Apple Careers recruitment website: class details, contributions, quotes and group photo.">
-  <meta name="keywords" content="Group 3, COS10026, Swinburne, team members, student IDs, contributions">
+  <meta name="description" content="Meet Group 3, the COS10026 students who built the Apple Careers recruitment website: class details, contributions, quotes, group photo and fun facts.">
+  <meta name="keywords" content="Group 3, COS10026, Swinburne, team members, student IDs, contributions, fun facts">
   <meta name="author" content="Group 3, COS10026">
   <title>Careers at Apple - About Group 3</title>
-
 
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="about.css">
 
   <style>
-    .todo-note {
-      border: 2px dashed #b07d00;
-      background-color: #fffaeb;
-      padding: 0.8em 1em;
+    #fun-facts caption {
+      font-weight: bold;
+      color: #1d1d1f;
     }
   </style>
 </head>
 
 <body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
   <header id="site-header">
     <div class="container">
       <a class="brand" href="index.html">
+
         <img src="images/logo.png" alt="Apple logo" width="48" height="48">
         Apple Careers
       </a>
@@ -44,18 +45,13 @@
     <strong>Student project for COS10026 at Swinburne.</strong> This is not an official Apple website and all jobs are fictional.
   </p>
 
-  <main>
+  <main id="main-content" tabindex="-1">
     <div class="container">
 
       <h1>About Group 3</h1>
       <p>
         We are the COS10026 Web Technology Project team that designed and built this
         Apple Careers website using only HTML5 and CSS3.
-      </p>
-
-      <p class="todo-note">
-        <strong>Before submission:</strong> every item shown in square brackets with a yellow highlight
-        must be replaced with the real details of that team member (page owned and other work).
       </p>
 
       <section id="group-details" aria-labelledby="group-heading">
@@ -129,9 +125,60 @@
       <section id="photo" aria-labelledby="photo-heading">
         <h2 id="photo-heading">Our group</h2>
         <figure id="group-photo">
-          <img src="images/group-photo.jpg" alt="Group 3 members together on campus" width="800" height="450">
-          <figcaption>Group 3, COS10026 Web Technology Project, 2026.</figcaption>
+          <div class="group-portraits">
+            <img src="images/group-portrait-1.png" alt="Portrait of a person wearing glasses and holding headphones" width="1280" height="1280">
+            <img src="images/group-portrait-2.png" alt="Portrait of a person wearing glasses, a dark suit and a tie" width="256" height="256">
+          </div>
+          <figcaption>Group 3, COS10026 Web Technology Project, 2026. Temporary portraits while the full group photo is being prepared.</figcaption>
         </figure>
+      </section>
+
+      <section id="fun-facts" aria-labelledby="facts-heading">
+        <h2 id="facts-heading">Fun facts</h2>
+        <div class="table-wrapper">
+          <table>
+            <caption>Fun facts about the members of Group 3</caption>
+            <thead>
+              <tr>
+                <th>Member</th>
+                <th>Dream job</th>
+                <th>Coding snack</th>
+                <th>Hometown</th>
+                <th>Favourite Apple product</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Bui Dang Minh</td>
+                <td>Data scientist</td>
+                <td>Matcha latte</td>
+                <td>Hanoi, Vietnam</td>
+                <td>MacBook Air</td>
+              </tr>
+              <tr>
+                <td>Le Ho Hoang Lan</td>
+                <td><span class="placeholder">[Dream job]</span></td>
+                <td><span class="placeholder">[Coding snack]</span></td>
+                <td><span class="placeholder">[Hometown]</span></td>
+                <td><span class="placeholder">[Favourite Apple product]</span></td>
+              </tr>
+              <tr>
+                <td>Nguyen Quang Thang</td>
+                <td><span class="placeholder">[Dream job]</span></td>
+                <td><span class="placeholder">[Coding snack]</span></td>
+                <td><span class="placeholder">[Hometown]</span></td>
+                <td><span class="placeholder">[Favourite Apple product]</span></td>
+              </tr>
+              <tr>
+                <td>Tran Vo Nhat Minh</td>
+                <td><span class="placeholder">[Dream job]</span></td>
+                <td><span class="placeholder">[Coding snack]</span></td>
+                <td><span class="placeholder">[Hometown]</span></td>
+                <td><span class="placeholder">[Favourite Apple product]</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </section>
 
       <section id="why-apple" aria-labelledby="why-heading">
@@ -180,6 +227,7 @@
             <li><a href="about.html">About us</a></li>
           </ul>
         </section>
+
         <section class="footer-map" aria-labelledby="footer-location">
           <h2 id="footer-location">Apple headquarters</h2>
           <iframe src="https://www.google.com/maps/embed?origin=mfe&amp;pb=!1m3!2m1!1sApple+Park,+One+Apple+Park+Way,+Cupertino,+CA+95014!6i15"

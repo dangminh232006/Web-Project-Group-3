@@ -2,7 +2,10 @@
 
 COS10026 Applied Web Project - Part 1.
 
-> **Status: UNSIGNED DRAFT. Not submitted.**
+> **Status of this file: UNSIGNED DRAFT. This Markdown template was not submitted.**
+> Bui Dang Minh's separate official `Group3_GroupAgreement.docx` is shown as Submitted
+> in Canvas (attempt 1), verified 23 October 2026. Other members' receipts are unverified.
+> This draft does not replace that official document or establish anyone's signature.
 >
 > Two things matter here:
 >

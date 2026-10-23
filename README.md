@@ -24,7 +24,7 @@ built with HTML5 and CSS3 only. No JavaScript, no frameworks, no build step.
 | `index.html` | Logo, company name, slogan, description and image; CSS background graphic; search box with button; hiring-process table with merged cells (`rowspan`, `colspan`); Acknowledgement of Country and inclusive hiring statement; footer with Jira, GitHub and email links |
 | `jobs.html` | Two job descriptions (`AFE26` Front-End Web Developer, `AUX26` Accessibility and UX Designer), each a `<section>` with salary, reporting line, responsibilities, essential (`<ol>`) and preferable (`<ul>`) requirements; `<aside>` floated right at 25% |
 | `apply.html` | Job application form, `method="post"` to `https://mercury.swin.edu.au/it000000/formtest.php`, HTML5 validation with `pattern`, `maxlength`, `required`, `type="email"`; layout with CSS Grid |
-| `about.html` | Group name and class details (nested list), selected project brief, members, contributions and quotes (definition list), group photo in a bordered `<figure>` |
+| `about.html` | Group name and class details (nested list), selected project brief, members, contributions and quotes (definition list), temporary member portraits in a bordered `<figure>`; full group photo pending |
 | `styles.css` | Shared base, navigation, footer, responsive and print styles |
 | `index.css`, `jobs.css`, `apply.css`, `about.css` | CSS specific to each matching HTML page |
 
@@ -51,27 +51,24 @@ applied-web-project-part1/
 │   ├── logo.png             Apple logo glyph, 48 x 48 (see docs/references.md)
 │   ├── hero-workplace.jpg   Hero illustration, 640 x 400
 │   ├── bg-hero.jpg          Background graphic for the home page hero (CSS)
-│   └── group-photo.jpg      PLACEHOLDER - replace with the real group photo (< 300 KB)
+│   ├── group-portrait-1.png First supplied portrait, unchanged (1280 x 1280)
+│   └── group-portrait-2.png Second supplied portrait, unchanged (256 x 256)
 ├── docs/                    Supporting documentation (see below)
 └── README.md
 ```
 
-## Before submission (team to do)
+## Submission status (23 October 2026)
 
-Search for the yellow placeholders and replace each one with real details:
+The four page owners, their student IDs and translated quotes are recorded. The live site works,
+and Jira contains epics, stories, tasks and two Part 1 sprints. Remaining items include the real
+group photo, 12 fun-fact cells from the other three members and verified tutor access to Jira.
+The group and individual Canvas submissions have not yet been uploaded.
 
-```bash
-grep -n 'class="placeholder"' about.html
-```
+The current Canvas deadline for both Part 1 submissions is **1 November 2026, 23:59 Vietnam time**
+(2 November, 03:59 Melbourne time).
 
-1. Page owned and other work for Le Ho Hoang Lan, Nguyen Quang Thang and Tran Vo Nhat Minh
-   (names and student IDs are already filled in).
-2. Replace `images/group-photo.jpg` with a real group photo (JPEG, under 300 KB, keep 800 x 450 or update
-   `width`/`height` in `about.html`), then delete the "Before submission" box at the top of `about.html`.
-3. Check the Jira board has epics, user stories, tasks and two sprints, and that the tutor has access.
-4. Make sure GitHub Pages is switched on and the live link works (the repository must allow Pages).
-
-Full list: `docs/release-checklist.md`.
+The complete status, evidence and remaining submission steps are maintained in
+[`docs/release-checklist.md`](docs/release-checklist.md).
 
 ## Running locally
 
@@ -83,14 +80,20 @@ python3 -m http.server 8777
 
 Then open `http://127.0.0.1:8777/applied-web-project-part1/index.html`.
 
-## Verification (07/10/2026)
+## Verification
 
 | Check | Result |
 |---|---|
-| W3C Nu HTML Checker, all four pages | 0 errors, 0 warnings |
-| W3C CSS Validator (CSS level 3 + SVG) | 0 errors |
-| No horizontal page scroll at 320, 375, 768, 1024 and 1280 px | Pass |
-| Form pattern tests (valid and invalid values for every rule) | 28 of 28 as expected |
-| POST to Mercury `formtest.php` | HTTP 200, all 13 field names echoed |
+| W3C Nu HTML Checker, all four deployed pages (23 October) | 0 errors, 0 warnings |
+| W3C CSS Validator, all five deployed CSS files (23 October, CSS level 3 + SVG) | 0 errors |
+| WAVE screenshots, all four pages (23 October) | 0 errors, 0 contrast errors; alerts reviewed |
+| Chrome responsive checks, four pages at 320, 375, 768, 1024 and 1280 px (20 October) | 20/20 without page overflow |
+| Form pattern tests (7 October) | 28 of 28 as expected |
+| POST to Mercury `formtest.php` (7 and 20 October) | All 13 field names echoed; result opens separately |
 
 Details: `docs/test-report.md`.
+
+## Acknowledgements
+
+- External sources (Devicon logo glyph, Apple company information, Google Maps embed, City of Sydney)
+  are listed in `docs/references.md`.

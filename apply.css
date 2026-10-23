@@ -130,8 +130,6 @@ legend {
   border-color: #003d7a;
 }
 
-
-
 @media screen and (max-width: 768px) {
   .form-grid {
     grid-template-columns: 1fr;

@@ -1,85 +1,41 @@
 # Contribution record
 
-COS10026 Applied Web Project - Part 1.
+COS10026 Applied Web Project - Part 1, Group 3. Updated 23 October 2026.
 
-> **This file is empty on purpose.** It records who actually did what. It must be
-> filled in by the group, from the real Git history and the real Jira board -
-> not estimated, and never written on someone else's behalf.
->
-> Only Bui Dang Minh's rows are filled in. The other members fill in their own rows;
-> inventing a contribution record for someone else would be academic misconduct.
-
----
-
-## Why this matters
-
-The brief requires that *"Each student should be responsible for developing at
-least one page, including its required CSS styling."* The individual component
-(30% of Part 1) assesses your understanding of the project in a Week 6 interview,
-and the Peer and Self Evaluation asks each member to justify their own and their
-peers' contributions.
-
-If the record here does not match the Git history, the mismatch is visible to the
-tutor.
-
----
+This factual record links page ownership to the authors recorded in the current `main` history.
+It is not a self-assessment written for another member and does not assign credit from commit
+counts alone. Each member remains responsible for explaining their work in the interview and
+completing their own peer and self-evaluation. Bui Dang Minh confirmed on 23 October that he
+has completed the Week 6 interview in class; no grade or interview date is inferred.
 
 ## Page and stylesheet ownership
 
-Fill this in and keep it current.
-
-| Page | Owner | Page stylesheet | Evidence (commit range or Jira issues) |
-|---|---|---|---|
-| `index.html` | Bui Dang Minh (105716425) | `index.css` | |
-| `jobs.html` | | `jobs.css` | |
-| `apply.html` | | `apply.css` | |
-| `about.html` | | `about.css` | |
-| `styles.css` (base, header, navigation, shared blocks, footer, responsive and print) | Bui Dang Minh (105716425) | Shared styles | |
-
----
-
-## Individual contribution records
-
-Copy this block once per member. Each member writes their own.
-
-### Member: _______________  Student ID: _______________
-
-| Field | Detail |
-|---|---|
-| Page owned | |
-| CSS sections written | |
-| Other contributions | e.g. testing, Jira administration, assets, documentation |
-| Jira issues completed | issue keys |
-| Commits | approximate count and date range |
-| Anything they did **not** do that might otherwise be assumed | |
-
-**Self-assessment against the ownership rule:** did this member develop at least
-one full page and its CSS? Yes / No. If no, say what is being done about it.
-
----
-
-## Shared or pair work
-
-Record anything genuinely done together, so it is not double-counted as two
-individual contributions.
-
-| Work | Members involved | How the effort was split |
+| Member | Page and stylesheet | Verified authored changes |
 |---|---|---|
-| | | |
+| Bui Dang Minh (105716425), `dangminh232006` | `index.html`, `index.css`; shared `styles.css` | `e73579f`: site shell, shared styles and documentation; `69a9188`: Home stylesheet extraction and shared CSS; `df90637`: shared footer and project documentation |
+| Le Ho Hoang Lan (106229050), `106229050` | `jobs.html`, `jobs.css` | `189dd24`: Jobs page; `f494490`: Jobs stylesheet extraction; `9bae790`: Jobs map moved into the shared footer arrangement |
+| Nguyen Quang Thang (106202475), `swinburnhehe` | `apply.html`, `apply.css` | `3d47a88`: application form; `005b7ec`: Apply stylesheet extraction; `89aedcc`: form alignment and preserving answers while opening results in a separate tab |
+| Tran Vo Nhat Minh (106233462), `TomJoke26` | `about.html`, `about.css` | `522f2e5`: About page; `cd0f282`: About stylesheet extraction; `ff39fb8`: class details and project description; `1c5e897`: member page ownership and translated quotes |
 
----
+The names and IDs above match the four members listed on `about.html`. The Git author labels
+`106229050`, `106202475`, `106233462` and `TomJoke26` are retained as recorded; another member's
+commits are not counted as Bui Dang Minh's authored page work.
+
+## Integration and shared work
+
+Bui Dang Minh's merge commits integrate the Apply, Jobs and About contributions in pull requests
+1 to 6. These integration commits are distinct from the page owners' authored changes.
+The shared footer and styles affect all four pages; the page-specific stylesheets keep the
+individual responsibilities visible. Additional changes to the About fun-facts table are
+recorded in `d8aec2e` and integrated in `c265cea`.
+
+The current source has complete member names, student IDs, page ownership and translated quotes.
+A real group photo and three members' fun facts are still outstanding. Their details must come
+from those members rather than be inferred from Git activity. Submission and access checks are
+tracked in `release-checklist.md`.
 
 ## What the AI assistance covered
 
-For honesty, as also recorded in the README: an AI assistant produced the initial
-scaffold of all four pages, the stylesheet and this documentation set in a single
-session, before any member-specific content existed.
-
-That means **the current code is not yet evidence of anyone's individual
-contribution.** It becomes evidence as members review it, change it, fill in the
-placeholders, fix what they disagree with, and commit their own work under their
-own accounts.
-
-Be straightforward about this in the interview. The interview assesses whether
-**you** can explain and modify the code, so make sure you can explain every line of
-the page you own.
+AI assistance supported website layout and colour choices through specific questions and
+suggestions. Members reviewed and adapted those suggestions to suit the project requirements.
+Each member should be able to explain and modify the code for the page they own during the interview.

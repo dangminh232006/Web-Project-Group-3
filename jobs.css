@@ -54,14 +54,12 @@ aside ul {
   margin-bottom: 0.3em;
 }
 
-
 .clear {
   clear: both;
 }
 
-
-
 @media screen and (max-width: 768px) {
+
   aside {
     float: none;
     width: 100%;
