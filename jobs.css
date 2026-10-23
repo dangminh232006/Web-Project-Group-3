@@ -1,3 +1,14 @@
+/* Generative AI acknowledgement (unit requirement):
+   Claude (Anthropic, Claude Opus 5.5, October 2026) produced the first draft of these Jobs page rules from the brief.
+   Group members then reviewed, edited and tested the code and replaced the content with their own.
+   Prompt used (translated from Vietnamese): "Complete Applied Web Project Part 1 for me. Our company is Apple.
+   Meet every requirement of the brief at the highest marking level, and only use the HTML and CSS taught in the unit." */
+
+/* ==========================================================
+   JOBS PAGE (jobs.html): page-specific rules
+   ========================================================== */
+
+/* Required: <aside> floated right, 25% width, with margin, padding and border. */
 aside {
   float: right;
   width: 25%;
@@ -16,6 +27,7 @@ aside ul {
   padding-left: 1.2em;
 }
 
+/* Each job is a card. overflow: hidden keeps the card's border around the floated aside area tidy. */
 .job {
   border: 1px solid #d2d2d7;
   border-radius: 18px;
@@ -24,6 +36,8 @@ aside ul {
   overflow: hidden;
 }
 
+/* Key facts about the job: description list with the term and value on one line
+   (Lecture 2: "Use CSS to style on one line"). */
 .job-facts {
   background-color: #f5f5f7;
   padding: 0.8em 1em;
@@ -42,6 +56,7 @@ aside ul {
   margin-bottom: 0.3em;
 }
 
+/* Ordered list of essential requirements uses numbers; the preferable list uses squares. */
 .job ol {
   list-style-type: decimal;
 }
@@ -55,6 +70,7 @@ aside ul {
 }
 
 
+/* Clears the float so the footer always starts below the aside. */
 .clear {
   clear: both;
 }
@@ -62,6 +78,7 @@ aside ul {
 
 
 @media screen and (max-width: 768px) {
+  /* On a phone a 25% aside would be too narrow to read, so it stops floating. */
   aside {
     float: none;
     width: 100%;

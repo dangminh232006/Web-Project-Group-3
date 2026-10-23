@@ -94,3 +94,14 @@ Then open `http://127.0.0.1:8777/applied-web-project-part1/index.html`.
 | POST to Mercury `formtest.php` | HTTP 200, all 13 field names echoed |
 
 Details: `docs/test-report.md`.
+
+## Acknowledgements
+
+- Generative AI: Claude (Anthropic, Claude Opus 5.5, October 2026) produced the first draft of the
+  pages, stylesheets and the two illustrations from the brief. Group members then reviewed, edited and
+  tested the code and replaced the content with their own. Prompt used (translated from Vietnamese):
+  "Complete Applied Web Project Part 1 for me. Our company is Apple. Meet every requirement of the brief
+  at the highest marking level, and only use the HTML and CSS taught in the unit."
+  The same acknowledgement is at the top of every HTML and CSS file, as the unit requires.
+- External sources (Devicon logo glyph, Apple company information, Google Maps embed, City of Sydney)
+  are credited in comments next to the code they influenced and listed in `docs/references.md`.

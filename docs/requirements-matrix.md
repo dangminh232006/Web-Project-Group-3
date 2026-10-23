@@ -73,10 +73,10 @@ and how to check it.
 | Member contributions and quotes, definition list | `dl.members` |
 | Quote in first language + English translation | `dd.quote` with `lang="vi"` for Bui Dang Minh (others B-04) |
 | Group photo under 300 KB in `<figure>` with caption | `#group-photo` (placeholder image, B-06) |
-| Fun facts table with caption | Removed at the coordinator's request on 20/10/2026; requirement not met |
+| Fun facts table with caption | `#fun-facts` (restored 23/10/2026; three members' cells still to fill in, B-05) |
 | Styled student IDs | `.student-id` |
 | Bordered figure | `#group-photo { border: 4px solid #1d1d1f; }` |
-| Table styled with hex colours and hover | About-page table removed at the coordinator's request on 20/10/2026; requirement not met |
+| Table styled with hex colours and hover | `about.css` `#fun-facts`: hex colours, `:nth-child(even)` stripes, `tbody tr:hover td` |
 
 ## CSS
 
@@ -86,7 +86,7 @@ and how to check it.
 | Page-specific external stylesheet | `index.css`, `jobs.css`, `apply.css`, or `about.css` linked from its matching page |
 | At least one embedded CSS example on every page | `<style>` in each `<head>` |
 | At least one inline CSS example on every page | one `style="..."` per page |
-| Clear comments | Not met: code comments were removed on 18 October 2026 at the coordinator's request; see `docs/release-checklist.md` B-11 and B-12 |
+| Clear comments | Section and rule comments in `styles.css` and the page stylesheets; HTML comments explain each required element and credit GenAI and external sources (restored 23/10/2026) |
 | Wide range of selectors | universal `*`, element, class, id, `element.class`, descendant, child `>`, adjacent `+`, grouping, attribute `[type="submit"]`, `:hover`, `:visited`, `:focus`, `:first-child`, `:nth-child(even)` |
 | Responsive layout | viewport meta tag + `@media` at 1024, 768 and 480 px; `max-width: 100%` images; `%` widths |
 | Accessibility best practices | visible focus outline, underlined links, high-contrast colours, `em` font sizes, `line-height: 1.6`, no colour-only cues |

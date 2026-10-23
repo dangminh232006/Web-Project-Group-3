@@ -1,9 +1,22 @@
+/* Generative AI acknowledgement (unit requirement):
+   Claude (Anthropic, Claude Opus 5.5, October 2026) produced the first draft of these Apply page rules from the brief.
+   Group members then reviewed, edited and tested the code and replaced the content with their own.
+   Prompt used (translated from Vietnamese): "Complete Applied Web Project Part 1 for me. Our company is Apple.
+   Meet every requirement of the brief at the highest marking level, and only use the HTML and CSS taught in the unit." */
+
+/* ==========================================================
+   APPLY PAGE (apply.html): page-specific rules
+   ========================================================== */
+
+/* Required: form layout using Flexbox or Grid.
+   Grid places the fields in two equal columns (Week 5 layout example: repeat(2, 1fr)). */
 .form-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 1em 1.5em;
 }
 
+/* A field that should use the full width of the grid, such as the street address. */
 .form-grid .wide {
   grid-column: 1 / 3;
 }
@@ -32,6 +45,7 @@ legend {
   margin-bottom: 0.5em;
 }
 
+/* Labels sit above their inputs so long labels never squash the field. */
 .field label {
   display: block;
   font-weight: bold;
@@ -44,6 +58,7 @@ legend {
   font-weight: normal;
 }
 
+/* Grouped selector for every text-style control so they all look the same. */
 .field > input,
 .field > select,
 .field > textarea {
@@ -58,6 +73,7 @@ legend {
   background-color: #ffffff;
 }
 
+/* Radio buttons and check boxes are laid out in a wrapping row with Flexbox. */
 .choices {
   display: flex;
   flex-wrap: wrap;
@@ -74,6 +90,8 @@ legend {
   font-weight: normal;
 }
 
+/* Radio buttons and check boxes keep their normal size: this rule comes after ".field input"
+   and has the same specificity, so it wins the cascade and undoes the 100% width. */
 .choices input {
   flex: none;
   width: auto;
@@ -81,10 +99,12 @@ legend {
   margin-right: 0.4em;
 }
 
+/* The gender group sits in a half-width grid cell, so two options per row fit better. */
 .field .choices label {
   width: 25%;
 }
 
+/* Nested fieldset (gender) has no second border, only its legend. */
 .field fieldset {
   border: none;
   padding: 0;

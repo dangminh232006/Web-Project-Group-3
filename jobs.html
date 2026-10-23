@@ -9,9 +9,20 @@
   <title>Careers at Apple - Current jobs</title>
 
 
+  <!--
+    Student project: not affiliated with Apple Inc. Both vacancies are fictional.
+
+    Generative AI acknowledgement (unit requirement):
+    Claude (Anthropic, Claude Opus 5.5, October 2026) produced the first draft of this page's structure, styles and job descriptions from the brief.
+    Group members then reviewed, edited and tested the code and replaced the content with their own.
+    Prompt used (translated from Vietnamese): "Complete Applied Web Project Part 1 for me. Our company is Apple.
+    Meet every requirement of the brief at the highest marking level, and only use the HTML and CSS taught in the unit."
+  -->
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="jobs.css">
 
+  <!-- Embedded CSS example (required on every page).
+       The "Apply for this role" line under each job is only used on this page. -->
   <style>
     .job-apply {
       margin-top: 1.5em;
@@ -23,13 +34,17 @@
 </head>
 
 <body>
+  <!-- Site header: logo and the main navigation bar shared by all four pages -->
   <header id="site-header">
     <div class="container">
       <a class="brand" href="index.html">
+        <!-- Apple logo glyph adapted from: Devicon "apple-original" icon, https://devicon.dev/ (MIT licence).
+             Accessed: 07 Oct 2026. Apple and the Apple logo are trademarks of Apple Inc. -->
         <img src="images/logo.png" alt="Apple logo" width="48" height="48">
         Apple Careers
       </a>
 
+      <!-- Main navigation: the same four links on every page; "current" marks this page -->
       <nav>
         <ul>
           <li><a href="index.html">Home</a></li>
@@ -41,6 +56,7 @@
     </div>
   </header>
 
+  <!-- Visible notice on every page: this is a student project, not Apple's real careers website -->
   <p class="project-banner">
     <strong>Student project for COS10026 at Swinburne.</strong> This is not an official Apple website and all jobs are fictional.
   </p>
@@ -55,6 +71,9 @@
         <a href="apply.html">application form</a>.
       </p>
 
+      <!-- Aside: related but non-essential information about working at Apple.
+           Required for jobs.html: floated right, 25% wide, with margin, padding and border (see jobs.css).
+           It is placed before the job sections so the jobs flow down its left side. -->
       <aside aria-labelledby="life-heading">
         <h2 id="life-heading">Life at Apple</h2>
         <p>Benefits offered with both roles:</p>
@@ -74,6 +93,8 @@
         </p>
       </aside>
 
+      <!-- Job 1. Each job is its own section with h2 (job title), h3 (topics) and h4 (requirement types),
+           so the page uses more than two heading levels. -->
       <section class="job" id="job-afe26" aria-labelledby="afe26-title">
         <h2 id="afe26-title">Front-End Web Developer, Apple Online Store</h2>
         <p>Reference number: <span class="ref">AFE26</span></p>
@@ -84,6 +105,7 @@
           screen size, from iPhone to Pro Display XDR.
         </p>
 
+        <!-- Key facts as a description list: term = fact name, description = value -->
         <section aria-labelledby="afe26-facts">
           <h3 id="afe26-facts">Job details</h3>
           <dl class="job-facts">
@@ -134,6 +156,7 @@
         </p>
       </section>
 
+      <!-- Job 2 -->
       <section class="job" id="job-aux26" aria-labelledby="aux26-title">
         <h2 id="aux26-title">Accessibility and UX Designer, Apple Online Store</h2>
         <p>Reference number: <span class="ref">AUX26</span></p>
@@ -194,6 +217,9 @@
         </p>
       </section>
 
+      <!-- Inline CSS example (required on every page).
+           This one closing note is centred; it is the only centred paragraph on the site, so a class is not needed.
+           class="clear" makes sure it starts below the floated aside. -->
       <p class="clear" style="text-align: center;">
         Don't see the right role? Check back soon: new positions are added every month.
       </p>
@@ -201,6 +227,7 @@
     </div>
   </main>
 
+  <!-- Site footer shared by all pages -->
   <footer id="site-footer">
     <div class="container">
       <div class="footer-columns">
@@ -235,6 +262,11 @@
             <li><a href="about.html">About us</a></li>
           </ul>
         </section>
+        <!-- Apple headquarters map shared by every footer.
+             Map embed adapted from: Google Maps "Share > Embed a map"
+             https://www.google.com/maps/place/Apple+Park,+One+Apple+Park+Way,+Cupertino,+CA+95014 Accessed: 07 Oct 2026.
+             <iframe> displays another web page inside this page; the map is loaded from Google and our code has no JavaScript.
+             title describes the map for screen reader users and loading="lazy" waits until the map is near the screen. -->
         <section class="footer-map" aria-labelledby="footer-location">
           <h2 id="footer-location">Apple headquarters</h2>
           <iframe src="https://www.google.com/maps/embed?origin=mfe&amp;pb=!1m3!2m1!1sApple+Park,+One+Apple+Park+Way,+Cupertino,+CA+95014!6i15"

@@ -1,11 +1,32 @@
+/* Generative AI acknowledgement (unit requirement):
+   Claude (Anthropic, Claude Opus 5.5, October 2026) produced the first draft of this stylesheet from the brief.
+   Group members then reviewed, edited and tested the code and replaced the content with their own.
+   Prompt used (translated from Vietnamese): "Complete Applied Web Project Part 1 for me. Our company is Apple.
+   Meet every requirement of the brief at the highest marking level, and only use the HTML and CSS taught in the unit." */
+
+/* Contents of this file (shared by all four pages)
+   1. Base styles (whole page, text, links, images)
+   2. Header and navigation
+   3. Shared building blocks (sections, buttons, notes, tables)
+   4. Footer
+   5. Responsive layout (media queries)
+   6. Print styles
+   Page-specific rules are in index.css, jobs.css, apply.css and about.css. */
 
 
+/* ==========================================================
+   1. BASE STYLES
+   ========================================================== */
 
-
+/* box-sizing: border-box (CSS3, Lecture 6) makes width include padding and border,
+   so a box set to 25% stays 25% wide after we add padding. */
 * {
   box-sizing: border-box;
 }
 
+/* Sans-serif fonts are easier to read on screen (Week 4 Usability notes).
+   The list ends with the generic family "sans-serif" to avoid a validator warning.
+   font-size in em lets users enlarge text in their browser (Week 6 accessibility). */
 body {
   margin: 0;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -15,6 +36,7 @@ body {
   background-color: #ffffff;
 }
 
+/* Headings are grouped because they share the same colour and spacing. */
 h1, h2, h3, h4 {
   color: #1d1d1f;
   line-height: 1.25;
@@ -38,6 +60,8 @@ h4 {
   font-size: 1.05em;
 }
 
+/* Links stay underlined so they are not identified by colour alone (Week 6).
+   #0066cc on white has a high contrast and matches Apple's link colour. */
 a {
   color: #0066cc;
 }
@@ -51,6 +75,11 @@ a:hover {
   text-decoration: none;
 }
 
+/* Keyboard users must be able to see where they are on the page.
+   Week 6 accessibility guideline: "show where focus is" by adding a border or outline to focused elements.
+   outline takes the same width, style and colour values as the border shorthand (Lecture 6).
+   :focus is the pseudo-class taught in Lecture 4 for form elements; here it is also used for links and buttons.
+   The dark blue stands out clearly on the white and light grey backgrounds. */
 a:focus,
 input:focus,
 select:focus,
@@ -59,15 +88,18 @@ button:focus {
   outline: 3px solid #0058b0;
 }
 
+/* On the dark header bar a dark outline would be invisible, so links there use a light orange outline. */
 #site-header a:focus {
   outline: 3px solid #ff9f0a;
 }
 
+/* Flexible images: never wider than their container (Week 5 responsive design). */
 img {
   max-width: 100%;
   height: auto;
 }
 
+/* Wrapper that centres the content and keeps lines at a comfortable reading width. */
 .container {
   width: 90%;
   max-width: 1080px;
@@ -76,13 +108,18 @@ img {
 }
 
 
+/* ==========================================================
+   2. HEADER AND NAVIGATION (all pages)
+   ========================================================== */
 
+/* Dark global bar, similar to the navigation bar on apple.com. */
 #site-header {
   background-color: #1d1d1f;
   color: #f5f5f7;
   padding: 0.6em 0;
 }
 
+/* Flexbox puts the logo on the left and the menu on the right (Week 5 layout). */
 #site-header .container {
   display: flex;
   justify-content: space-between;
@@ -99,6 +136,7 @@ img {
   font-weight: bold;
 }
 
+/* The logo image is black, so it sits on a light rounded tile inside the dark bar. */
 .brand img {
   background-color: #f5f5f7;
   border-radius: 10px;
@@ -110,6 +148,7 @@ img {
   color: #f5f5f7;
 }
 
+/* Horizontal menu built from an unordered list (Week 4 navigation example). */
 nav ul {
   list-style-type: none;
   margin: 0;
@@ -132,18 +171,25 @@ nav a:visited {
   color: #f5f5f7;
 }
 
+/* Underline on mouse over, as recommended in the Week 4 usability notes. */
 nav a:hover {
   color: #ffffff;
   border-bottom-color: #a1a1a6;
 }
 
+/* Class "current" marks the page the user is on, so the menu shows their location. */
 nav a.current {
   border-bottom-color: #2997ff;
   font-weight: bold;
 }
 
 
+/* ==========================================================
+   3. SHARED BUILDING BLOCKS
+   ========================================================== */
 
+/* Notice under the header on every page so nobody mistakes this student site for Apple's real careers site
+   (Week 6 web ethics: transparency, do not mislead users). */
 .project-banner {
   margin: 0;
   padding: 0.5em 0;
@@ -158,20 +204,25 @@ main {
   padding-bottom: 2em;
 }
 
+/* Every content section is separated by a thin line. */
 main section {
   margin-bottom: 2.5em;
 }
 
+/* Child combinator (Lecture 4): only the top-level sections inside .container get the divider. */
 main > .container > section {
   padding-bottom: 2em;
   border-bottom: 1px solid #d2d2d7;
 }
 
+/* Adjacent sibling combinator (Lecture 4): the first paragraph after an h1 is an introduction. */
 h1 + p {
   font-size: 1.2em;
   color: #424245;
 }
 
+/* Pill-shaped call to action links, in Apple's blue.
+   White text on the blue background gives high contrast between text and background (Week 6 guideline). */
 .button {
   display: inline-block;
   padding: 0.6em 1.4em;
@@ -192,6 +243,7 @@ h1 + p {
   color: #ffffff;
 }
 
+/* A second style of button with an outline instead of a fill. */
 .button.secondary {
   background-color: #ffffff;
   color: #0066cc;
@@ -202,6 +254,7 @@ h1 + p {
   background-color: #e8f2fd;
 }
 
+/* Grey information box. A border is added so the box is not shown by colour alone. */
 .note {
   background-color: #f5f5f7;
   border-left: 4px solid #86868b;
@@ -209,6 +262,7 @@ h1 + p {
   font-size: 0.95em;
 }
 
+/* Reference numbers are shown in a monospace font so each character is easy to read. */
 .ref {
   font-family: "Courier New", Courier, monospace;
   font-weight: bold;
@@ -216,10 +270,13 @@ h1 + p {
   padding: 0.1em 0.4em;
 }
 
+/* Wide tables scroll sideways inside this box on small screens
+   instead of making the whole page scroll (Lecture 5 responsive tables: overflow-x: auto). */
 .table-wrapper {
   overflow-x: auto;
 }
 
+/* Basic table styling shared by the home page table. */
 table {
   width: 100%;
   margin-top: 1em;
@@ -247,6 +304,8 @@ tbody th {
   background-color: #f5f5f7;
 }
 
+/* Placeholder text that the group still has to replace before submission.
+   It is highlighted AND written in square brackets, so it is not shown by colour alone. */
 .placeholder {
   background-color: #fff3c4;
   border: 1px dashed #b07d00;
@@ -254,7 +313,9 @@ tbody th {
 }
 
 
-
+/* ==========================================================
+   4. FOOTER (all pages)
+   ========================================================== */
 #site-footer {
   background-color: #f5f5f7;
   color: #424245;
@@ -268,6 +329,7 @@ tbody th {
   margin-bottom: 0.4em;
 }
 
+/* Footer columns use CSS Grid: four columns on desktop (Week 5 grid layout). */
 .footer-columns {
   display: grid;
   grid-template-columns: 1fr 1.4fr 0.6fr 1.4fr;
@@ -298,6 +360,8 @@ tbody th {
   margin-bottom: 0.5em;
 }
 
+/* Embedded Google Map: full width of its footer column so it shrinks on phones (Week 5 responsive design).
+   A border replaces the browser's default inset frame border. */
 .footer-map iframe {
   width: 100%;
   height: 240px;
@@ -309,6 +373,7 @@ tbody th {
   margin: 0.5em 0 0;
 }
 
+/* The disclaimer and copyright line sit under the columns. */
 .disclaimer {
   border-top: 1px solid #d2d2d7;
   padding-top: 1em;
@@ -316,13 +381,18 @@ tbody th {
 }
 
 
+/* ==========================================================
+   5. RESPONSIVE LAYOUT (Week 5: viewport meta tag + media queries)
+   ========================================================== */
 
+/* Tablets and small laptops: the footer changes to two columns. */
 @media screen and (max-width: 1024px) {
   .footer-columns {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
+/* Phones and narrow windows: everything stacks in one column. */
 @media screen and (max-width: 768px) {
   h1 {
     font-size: 1.9em;
@@ -343,6 +413,7 @@ tbody th {
 
 }
 
+/* Very small phones. */
 @media screen and (max-width: 480px) {
   .container {
     width: 94%;
@@ -358,6 +429,11 @@ tbody th {
 
 }
 
+/* ==========================================================
+   6. PRINT STYLES (Lecture 6 @media print example)
+   ========================================================== */
+
+/* When a job ad is printed, the menu and search box are hidden and the text is black on white. */
 @media print {
   nav,
   #search,

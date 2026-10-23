@@ -16,7 +16,7 @@ The validator results above are from 07/10/2026, before the CSS was split into
 five files. On 18/10/2026, all five files passed a local CSS syntax parse. A
 headless Chrome comparison of computed styles and element positions on all four
 pages at 320, 768 and 1280 px matched the pre-split version in all 12 cases.
-The new CSS files still need separate W3C CSS Validator checks before submission.
+On 23/10/2026, after the comments were restored and the fun facts table was added back, all four pages passed the W3C Nu HTML Checker with 0 errors and 0 warnings, and all five CSS files (styles.css, index.css, jobs.css, apply.css, about.css) passed the W3C CSS Validator (CSS level 3 + SVG) with 0 errors and 0 warnings.
 
 At the strictest warning level the CSS validator lists informational warnings only: "no
 background-color set but you have set a color" (the background comes from a parent element) and

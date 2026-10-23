@@ -1,3 +1,14 @@
+/* Generative AI acknowledgement (unit requirement):
+   Claude (Anthropic, Claude Opus 5.5, October 2026) produced the first draft of these About page rules from the brief.
+   Group members then reviewed, edited and tested the code and replaced the content with their own.
+   Prompt used (translated from Vietnamese): "Complete Applied Web Project Part 1 for me. Our company is Apple.
+   Meet every requirement of the brief at the highest marking level, and only use the HTML and CSS taught in the unit." */
+
+/* ==========================================================
+   ABOUT PAGE (about.html): page-specific rules
+   ========================================================== */
+
+/* Required: styled student IDs. */
 .student-id {
   display: inline-block;
   font-family: "Courier New", Courier, monospace;
@@ -10,10 +21,12 @@
   margin-left: 0.4em;
 }
 
+/* Nested list of group and class details. */
 #group-details ul ul {
   list-style-type: circle;
 }
 
+/* Members, contributions and quotes as a definition list. */
 .members dt {
   font-size: 1.2em;
   font-weight: bold;
@@ -22,6 +35,7 @@
   border-top: 1px solid #d2d2d7;
 }
 
+/* The first member does not need a dividing line above it (:first-child, Lab 5). */
 .members dt:first-child {
   border-top: none;
 }
@@ -31,12 +45,15 @@
   margin-bottom: 0.4em;
 }
 
+/* Quotes get a coloured bar and quotation marks so they read as quotations.
+   Italics are avoided because the Week 6 guideline says they are harder to read for people with dyslexia. */
 .members dd.quote {
   font-weight: bold;
   border-left: 4px solid #0071e3;
   padding-left: 0.8em;
 }
 
+/* Required: bordered figure. */
 #group-photo {
   border: 4px solid #1d1d1f;
   border-radius: 18px;
@@ -55,4 +72,29 @@
   text-align: center;
   padding-top: 0.6em;
   color: #424245;
+}
+
+/* Required: fun facts table styled with hex colours and a hover effect. */
+#fun-facts table {
+  border: 2px solid #1d1d1f;
+}
+
+#fun-facts th {
+  background-color: #0071e3;
+  color: #ffffff;
+}
+
+#fun-facts td {
+  background-color: #ffffff;
+}
+
+/* :nth-child(even) shades every second row so long rows are easier to follow. */
+#fun-facts tbody tr:nth-child(even) td {
+  background-color: #f5f5f7;
+}
+
+/* Hover effect: the row under the mouse pointer is highlighted. */
+#fun-facts tbody tr:hover td {
+  background-color: #d6e9ff;
+  color: #1d1d1f;
 }
