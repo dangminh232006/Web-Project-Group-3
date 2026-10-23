@@ -53,7 +53,8 @@ applied-web-project-part1/
 │   ├── bg-hero.jpg          Background graphic for the home page hero (CSS)
 │   ├── group-portrait-1.png First supplied portrait, unchanged (1280 x 1280)
 │   ├── group-portrait-2.png Second supplied portrait, unchanged (256 x 256)
-│   └── group-portrait-3.png Third supplied portrait, unchanged (960 x 1280)
+│   ├── group-portrait-3.png Third supplied portrait, unchanged (960 x 1280)
+│   └── group-portrait-4.png Fourth supplied portrait, unchanged (245 x 324)
 ├── docs/                    Supporting documentation (see below)
 └── README.md
 ```
@@ -62,7 +63,7 @@ applied-web-project-part1/
 
 The four page owners, their student IDs and translated quotes are recorded. The live site works,
 and Jira contains epics, stories, tasks and two Part 1 sprints. Remaining items include the real
-group photo, 12 fun-fact cells from the other three members and verified tutor access to Jira.
+group photo (the four individual portraits do not replace it), 12 fun-fact cells from the other three members and verified tutor access to Jira.
 The group and individual Canvas submissions have not yet been uploaded.
 
 The current Canvas deadline for both Part 1 submissions is **1 November 2026, 23:59 Vietnam time**
