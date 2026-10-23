@@ -54,9 +54,9 @@
 
 .group-portraits {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1em;
-  max-width: 560px;
+  max-width: 780px;
   margin: 0 auto;
 }
 
@@ -86,4 +86,24 @@
 #fun-facts tbody tr:hover td {
   background-color: #d6e9ff;
   color: #1d1d1f;
+}
+
+@media screen and (max-width: 600px) {
+  .group-portraits {
+    grid-template-columns: 1fr;
+    max-width: 320px;
+  }
+}
+
+.member-portrait {
+  margin: 0;
+}
+
+#group-photo .member-portrait img {
+  height: 280px;
+  object-fit: contain;
+}
+
+#group-photo .member-portrait figcaption {
+  font-weight: bold;
 }

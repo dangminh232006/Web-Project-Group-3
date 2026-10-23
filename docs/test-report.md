@@ -100,11 +100,11 @@ The script returned HTTP 200 and echoed all 13 name/value pairs: `job_ref`, `fir
 ## 4. Links and images
 
 All internal links (`index.html`, `jobs.html`, `apply.html`, `about.html`) and image paths are
-relative, so the site works from the GitHub Pages sub-folder. The current image set contains the three site graphics and two supplied member portraits.
+relative, so the site works from the GitHub Pages sub-folder. The current image set contains the three site graphics and three supplied member portraits.
 Their original files are retained; the former generated group-photo placeholder is no longer used.
 
 The Google Map is in the shared footer of all four pages. Its rendering at desktop and phone
-widths was checked on 20 October. The About page uses two supplied portraits with a temporary caption. In the published desktop
+widths was checked on 20 October. The About page uses three supplied portraits with a temporary caption. In the published desktop
 page, both images loaded at their original 1280 x 1280 and 256 x 256 dimensions and displayed
 at 272 px wide each in a two-column grid. Separate portraits do not satisfy the real
 full-group-photograph requirement.
@@ -146,7 +146,7 @@ particularly PDF pages 3-5 (web, keyboard and vision guidance) and 10-12 (docume
 
 | Guideline area | Source/evidence review | Remaining boundary |
 |---|---|---|
-| Accurate image alternatives | All image elements have alt text; two supplied portraits have accurate alternatives and a temporary caption | Real group photograph still needed |
+| Accurate image alternatives | All image elements have alt text; three supplied portraits have accurate alternatives and a temporary caption | Real group photograph still needed |
 | Heading structure and clear navigation | Semantic headings and consistent four-page navigation are present | Screen-reader navigation not tested |
 | Form instructions and keyboard operation | Labels, fieldsets, legends, format hints and visible focus styles are present; native controls were traversed by keyboard | Full responsive retest and screen-reader walkthrough pending |
 | Readable type and spacing | Shared body uses Helvetica/Arial sans-serif, scalable em sizes and 1.6 line height | No claim of testing every assistive reading configuration |
@@ -184,3 +184,7 @@ conformance or completion of WWTP-42's outstanding responsive verification.
 - Class details are Wednesday, 09:00 to 12:00, tutor Thomas Harrison, as confirmed by the coordinator. Current 23 October source contains all four translated quotes and the styled fun-facts table; 12 cells for three members still need real details.
 
 - About now includes a Selected project brief section describing the chosen Apple recruitment site, both advertised roles, the four pages and the HTML5/CSS3-only Part 1 scope.
+
+## 7. Additional portrait update (23 October)
+
+The coordinator supplied a third portrait and confirmed the image order: Tran Vo Nhat Minh, Bui Dang Minh, Le Ho Hoang Lan. The About page displays these full names below unchanged source images. Desktop CSS uses three columns; the rule at 600 px switches to one column. The source passed W3C HTML validation with zero errors and warnings. Publication evidence is recorded in WWTP-44; fresh narrow-viewport verification remains open in WWTP-42. Nguyen Quang Thang's portrait will be supplied later. These remain individual portraits, not a complete group photograph.
