@@ -9,7 +9,7 @@
   <title>Careers at Apple - Job application</title>
 
   <link rel="stylesheet" href="styles.css?v=20261023">
-  <link rel="stylesheet" href="apply.css">
+  <link rel="stylesheet" href="apply.css?v=20261023-skills2">
 
   <style>
     .required-star {
@@ -204,19 +204,15 @@
 
         <fieldset>
           <legend>Skills</legend>
-          <p>Tick every skill you have. HTML and CSS are essential for both roles. <span class="required-star">*</span></p>
+          <p>Confirm both essential skills. HTML and CSS are required for both advertised roles. <span class="required-star">*</span></p>
           <div class="choices">
-            <label><input type="checkbox" name="skills[]" value="html-css" required> HTML and CSS</label>
-            <label><input type="checkbox" name="skills[]" value="accessibility"> Web accessibility</label>
-            <label><input type="checkbox" name="skills[]" value="responsive"> Responsive design</label>
-            <label><input type="checkbox" name="skills[]" value="ux-research"> User research and testing</label>
-            <label><input type="checkbox" name="skills[]" value="git"> Git and GitHub</label>
-            <label><input type="checkbox" name="skills[]" value="jira"> Agile and Jira</label>
+            <label><input type="checkbox" name="skills[]" value="html" required> HTML <span class="required-star">*</span></label>
+            <label><input type="checkbox" name="skills[]" value="css" required> CSS <span class="required-star">*</span></label>
           </div>
 
           <div class="field">
             <label for="other-skills">Other skills
-              <span class="hint">Optional. You can also tell us about any adjustments you need for the interview.</span>
+              <span class="hint">Optional. Describe any additional skills you have, such as web accessibility, responsive design, user research, Git, GitHub, Agile or Jira. You may also mention interview adjustments.</span>
             </label>
             <textarea id="other-skills" name="other_skills" rows="5" cols="40"
                       placeholder="Tell us about other skills or experience..."></textarea>
