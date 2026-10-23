@@ -74,7 +74,7 @@ and how to check it. Status reviewed 23 October 2026; remaining work is tracked 
 | Member contributions and quotes, definition list | `dl.members` |
 | Quote in first language + English translation | All four members have `dd.quote` with `lang="vi"` plus an English translation (B-04) |
 | Group photo under 300 KB in `<figure>` with caption | `#group-photo` (two temporary member portraits; a real full-group photo under 300 KB remains pending, B-06) |
-| Fun facts table with caption | `#fun-facts` (styled table present; 12 cells across three members remain placeholders, B-05) |
+| Fun facts table with caption | `#fun-facts` (all cells filled; the coordinator-selected entries for three members still need their confirmation, B-05) |
 | Styled student IDs | `.student-id` |
 | Bordered figure | `#group-photo { border: 4px solid #1d1d1f; }` |
 | Table styled with hex colours and hover | `about.css` `#fun-facts`: hex colours, `:nth-child(even)` stripes, `tbody tr:hover td` |
