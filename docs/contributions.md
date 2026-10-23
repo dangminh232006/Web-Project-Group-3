@@ -15,7 +15,7 @@ has completed the Week 6 interview in class; no grade or interview date is infer
 | Bui Dang Minh (105716425), `dangminh232006` | `index.html`, `index.css`; shared `styles.css` | `e73579f`: site shell, shared styles and documentation; `69a9188`: Home stylesheet extraction and shared CSS; `df90637`: shared footer and project documentation |
 | Le Ho Hoang Lan (106229050), `106229050` | `jobs.html`, `jobs.css` | `189dd24`: Jobs page; `f494490`: Jobs stylesheet extraction; `9bae790`: Jobs map moved into the shared footer arrangement |
 | Nguyen Quang Thang (106202475), `swinburnhehe` | `apply.html`, `apply.css` | `3d47a88`: application form; `005b7ec`: Apply stylesheet extraction; `89aedcc`: form alignment and preserving answers while opening results in a separate tab |
-| Tran Vo Nhat Minh (106233462), `TomJoke26` | `about.html`, `about.css` | `522f2e5`: About page; `cd0f282`: About stylesheet extraction; `ff39fb8`: class details and project description; `1c5e897`: member page ownership and translated quotes |
+| Tran Vo Nhat Minh (106233462), `TomJoke26` | `about.html`, `about.css` | `522f2e5`: About page; `cd0f282`: About stylesheet extraction; `ff39fb8`: class details and project description; `1c5e897`: member page ownership and translated quotes; `38c5d03`: fourth supplied portrait and responsive four-member grid |
 
 The names and IDs above match the four members listed on `about.html`. The Git author labels
 `106229050`, `106202475`, `106233462` and `TomJoke26` are retained as recorded; another member's

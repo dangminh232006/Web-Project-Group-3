@@ -39,4 +39,4 @@ assessment. They are fictional and are labelled as such on every page.
 No third-party HTML or CSS code (frameworks, templates, snippets) is used. All layout techniques
 (float, Flexbox, Grid, media queries) follow the Week 4 and Week 5 lecture and lab material.
 
-The third temporary portrait, `images/group-portrait-3.png`, was supplied by the coordinator on 23 October 2026. The coordinator identified the three portraits, in order, as Tran Vo Nhat Minh, Bui Dang Minh and Le Ho Hoang Lan. Names are displayed below the unchanged images; a complete group photograph remains outstanding.
+The third temporary portrait, `images/group-portrait-3.png`, was supplied by the coordinator on 23 October 2026. The coordinator identified the three portraits, in order, as Tran Vo Nhat Minh, Bui Dang Minh and Le Ho Hoang Lan. The fourth portrait, `images/group-portrait-4.png` (245 x 324), was supplied unchanged for Nguyen Quang Thang on the same day and appears after the first three. Names are displayed below all four unchanged images; a complete group photograph remains outstanding.
