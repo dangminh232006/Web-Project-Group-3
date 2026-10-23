@@ -63,7 +63,7 @@ applied-web-project-part1/
 
 The four page owners, their student IDs and translated quotes are recorded. The live site works,
 and Jira contains epics, stories, tasks and two Part 1 sprints. Remaining items include the real
-group photo (the four individual portraits do not replace it), 12 fun-fact cells from the other three members and verified tutor access to Jira.
+group photo (the four individual portraits do not replace it), confirmation of the three other members' coordinator-selected fun facts and verified tutor access to Jira.
 The group and individual Canvas submissions have not yet been uploaded.
 
 The current Canvas deadline for both Part 1 submissions is **1 November 2026, 23:59 Vietnam time**
