@@ -3,15 +3,17 @@
 COS10026 Applied Web Project - Part 1, Group 3. Referencing style: APA 7 where applicable.
 
 The unit requires every external source to be acknowledged in a code comment next to the code
-that uses it (Canvas: *Unit Requirement: External Source Acknowledgment*). Source comments were removed from the current HTML and CSS on 23 October 2026.
-This file retains the source records; it does not replace the required in-code acknowledgements.
+that uses it (Canvas: *Unit Requirement: External Source Acknowledgment*). The final 23 October
+comment-only revision restores concise source acknowledgements beside the logo, hero assets,
+company information, Country statement, form guidance/state names and shared Google Maps embeds.
+This file retains the detailed source records.
 
 ## Images
 
 | File | Origin | Licence / note | Current record |
 |---|---|---|---|
 | `images/logo.png` | Apple logo glyph adapted from the Devicon `apple-original` icon (https://devicon.dev/), exported to a 48 x 48 PNG | Devicon is MIT licensed. Apple and the Apple logo are trademarks of Apple Inc.; used only to identify the company in an educational project, with a disclaimer on every page | This file; used in the header of every page |
-| `images/hero-workplace.jpg` | Generated: Claude (Anthropic, Claude Opus 5.5, October 2026) wrote an HTML/CSS drawing that was rendered to JPEG at 640 x 400 | Original; no third-party artwork | This file; used in `index.html` |
+| `images/hero-workplace.jpg` | Original AI-assisted HTML/CSS illustration rendered to JPEG at 640 x 400 | Original; no third-party artwork | This file; used in `index.html` |
 | `images/bg-hero.jpg` | Generated the same way (soft colour background, 1200 x 600) | Original | This file; used by `#hero` in `index.css` |
 | `images/group-portrait-1.png` | Supplied portrait of Tran Vo Nhat Minh, retained unchanged (1280 x 1280) | Original source retained; not a together group photograph | Source for `group-collage.jpg` |
 | `images/group-portrait-2.png` | Supplied portrait of Bui Dang Minh, retained unchanged (256 x 256) | Original source retained; not a together group photograph | Source for `group-collage.jpg` |
@@ -45,3 +47,17 @@ No third-party HTML or CSS code (frameworks, templates, snippets) is used. All l
 The collage order is Tran Vo Nhat Minh and Bui Dang Minh on the top row, then Le Ho Hoang Lan
 and Nguyen Quang Thang on the bottom row. All four original PNG files remain unchanged. The
 collage is a composition of separate portraits and is not presented as a real together photograph.
+
+## Generative AI acknowledgement
+
+Claude (recorded model: Opus 5.5) and Codex (current-session model: gpt-6.1-sol).
+Use: development and review assistance; outputs were reviewed and adapted.
+The source acknowledgement in index.html contains a translated prompt summary.
+
+Original prompt (translated from Vietnamese, recorded in the original source history):
+
+> Complete Applied Web Project Part 1 for me. Our company is Apple. Meet every requirement of the brief at the highest marking level, and only use the HTML and CSS taught in the unit.
+
+The model labels come from original source records and current session metadata respectively;
+exact application builds and historical runtimes are not independently verified. The source
+summary is not a verbatim prompt record. The portrait collage combines unchanged supplied photos.

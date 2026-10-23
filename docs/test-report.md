@@ -1,8 +1,9 @@
 # Test report
 
 COS10026 Applied Web Project - Part 1, Group 3. Updated 23 October 2026.
-Section 9 records the final collage and required-skills revision. Earlier sections retain dated
-observations from previous revisions and do not establish the current image or checkbox structure.
+Section 10 records the final comment-only acknowledgement revision. Section 9 records the
+collage and required-skills behaviour; earlier sections retain dated observations from previous
+revisions and do not establish the current source-comment coverage.
 
 ## 1. Validation and deployed files (23 October 2026)
 
@@ -196,7 +197,7 @@ The 12 previously empty fun-fact cells now contain coordinator-selected entries 
 
 The outer gallery caption was removed; all four individual name captions and original portraits remain. Scoped About styles center the Our group heading and bordered figure. Connected Chrome checks at 320, 375, 600, 601, 768 and 1280 px measured a 0 px difference between the horizontal centers of the section and figure, no horizontal page overflow, and four loaded portraits. The existing two-column desktop and one-column mobile rules remain in place.
 
-## 9. Final collage and required-skills checks (23 October)
+## 9. Collage and required-skills checks (23 October, before comment restoration)
 
 This section supersedes the separate-portrait layouts and combined skill checkbox described in
 sections 1 to 8. The source validation below was repeated on the final website changes.
@@ -226,9 +227,39 @@ The coordinator confirmed tutor approval of the Apple topic and Zalo participati
 and exemption from Peer and Self Evaluation on 23 October. The Jira Access table lists
 the tutor with the Viewer role; actual tutor login remains unobserved. The collage is below 300 KB but is not a
 photograph of the group together, so acceptance as a substitute remains unverified. Personal
-confirmation of the three coordinator-selected fun-fact rows remains open. The owner's decision
-to omit source comments leaves the unit's in-code acknowledgement/comment requirements unmet.
+confirmation of the three coordinator-selected fun-fact rows remains open. Source comments were
+absent at this revision; section 10 supersedes that acknowledgement/comment status.
 
 The publication gate compares all 17 website HTML/CSS/image files against committed Git bytes
 after a successful GitHub Pages run. The exact final main SHA and run URL are returned with the
 publication result so the Windows report and ZIP can be rebuilt from that stable revision.
+
+## 10. Minimal source comments and truthful acknowledgements (23 October)
+
+This revision adds comments only to the four HTML files and five external stylesheets. Removing
+only the inserted comment lines, including their introduced line whitespace, reproduces each
+file at baseline 1b28c2b exactly (9/9). All eight image assets remain byte-identical to that
+baseline; no visible content, functional code, stylesheet URL or asset was changed.
+
+- W3C Nu HTML Checker was rerun on all four final HTML sources: each returned zero messages
+  (0 errors, 0 warnings).
+- W3C CSS Validator was rerun on all five final external stylesheets: each was valid with
+  0 errors using CSS level 3 + SVG. Warnings were suppressed; no warning-count claim is made.
+- Concise explanatory comments cover meaningful CSS groups, including shared focus/base rules,
+  navigation, sections, table overflow, footer columns, responsive layout and print behaviour.
+- Source comments sit beside all four Devicon logo uses and Google Maps embeds, Home company
+  information/Country wording, form guidance and state names. Hero image/background comments
+  identify the original AI-assisted visual assets.
+- AI comments use the concise wording approved on 23 October: tool names, qualified model
+  labels, general use and a translated prompt summary in index.html. Other HTML/CSS files refer
+  to that acknowledgement. references.md retains the original translated prompt. The summary
+  is not a verbatim prompt record; exact application builds and historical runtimes remain
+  unverified. No detailed per-tool task list is included.
+- The deterministic portrait collage is not labelled as an AI-generated face image. Its original
+  sources and the outstanding tutor acceptance/member-confirmation items are unchanged.
+
+No functional or responsive tests were repeated for this comment-only revision: the exact
+comment-stripped baseline proof preserves the section 9 implementation and its dated results.
+Those earlier checks remain historical evidence, not newly executed tests. The final publication
+gate compares all 17 live website HTML/CSS/image files with committed bytes after a successful
+Pages run; the stable main SHA, owner commits, PRs and run URL accompany the hand-off result.

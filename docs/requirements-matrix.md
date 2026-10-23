@@ -87,7 +87,9 @@ and how to check it. Status reviewed 23 October 2026; remaining work is tracked 
 | Page-specific external stylesheet | `index.css`, `jobs.css`, `apply.css`, or `about.css` linked from its matching page |
 | At least one embedded CSS example on every page | `<style>` in each `<head>` |
 | At least one inline CSS example on every page | one `style="..."` per page |
-| Clear comments | Not met in the current source: all HTML and CSS comments were removed on 23/10/2026 at the project owner's request |
+| Clear comments | Concise explanatory group comments in styles.css and all four page-specific stylesheets; final comment-only revision on 23 October |
+| External-source acknowledgements | Adjacent HTML/CSS comments for the logo, company information, Country statement, form guidance/state names and shared map; references.md retains source detail |
+| GenAI acknowledgements and prompts | index.html identifies tools, qualified model labels, general use and a translated prompt summary; other sources refer to it. references.md retains the original translated prompt. Exact builds and historical runtimes remain unverified |
 | Wide range of selectors | universal `*`, element, class, id, `element.class`, descendant, child `>`, adjacent `+`, grouping, attribute `[type="submit"]`, `:hover`, `:visited`, `:focus`, `:first-child`, `:nth-child(even)` |
 | Responsive layout | viewport meta tag + `@media` at 1024, 768 and 480 px; `max-width: 100%` images; `%` widths |
 | Accessibility best practices | visible focus outline, underlined links, high-contrast colours, `em` font sizes, `line-height: 1.6`, no colour-only cues |
