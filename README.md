@@ -48,7 +48,7 @@ applied-web-project-part1/
 ├── apply.css
 ├── about.css
 ├── images/
-│   ├── logo.png             Apple logo glyph, 48 x 48 (see docs/references.md)
+│   ├── logo.png             Apple logo glyph, 48 x 48 (source comment in index.html)
 │   ├── hero-workplace.jpg   Hero illustration, 640 x 400
 │   ├── bg-hero.jpg          Background graphic for the home page hero (CSS)
 │   ├── group-portrait-1.png First supplied portrait, unchanged (1280 x 1280)
@@ -104,4 +104,5 @@ Details: `docs/test-report.md`.
 ## Acknowledgements
 
 - External sources (Devicon logo glyph, Apple company information, Google Maps embed, City of Sydney)
-  are listed in `docs/references.md`.
+  are acknowledged in adjacent HTML/CSS source comments. The concise AI acknowledgement,
+  general use and translated prompt summary are in `index.html`.

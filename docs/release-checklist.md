@@ -1,6 +1,6 @@
 # Release checklist
 
-COS10026 Applied Web Project - Part 1, Group 3. Checked 23 October 2026.
+COS10026 Applied Web Project - Part 1, Group 3. Checked 24 October 2026.
 This is the canonical submission checklist; Jira tracks the work and its evidence.
 
 **Deadline:** 1 November 2026, 23:59 Vietnam time (2 November, 03:59 Melbourne time),
@@ -20,8 +20,8 @@ as displayed by the current group and individual Canvas assignments.
 | B-08 | Partial | Jira has 8 epics, 11 stories, 22 tasks and two Part 1 sprints. The Jira Access table lists the tutor with the Viewer role on 23 October; actual tutor login remains unobserved | WWTP-45; the tutor email is not published here |
 | B-09 | Complete for audited website files | Final publication is checked against committed HTML, CSS and image bytes after a successful Pages deployment; the publication result identifies the final main SHA | `test-report.md` section 9 and GitHub Pages run history; this document does not change live Jira status |
 | B-10 | Partial | Bui Dang Minh's Canvas Group Agreement shows Submitted, attempt 1, `Group3_GroupAgreement.docx`. Other members' submissions are unverified | Each member; WWTP-27 In Progress |
-| B-11 | Unmet | Required in-code GenAI acknowledgements are absent. The owner has explicitly chosen to keep source files without comments | Documentation does not replace this requirement |
-| B-12 | Unmet | Required explanatory CSS comments and external-source acknowledgements are absent | Source records in `references.md` do not meet an in-code requirement |
+| B-11 | Partial | Source comments identify the tools, a concise general use description and a translated prompt summary in index.html | Only a translated prompt summary remains in the current submission, not a verbatim prompt record. Exact application builds and historical runtimes remain unverified |
+| B-12 | Complete for audited sources | Concise explanatory comments cover meaningful groups in all five stylesheets; adjacent source comments cover sourced logo/content/form guidance/map and generated hero assets | Comment coverage and baseline-equivalence checks in test-report.md section 10 |
 | B-13 | Complete | HTML and CSS are separate required checkboxes, both essential for the advertised roles. Additional skill information is confined to the optional Other skills textarea | Native-validation checks in `test-report.md` section 9; `decisions.md` D-04 |
 | B-14 | Partial | Fresh HTML/CSS validation passed. Published skip links and keyboard controls passed; guideline/contrast review is complete. Changed-page responsive checks are recorded in section 9; a screen-reader walkthrough remains unverified | `test-report.md`; WWTP-43 Done, WWTP-42 In Progress |
 | B-15 | Not submitted | Canvas group submission shows attempt 0. The release archive is generated from the final committed revision; its commit and verification are recorded in WWTP-46 | WWTP-25 and WWTP-46 In Progress until a Canvas receipt exists |

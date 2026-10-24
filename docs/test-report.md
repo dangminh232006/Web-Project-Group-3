@@ -1,8 +1,9 @@
 # Test report
 
 COS10026 Applied Web Project - Part 1, Group 3. Updated 23 October 2026.
-Section 9 records the final collage and required-skills revision. Earlier sections retain dated
-observations from previous revisions and do not establish the current image or checkbox structure.
+Section 10 records the final comment-only acknowledgement revision. Section 9 records the
+collage and required-skills behaviour; earlier sections retain dated observations from previous
+revisions and do not establish the current source-comment coverage.
 
 ## 1. Validation and deployed files (23 October 2026)
 
@@ -10,13 +11,13 @@ observations from previous revisions and do not establish the current image or c
 |---|---|---|
 | `index.html`, `jobs.html`, `apply.html`, `about.html` | [W3C Nu HTML Checker](https://validator.w3.org/nu/) against each live URL | Each: 0 errors, 0 warnings |
 | `styles.css`, `index.css`, `jobs.css`, `apply.css`, `about.css` | [W3C CSS Validator](https://jigsaw.w3.org/css-validator/), CSS level 3 + SVG profile | Each: valid, 0 errors |
-| Four HTML pages, five CSS files and two portraits | HTTP retrieval of the GitHub Pages files and comparison with committed source | All eleven matched `23e4809`; the four updated HTML pages with versioned stylesheet URLs are live at `32a2b06` |
+| Four HTML pages, five CSS files and two portraits | HTTP retrieval of the GitHub Pages files and comparison with committed source | All eleven matched `4fb5bca`; the four updated HTML pages with versioned stylesheet URLs are live at `1c0dcd7` |
 | Internal page links and local assets | Local path checks | All referenced files exist |
 
 The CSS request suppressed warnings; the result establishes zero errors, not zero warnings.
 Windows working-tree line endings differ from the deployed files; the comparison used committed
 Git content so line-ending conversion did not produce a false mismatch. The final source check
-after `32a2b06` returned an empty W3C Nu message list for each HTML page and valid/zero-error
+after `1c0dcd7` returned an empty W3C Nu message list for each HTML page and valid/zero-error
 results for all five stylesheets. The stylesheet URL version avoids stale browser caching.
 
 Earlier checks: on 18 October, all five stylesheets passed a local syntax parse, and Chrome
@@ -129,7 +130,7 @@ accessibility certification.
 
 On 23 October, a live keyboard check traversed the four navigation links in order, activated
 About with Enter, traversed the Apply controls with visible 3 px focus outlines, and toggled a
-skill checkbox with Space in both directions. After publication of `32a2b06`, the first Tab on
+skill checkbox with Space in both directions. After publication of `1c0dcd7`, the first Tab on
 each of the four pages displayed Skip to main content with a visible orange 3 px outline;
 Enter moved focus to `main-content`. This verifies the published skip link on all four pages.
 That earlier revision used temporary portrait alternatives. The current collage alternative and
@@ -196,7 +197,7 @@ The 12 previously empty fun-fact cells now contain coordinator-selected entries 
 
 The outer gallery caption was removed; all four individual name captions and original portraits remain. Scoped About styles center the Our group heading and bordered figure. Connected Chrome checks at 320, 375, 600, 601, 768 and 1280 px measured a 0 px difference between the horizontal centers of the section and figure, no horizontal page overflow, and four loaded portraits. The existing two-column desktop and one-column mobile rules remain in place.
 
-## 9. Final collage and required-skills checks (23 October)
+## 9. Collage and required-skills checks (23 October, before comment restoration)
 
 This section supersedes the separate-portrait layouts and combined skill checkbox described in
 sections 1 to 8. The source validation below was repeated on the final website changes.
@@ -206,7 +207,7 @@ sections 1 to 8. The source validation below was repeated on the final website c
   CSS level 3 + SVG profile. Warning suppression means no warning-count claim is made.
 - Local source checks: 28 deliverable files, four HTML pages, five CSS files and 56 local
   HTML references; every local reference exists. All HTML/CSS files contain zero comments
-  and no script elements. The four original portrait PNGs match revision ea81c93 byte for byte.
+  and no script elements. The four original portrait PNGs match revision 7d11a82 byte for byte.
 - The displayed collage is the exact coordinator-supplied JPEG: 1200 x 1320, 299185 bytes,
   SHA-256 f3a1d8599fde583498c508b44564917eec90b4a325cacdd8421fb62a53f093c4.
   It uses the original portraits with names; faces were not regenerated. The single image
@@ -226,9 +227,52 @@ The coordinator confirmed tutor approval of the Apple topic and Zalo participati
 and exemption from Peer and Self Evaluation on 23 October. The Jira Access table lists
 the tutor with the Viewer role; actual tutor login remains unobserved. The collage is below 300 KB but is not a
 photograph of the group together, so acceptance as a substitute remains unverified. Personal
-confirmation of the three coordinator-selected fun-fact rows remains open. The owner's decision
-to omit source comments leaves the unit's in-code acknowledgement/comment requirements unmet.
+confirmation of the three coordinator-selected fun-fact rows remains open. Source comments were
+absent at this revision; section 10 supersedes that acknowledgement/comment status.
 
 The publication gate compares all 17 website HTML/CSS/image files against committed Git bytes
 after a successful GitHub Pages run. The exact final main SHA and run URL are returned with the
 publication result so the Windows report and ZIP can be rebuilt from that stable revision.
+
+## 10. Minimal source comments and truthful acknowledgements (23 October)
+
+This revision adds comments only to the four HTML files and five external stylesheets. Removing
+only the inserted comment lines, including their introduced line whitespace, reproduces each
+file at baseline a94110e exactly (9/9). All eight image assets remain byte-identical to that
+baseline; no visible content, functional code, stylesheet URL or asset was changed.
+
+- W3C Nu HTML Checker was rerun on all four final HTML sources: each returned zero messages
+  (0 errors, 0 warnings).
+- W3C CSS Validator was rerun on all five final external stylesheets: each was valid with
+  0 errors using CSS level 3 + SVG. Warnings were suppressed; no warning-count claim is made.
+- Concise explanatory comments cover meaningful CSS groups, including shared focus/base rules,
+  navigation, sections, table overflow, footer columns, responsive layout and print behaviour.
+- Source comments sit beside all four Devicon logo uses and Google Maps embeds, Home company
+  information/Country wording, form guidance and state names. Hero image/background comments
+  identify the original AI-assisted visual assets.
+- AI comments identify tool names, general use and a translated prompt summary in
+  index.html. Other HTML/CSS files refer
+  to that acknowledgement. Only the translated summary remains in the current submission.
+  It is not a verbatim prompt record; exact application builds and historical runtimes remain
+  unverified. No detailed per-tool task list is included.
+- The deterministic portrait collage is not labelled as an AI-generated face image. Its original
+  sources and the outstanding tutor acceptance/member-confirmation items are unchanged.
+
+No functional or responsive tests were repeated for this comment-only revision: the exact
+comment-stripped baseline proof preserves the section 9 implementation and its dated results.
+Those earlier checks remain historical evidence, not newly executed tests. The final publication
+gate compares all 17 live website HTML/CSS/image files with committed bytes after a successful
+Pages run; the stable main SHA, owner commits, PRs and run URL accompany the hand-off result.
+
+## 11. Documentation-only cleanup (24 October)
+
+The standalone references document was removed from the current tree. README and supporting
+documents now point to the actual adjacent HTML/CSS source comments. The full original prompt
+was not moved or duplicated; only the approved translated summary remains in index.html.
+B-11 remains Partial because that summary is not verbatim and exact application builds and
+historical runtimes remain unverified. After removing complete comment lines/blocks, including
+their indentation and terminating newline, all nine HTML/CSS files are byte-identical to
+baseline `a94110e`; all eight images are byte-identical without transformation.
+Functional, responsive and validator results above retain their original dates; this cleanup
+does not represent a rerun of those tests. Publication verification compares all 17 live files
+with the final committed revision after its successful Pages run.
