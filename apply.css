@@ -1,5 +1,5 @@
 /* Pair related form fields in two columns. */
-/* GenAI acknowledgement: see index.html. */
+/* GenAI acknowledgement: see index.php. */
 .form-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -160,4 +160,16 @@ legend {
   .field .choices label {
     width: 100%;
   }
+}
+
+.required-star {
+  color: #b3261e;
+  font-weight: bold;
+}
+
+#privacy {
+  border: 1px solid #0071e3;
+  background-color: #e8f2fd;
+  padding: 1em 1.2em;
+  margin-bottom: 1.5em;
 }
